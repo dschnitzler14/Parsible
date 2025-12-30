@@ -1,0 +1,243 @@
+/* =========================
+   Fonts
+   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Baskerville:wght@400;700&display=swap');
+
+:root {
+    --paper-bg-0: #EEDDC1;
+    --paper-bg-1: #F2EDD2;
+    --accent-green: #4C6B00;
+    --accent-green-dark: #3f5a00;
+    --accent-soft-green: #CBD5AE;
+    --accent-yellow: #FFE291;
+    --ink: #2f3b00;
+    --sidebar-bg: #000000;
+    --sidebar-ink: #D9DDD6;
+}
+
+/* Global */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, var(--paper-bg-0) 0%, var(--paper-bg-1) 100%);
+    color: var(--ink);
+}
+
+/* =========================
+   bslib page layout
+   ========================= */
+
+/* Main content area */
+main,
+.bslib-page-main,
+.container-fluid {
+    background: transparent !important;
+}
+
+/* Sidebar container (bslib sidebar()) */
+.bslib-sidebar,
+.sidebar {
+    background: var(--sidebar-bg) !important;
+    color: var(--sidebar-ink) !important;
+}
+
+/* Sidebar nav list (navset_pill_list) */
+.bslib-navs-pills .nav-link {
+    color: var(--sidebar-ink) !important;
+    border-radius: 12px !important;
+    font-weight: 600;
+    padding: 10px 12px;
+}
+
+.bslib-navs-pills .nav-link:hover,
+.bslib-navs-pills .nav-link:focus {
+    background: rgba(217, 221, 214, 0.18) !important;
+    color: #ffffff !important;
+}
+
+.bslib-navs-pills .nav-link.active {
+    background: var(--sidebar-ink) !important;
+    color: var(--ink) !important;
+}
+
+/* Optional: sidebar title styling if you show it */
+.bslib-sidebar .sidebar-title,
+.bslib-sidebar h2,
+.bslib-sidebar h3 {
+    font-family: 'Libre Baskerville', serif !important;
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+/* =========================
+   Cards (bslib::card)
+   ========================= */
+
+/* bslib cards render with .card */
+.card {
+    border: none !important;
+    border-radius: 16px !important;
+    background: rgba(242, 237, 210, 0.85) !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12) !important;
+    overflow: hidden;
+}
+
+/* Card header */
+.card-header {
+    background: transparent !important;
+    border-bottom: none !important;
+    padding: 14px 18px !important;
+    font-family: 'Libre Baskerville', serif !important;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--ink) !important;
+}
+
+/* Card body */
+.card-body {
+    padding: 16px 18px !important;
+    font-family: 'Inter', sans-serif !important;
+    color: var(--ink) !important;
+    font-size: 1rem;
+}
+
+/* =========================
+   Action buttons (pill style)
+   Works for actionButton() which renders as <button class="btn ...">
+   ========================= */
+
+.fun-btn {
+    border-radius: 999px !important;
+    padding: 12px 22px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 10px;
+    border: none !important;
+    box-shadow: none !important;
+    transition: background-color 0.15s ease-in-out, transform 0.08s ease-in-out;
+}
+
+.fun-btn:active {
+    transform: scale(0.98);
+}
+
+.fun-btn-primary {
+    background-color: var(--accent-green) !important;
+    color: #ffffff !important;
+}
+
+.fun-btn-primary:hover,
+.fun-btn-primary:focus {
+    background-color: var(--accent-green-dark) !important;
+    color: #ffffff !important;
+}
+
+/* Secondary outlined */
+.fun-btn-secondary {
+    background-color: #ffffff !important;
+    color: #1f2a10 !important;
+    border: 2px solid #d2d6c6 !important;
+}
+
+.fun-btn-secondary:hover,
+.fun-btn-secondary:focus {
+    background-color: #f6f4ec !important;
+    color: #1f2a10 !important;
+}
+
+.fun-btn i {
+    font-size: 1.1em;
+}
+
+/* Center action rows inside cards */
+.card-actions,
+.box-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+/* =========================
+   Footer (custom footer div in app.R)
+   ========================= */
+
+/* Ensure page fills viewport so footer can stick to bottom */
+html,
+body {
+    height: 100%;
+}
+
+/* Let body grow to full height */
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+.app-footer {
+    background: var(--accent-green);
+    padding: 6px 12px;
+    color: #ffffff;
+    margin-top: auto;
+}
+
+.app-footer .footer-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-footer .footer-inner span,
+.app-footer .footer-inner p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.app-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.app-footer a:focus {
+    outline: 2px solid var(--accent-yellow);
+    outline-offset: 3px;
+    border-radius: 8px;
+}
+
+.app-footer .footer-logo {
+    height: 42px;
+    width: auto;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.app-footer {
+    background: var(--accent-green);
+    padding: 6px 12px;
+    color: #ffffff;
+    margin-top: auto;
+    /* sticky footer behavior */
+}
+
+/* =========================
+   Card images
+   ========================= */
+
+.card-figure {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+    /* prevents giant images */
+    margin: 0 auto;
+    /* center horizontally */
+    object-fit: contain;
+}

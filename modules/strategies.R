@@ -3,16 +3,21 @@ strategies_module_ui <- function(id) {
 
   bslib::page_fluid(
     
+  nav_buttons_ui(ns("nav_controls"))
+
 )
 }
 
-strategies_module_server <- function(id, parent_session) {
+strategies_module_server <- function(id, parent_session, nav_order_list) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
-    observeEvent(input$next_page_intro, {
-      bslib::nav_select(id = "topnav", selected = "anatomy", session = parent_session)
-    })
+   nav_buttons_server(
+      id = "nav_controls",
+      parent_session = parent_session,
+      nav_order_list = nav_order_list,
+      nav_input_id = "topnav"
+    )
 
   })
 }

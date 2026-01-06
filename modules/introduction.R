@@ -7,25 +7,26 @@ introduction_module_ui <- function(id) {
       bslib::card_header("Welcome to the App"),
       p("Card 1 body"),
 
-      div(
-        class = "card-actions",
-        actionButton(
-          ns("next_page_intro"),
-          label = tagList("Next", icon("arrow-right")),
-          class = "fun-btn fun-btn-primary"
-        )
-      )
+      nav_buttons_ui(ns("nav_controls"))
+
+
     )
 )
 }
 
-introduction_module_server <- function(id, parent_session) {
+introduction_module_server <- function(id, parent_session, nav_order_list) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
-    observeEvent(input$next_page_intro, {
-      bslib::nav_select(id = "topnav", selected = "anatomy", session = parent_session)
-    })
+
+    nav_buttons_server(
+      id = "nav_controls",
+      parent_session = parent_session,
+      nav_order_list = nav_order_list,
+      nav_input_id = "topnav"
+    )
+
+
 
   })
 }

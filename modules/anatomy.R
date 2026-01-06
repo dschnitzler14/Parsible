@@ -62,7 +62,7 @@ anatomy_module_ui <- function(id) {
 
 
 
-anatomy_module_server <- function(id, parent_session) {
+anatomy_module_server <- function(id, parent_session, nav_order_list) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 

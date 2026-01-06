@@ -227,6 +227,39 @@ body {
     /* sticky footer behavior */
 }
 
+html,
+body {
+    height: 100%;
+}
+
+/* Make the page a flex column so margin-top:auto works */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure bslib page content takes remaining height */
+body>.container-fluid {
+    flex: 1 0 auto;
+}
+
+/* Footer sits at bottom on short pages */
+.app-footer {
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+/* =========================
+   Navbar title font
+   ========================= */
+
+/* bslib page_navbar title */
+.navbar-brand {
+    font-family: 'Libre Baskerville', serif !important;
+    font-weight: 700;
+}
+
 /* =========================
    Card images
    ========================= */

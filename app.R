@@ -34,6 +34,11 @@ ui <- bslib::page_navbar(
     introduction_module_ui("introduction")
   ),
   nav_panel(
+    "What is a Paper?",
+    value = "what_is_a_paper",
+    h3("Coming soon")
+  ),
+  nav_panel(
     "Anatomy of a Paper",
     value = "anatomy",
     anatomy_module_ui("anatomy")
@@ -48,8 +53,14 @@ ui <- bslib::page_navbar(
     value = "practice",
     h3("Coming soon")
   ),
+  nav_panel(
+    "Searching Papers",
+    value = "searching",
+    h3("Coming soon")
+  ),
+  
 
-  # --- footer ---
+  # footer
   footer = tags$footer(
     class = "app-footer",
     div(
@@ -69,9 +80,9 @@ ui <- bslib::page_navbar(
 )
 
 server <- function(input, output, session) {
-  introduction_module_server("introduction", parent_session = session)
-  anatomy_module_server("anatomy", parent_session = session)
-  strategies_module_server("strategies", parent_session = session)
+  introduction_module_server("introduction", parent_session = session, nav_order_list = nav_order_list)
+  anatomy_module_server("anatomy", parent_session = session, nav_order_list = nav_order_list)
+  strategies_module_server("strategies", parent_session = session, nav_order_list = nav_order_list)
 }
 
 shinyApp(ui, server)

@@ -4,12 +4,13 @@
 - commit that this work, from conceptualisation to implementation is entirely my work.
 - Describe use of of AI tools and rationale.
 
-| Tool & Version | Date | Description    | Prompt Link   | Rationale |
-| -------------- | ---- | -------------- | ------------- | --------- |
-| ChatGPT        |      | styling of css | [[#Prompt 1]] |           |
+
+| Tool & Version | Date | Description    | Prompt Link   | Rationale             |
+| -------------- | ---- | -------------- | ------------- | --------------------- |
+| ChatGPT        |      | styling of css | [[#1]] | not proficient in css |
 
 
-# Prompt 1
+# Prompt 1 [#1]
 ## 1	Prompt 1
 
 ```

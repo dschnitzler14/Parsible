@@ -5,7 +5,7 @@ introduction_module_ui <- function(id) {
     bslib::card(
       full_screen = FALSE,
       bslib::card_header("Welcome to the App"),
-      p("Card 1 body"),
+      uiOutput(ns("introduction_box1")),
 
       nav_buttons_ui(ns("nav_controls"))
 
@@ -14,10 +14,13 @@ introduction_module_ui <- function(id) {
 )
 }
 
-introduction_module_server <- function(id, parent_session, nav_order_list) {
+introduction_module_server <- function(id, parent_session, nav_order_list, process_markdown) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
+   output$introduction_box1 <- renderUI({
+        process_markdown("introduction/introduction.md")
+      })
 
     nav_buttons_server(
       id = "nav_controls",

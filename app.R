@@ -36,7 +36,7 @@ ui <- bslib::page_navbar(
   nav_panel(
     "What is a Paper?",
     value = "what_is_a_paper",
-    h3("Coming soon")
+    what_is_a_paper_module_ui("what_is_a_paper")
   ),
   nav_panel(
     "Anatomy of a Paper",
@@ -46,17 +46,22 @@ ui <- bslib::page_navbar(
   nav_panel(
     "Reading Strategies",
     value = "strategies",
-    h3("Coming soon")
+    strategies_module_ui("strategies")
   ),
   nav_panel(
     "Practice",
     value = "practice",
-    h3("Coming soon")
+    practice_module_ui("practice")
   ),
   nav_panel(
     "Searching Papers",
     value = "searching",
-    h3("Coming soon")
+    searching_module_ui("searching")
+  ),
+  nav_panel(
+    "Useful Tools",
+    value = "tools",
+    tools_module_ui("tools")
   ),
   
 
@@ -80,9 +85,45 @@ ui <- bslib::page_navbar(
 )
 
 server <- function(input, output, session) {
-  introduction_module_server("introduction", parent_session = session, nav_order_list = nav_order_list)
-  anatomy_module_server("anatomy", parent_session = session, nav_order_list = nav_order_list)
-  strategies_module_server("strategies", parent_session = session, nav_order_list = nav_order_list)
+
+  markdown_path <- reactiveVal("markdown/english/")
+
+  observeEvent(input$selected_language, {
+    if (input$selected_language == "en") {
+      markdown_path("markdown/english/")
+    } else if (input$selected_language == "de") {
+      markdown_path("markdown/german/")
+    }
+  }
+  )
+
+  include_markdown_language <- function(filepath) {
+    includeMarkdown(file.path(markdown_path(), filepath))
+  }
+
+
+
+process_markdown <- function(filepath) {
+
+  full_path <- file.path(markdown_path(), filepath)
+  
+  rmd_content <- readLines(full_path, warn = FALSE)
+  processed_rmd <- whisker::whisker.render(paste(rmd_content, collapse = "\n"))
+  
+  html_output <- HTML(markdown::markdownToHTML(text = processed_rmd, fragment.only = TRUE))
+  
+  return(html_output)
 }
+
+  introduction_module_server("introduction", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
+  what_is_a_paper_module_server("what_is_a_paper", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
+  anatomy_module_server("anatomy", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
+  strategies_module_server("strategies", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
+  practice_module_server("practice", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
+  searching_module_server("searching", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
+  tools_module_server("tools", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
+}
+
+
 
 shinyApp(ui, server)

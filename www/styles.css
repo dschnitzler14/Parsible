@@ -11,7 +11,7 @@
     --accent-soft-green: #CBD5AE;
     --accent-yellow: #FFE291;
     --ink: #2f3b00;
-    --sidebar-bg: #000000;
+    --sidebar-bg: #F2EDD2;
     --sidebar-ink: #D9DDD6;
 }
 
@@ -274,3 +274,19 @@ body>.container-fluid {
     /* center horizontally */
     object-fit: contain;
 }
+/* =========================
+   Module Card TOCs
+   ========================= */
+
+   /* Chapter title typography */
+   .toc-title {
+       color: #000;
+       font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+       font-weight: 700;
+   }
+
+   /* Main content padding (optional, if your markdown needs it) */
+   .module-page {
+       padding: 6px 6px;
+       min-width: 0;
+   }

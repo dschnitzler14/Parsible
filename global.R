@@ -3,7 +3,7 @@ library(shinydashboard)
 library(shinydashboardPlus)
 library(bslib)
 library(tidyverse)
-
+library(markdown)
 
 nav_order_list <- c(
   "introduction",
@@ -11,7 +11,8 @@ nav_order_list <- c(
   "anatomy",
   "strategies",
   "practice",
-  "searching"
+  "searching",
+  "tools"
 )
 
 get_next_nav <- function(current, nav_order_list) {

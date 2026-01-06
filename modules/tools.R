@@ -1,4 +1,4 @@
-strategies_module_ui <- function(id) {
+tools_module_ui <- function(id) {
   ns <- NS(id)
 
   bslib::page_fluid(
@@ -8,7 +8,7 @@ strategies_module_ui <- function(id) {
 )
 }
 
-strategies_module_server <- function(id, parent_session, nav_order_list, process_markdown) {
+tools_module_server <- function(id, parent_session, nav_order_list, process_markdown) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 

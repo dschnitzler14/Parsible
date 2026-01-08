@@ -15,7 +15,7 @@ A good discussion balances interpretation with caution. It should acknowledge un
   <li>Clear explanation of how the results fit within existing literature</li>
   <li>
     Limitations of the study are explicitly acknowledged
-    <br><em>(remember: no model is ever perfect—only an approximation of reality)</em>
+    <br><em>(remember: no model is ever perfect, only an approximation of reality)</em>
   </li>
   <li>Multiple interpretations of the results are considered</li>
   <li>Claims are proportional to the data presented</li>
@@ -34,7 +34,7 @@ A good discussion balances interpretation with caution. It should acknowledge un
 
 <ul style="margin: 10px 0 0 18px; line-height: 1.45;">
   <li>No limitations are described</li>
-  <li>Limitations are mentioned but minimised or dismissed</li>
+  <li>Limitations are absent, or mentioned but minimised or dismissed</li>
   <li>
     Overinterpretation of results
     <br><em>(for example, making large causal or clinical claims from limited or correlational data)</em>

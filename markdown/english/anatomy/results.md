@@ -23,25 +23,6 @@ This is also the section where presentation choices can strongly influence how c
 </div>
 
 <div style="
-  border-left: 6px solid #dc3545;
-  background-color: #fff5f5;
-  padding: 16px;
-  margin: 18px 0;
-  border-radius: 6px;
-">
-<strong>🚩 Red Flags</strong>
-
-<ul style="margin: 10px 0 0 18px; line-height: 1.45;">
-  <li>Important methodological details appear only in figure legends</li>
-  <li>Statistical annotations are unclear, misleading, or unexplained</li>
-  <li>Axes are truncated or rescaled in a way that exaggerates effects</li>
-  <li>Sample sizes are smaller than expected compared to the Methods section</li>
-  <li>Results are selectively reported (some outcomes mentioned in Methods never appear)</li>
-  <li>“Trends” are emphasized despite non-significant results</li>
-</ul>
-</div>
-
-<div style="
   border-left: 6px solid #fd7e14;
   background-color: #fff8f1;
   padding: 16px;
@@ -61,6 +42,26 @@ This is also the section where presentation choices can strongly influence how c
   <li>Figures that require extensive interpretation to understand what was measured</li>
 </ul>
 </div>
+
+<div style="
+  border-left: 6px solid #dc3545;
+  background-color: #fff5f5;
+  padding: 16px;
+  margin: 18px 0;
+  border-radius: 6px;
+">
+<strong>🚩 Red Flags</strong>
+
+<ul style="margin: 10px 0 0 18px; line-height: 1.45;">
+  <li>Important methodological details appear only in figure legends</li>
+  <li>Statistical annotations are unclear, misleading, or unexplained</li>
+  <li>Axes are truncated or rescaled in a way that exaggerates effects</li>
+  <li>Sample sizes are smaller than expected compared to the Methods section</li>
+  <li>Results are selectively reported (some outcomes mentioned in Methods never appear)</li>
+  <li>“Trends” are emphasized despite non-significant results</li>
+</ul>
+</div>
+
 
 <div style="
   border-left: 6px solid #000000;

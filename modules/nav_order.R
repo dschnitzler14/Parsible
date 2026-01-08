@@ -73,7 +73,7 @@ nav_buttons_server <- function(id, parent_session, nav_order_list, nav_input_id 
         if (idx > 1) {
           actionButton(
             session$ns("go_back"),
-            tagList(icon("arrow-left"), "Back"),
+            tagList(icon("arrow-left"), "Previous Section"),
             class = "fun-btn fun-btn-secondary"
           )
         },
@@ -81,7 +81,7 @@ nav_buttons_server <- function(id, parent_session, nav_order_list, nav_input_id 
         if (idx < length(nav_order_list)) {
           actionButton(
             session$ns("go_next"),
-            tagList("Next", icon("arrow-right")),
+            tagList("Next Section", icon("arrow-right")),
             class = "fun-btn fun-btn-primary"
           )
         }

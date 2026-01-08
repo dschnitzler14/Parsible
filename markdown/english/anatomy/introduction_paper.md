@@ -4,7 +4,7 @@ A good introduction will start broadly with the reason for study, e.g. "depressi
 
 This is a good place to start if you are new to the topic, but as your understanding grows, you will be able to skip it for the most part.
 
-The most important part of the introduction will be introducing what the researchers did and what they hoped to find out, which is usually found in the final paragraph. The best ones will clearly define their hypotheses (H0 and H1)and aims - these are often described as "predictions", if they are explicitly spelled out as hypotheses.
+The most important part of the introduction will be introducing what the researchers did and what they hoped to find out, which is usually found in the final paragraph. The best ones will clearly define their hypotheses (H0 and H1)and aims - these are often described as "predictions", if they aren't explicitly spelled out as hypotheses.
 
 <div style="
   border-left: 6px solid #6c757d;

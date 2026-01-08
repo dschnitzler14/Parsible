@@ -24,9 +24,13 @@ ui <- bslib::page_navbar(
   theme = theme,
 
   tags$head(
-    includeCSS("www/styles.css"),
-    tags$meta(name = "viewport", content = "width=device-width, initial-scale=1.0")
-  ),
+  tags$link(rel="stylesheet", href="styles.css"),
+  tags$link(rel="stylesheet", href="css/paper_stack.css"),
+  tags$link(rel = "stylesheet", type = "text/css", href = "css/highlights.css"),
+  tags$meta(name = "viewport", content = "width=device-width, initial-scale=1.0")
+),
+
+
 
   nav_panel(
     "Introduction",
@@ -115,10 +119,33 @@ process_markdown <- function(filepath) {
   return(html_output)
 }
 
+process_rmd_fragment <- function(filepath,
+                                 ns,
+                                 wrapper_class = "prose",
+                                 base_dir = NULL,
+                                 quiet = TRUE,
+                                 ...) {
+  full_path <- if (!is.null(base_dir)) file.path(base_dir, filepath) else filepath
+
+  env_list <- c(list(ns = ns), list(...))
+  knit_env <- list2env(env_list, parent = environment())
+
+  md <- knitr::knit_child(full_path, quiet = quiet, envir = knit_env)
+
+  html_str <- markdown::markdownToHTML(
+    text = paste(md, collapse = "\n"),
+    fragment.only = TRUE
+  )
+  htmltools::tags$div(class = wrapper_class, htmltools::HTML(html_str))
+}
+
+
+
+
   introduction_module_server("introduction", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
   what_is_a_paper_module_server("what_is_a_paper", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
   anatomy_module_server("anatomy", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
-  strategies_module_server("strategies", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
+  strategies_module_server("strategies", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown, process_rmd_fragment = process_rmd_fragment)
   practice_module_server("practice", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
   searching_module_server("searching", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
   tools_module_server("tools", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)

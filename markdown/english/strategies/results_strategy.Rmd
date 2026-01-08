@@ -1,0 +1,17 @@
+# Results
+
+## Weight gain rate (Fig 1A)
+There were no significant differences between the Int and Control groups with respect to the rate of weight gain. In contrast, the Iso group had a significantly higher weight gain from the start of the experiment to day 20, just before the end of the experiment, compared to the Control group on days 16, 18, and 20 (p= 0.007, 0.012, 0.01, respectively).
+
+## Food intake (Fig 1B) 
+Food intake was not significantly different between the Int and Control groups. On the other hand, food intake in the Iso group increased significantly after day 10 compared to that in the Control group.
+
+## Locomotor activity (Fig 1C)
+Locomotor activity determined by nanotag analysis was found to be significantly reduced in the Iso group compared to that in the Int group during the light period (p= 0.023). In the dark phase, the active phase of the rats in the Iso group showed a significant decrease compared to that in both the Control and Int groups (p<0.001).
+
+## Muscle to body weight ratio (Fig 2)
+The masseter muscle-to-body weight ratio was not significantly different between the Int and Control groups. On the other hand, the ratio in the Iso group was significantly lower than the Control group (p = 0.002). Similarly, the lower extremity muscle/body weight ratio in the Iso group was significantly lower than the Control group (p= 0.004).
+
+## Plasma protein concentration (Fig 3)
+Plasma corticosterone levels were not significantly different between the Int and Control groups. However, there was significant difference between the Iso and Control groups with respect to the plasma concentration (p= 0.033). Plasma acylated ghrelin levels were significantly lower in the Iso group than in the Control and Int groups (p= 0.001 and 0.009, respectively). Plasma myostatin levels were not significantly different between the Int and Control groups. However, plasma myostatin levels were significantly higher in the Iso group than in the Int group (p= 0.03).
+

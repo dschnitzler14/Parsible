@@ -15,7 +15,7 @@ In the methods section there a few things to look out for and take note of. Ther
 
 It is particularly important here to make a note of different abbreviations used throughout (or you'll be scrolling back from a figure wondering what CHL and CHD stand for!) and what was done for the different experiments (i.e. experiment 1 and experiment 2).
 
-If you are familiar with the techniques you can skim this section.
+Even if you are not 100% confident with a particular method, you can apply common sense here. For example, if the study is examining the effects of stress on food intake, you might want to check that the animals are being fed food they actually eat or similar sanity checks.
 
 <div style="
   border-left: 6px solid #198754;

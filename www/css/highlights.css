@@ -1,0 +1,109 @@
+/* =========================================================
+   highlights.css
+   Marker-style inline highlights for Shiny actionLink()
+   Requires wrapping the rendered markdown in: div.prose
+   ========================================================= */
+
+/* 0) Kill Bootstrap reboot underline ONLY in prose + only for our highlight_* links */
+
+/* Override Bootstrap reboot link underline INSIDE prose */
+.prose a {
+    text-decoration: none !important;
+    color: inherit !important;
+    font: inherit !important;
+    font-weight: inherit !important;
+}
+
+.prose a.action-button[class^="highlight_"],
+.prose a.action-button[class^="highlight_"]:link,
+.prose a.action-button[class^="highlight_"]:visited,
+.prose a.action-button[class^="highlight_"]:hover,
+.prose a.action-button[class^="highlight_"]:active,
+.prose a.action-button[class^="highlight_"]:focus,
+.prose a.action-button[class^="highlight_"]:focus-visible,
+.prose a.shiny-bound-input.action-button[class^="highlight_"],
+.prose a.shiny-bound-input.action-button[class^="highlight_"]:link,
+.prose a.shiny-bound-input.action-button[class^="highlight_"]:visited,
+.prose a.shiny-bound-input.action-button[class^="highlight_"]:hover,
+.prose a.shiny-bound-input.action-button[class^="highlight_"]:active,
+.prose a.shiny-bound-input.action-button[class^="highlight_"]:focus,
+.prose a.shiny-bound-input.action-button[class^="highlight_"]:focus-visible {
+    /* absolutely no underline, regardless of Bootstrap reboot */
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+
+    /* look like normal text */
+    color: inherit !important;
+    font: inherit !important;
+    font-weight: inherit !important;
+
+    /* inline behavior */
+    display: inline !important;
+    width: auto !important;
+    float: none !important;
+
+    /* remove button/link chrome some themes add */
+    border: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+
+    /* marker foundation */
+    position: relative !important;
+    padding: 0 2px !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 0.6em !important;
+    background-position: 0 85% !important;
+
+    cursor: pointer !important;
+
+    transition: background-size 0.15s ease-in-out;
+}
+
+/* Hover: slightly fuller marker */
+.prose a.action-button[class^="highlight_"]:hover,
+.prose a.shiny-bound-input.action-button[class^="highlight_"]:hover {
+    background-size: 100% 0.75em !important;
+}
+
+/* Keyboard focus */
+.prose a.action-button[class^="highlight_"]:focus-visible,
+.prose a.shiny-bound-input.action-button[class^="highlight_"]:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.35) !important;
+    outline-offset: 2px !important;
+}
+
+/* Optional: subtle second swipe for "marker" texture */
+.prose a.action-button[class^="highlight_"]::after,
+.prose a.shiny-bound-input.action-button[class^="highlight_"]::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    bottom: 0.08em;
+    height: 0.14em;
+    background: inherit;
+    opacity: 0.35;
+    transform: rotate(-0.4deg);
+    pointer-events: none;
+}
+
+/* Color variants */
+.prose a.highlight_yellow {
+    background-image: linear-gradient(rgba(255, 235, 59, 0.65), rgba(255, 235, 59, 0.65)) !important;
+}
+
+.prose a.highlight_green {
+    background-image: linear-gradient(rgba(174, 213, 129, 0.65), rgba(174, 213, 129, 0.65)) !important;
+}
+
+.prose a.highlight_blue {
+    background-image: linear-gradient(rgba(129, 212, 250, 0.65), rgba(129, 212, 250, 0.65)) !important;
+}
+
+.prose a.highlight_pink {
+    background-image: linear-gradient(rgba(248, 187, 208, 0.65), rgba(248, 187, 208, 0.65)) !important;
+}
+
+.prose a.highlight_orange {
+    background-image: linear-gradient(rgba(255, 204, 128, 0.65), rgba(255, 204, 128, 0.65)) !important;
+}

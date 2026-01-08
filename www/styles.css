@@ -12,7 +12,7 @@
     --accent-yellow: #FFE291;
     --ink: #2f3b00;
     --sidebar-bg: #F2EDD2;
-    --sidebar-ink: #D9DDD6;
+    --sidebar-ink: #2b2b2b;
 }
 
 /* Global */
@@ -290,3 +290,221 @@ body>.container-fluid {
        padding: 6px 6px;
        min-width: 0;
    }
+
+/* Highlighted text */
+
+a.action-button.highlight {
+    display: inline !important;
+    padding: 0 !important;
+    /* optional */
+    border: 0 !important;
+    /* optional */
+    background: transparent !important;
+}
+
+/* Force Shiny actionLink() highlights to stay inline */
+a.action-button.highlight.shiny-bound-input,
+a.action-button.highlight.shiny-bound-input:link,
+a.action-button.highlight.shiny-bound-input:visited,
+a.action-button.highlight.shiny-bound-input:hover,
+a.action-button.highlight.shiny-bound-input:active {
+    display: inline !important;
+    float: none !important;
+    width: auto !important;
+}
+
+/* Ensure prose paragraphs flow inline text correctly */
+.card-body p,
+.sidebar p,
+.nav-panel p {
+    display: block;
+}
+
+/* Paper-like container for long prose */
+/* Paper-like container for long prose */
+.paper-box {
+    position: relative;
+    padding: 18px 20px;
+    border-radius: 14px;
+    background: #fbf8ee;
+    /* warm paper */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08),
+        0 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+/* subtle paper grain */
+.paper-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    pointer-events: none;
+    background-image:
+        radial-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+    background-size: 14px 14px;
+    opacity: 0.25;
+}
+
+/* optional: faint top highlight like a sheet catching light */
+.paper-box::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    height: 18px;
+    border-radius: 12px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0));
+    opacity: 0.6;
+}
+
+
+/* sidebar notes */
+/* =========================
+   Sidebar blocks
+   ========================= */
+
+/* Ensure sidebar text is readable (your vars are currently very low contrast) */
+.bslib-sidebar,
+.sidebar {
+    color: #2b2b2b !important;
+}
+
+/* A) White instruction box */
+.sb-white {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 14px;
+    padding: 12px 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.sb-white h4,
+.sb-white h5 {
+    margin: 0 0 8px 0;
+    font-family: 'Libre Baskerville', serif;
+    color: var(--ink);
+}
+
+.sb-white p {
+    margin: 0 0 10px 0;
+    color: #2b2b2b !important;
+}
+
+/* B) Notepad / checklist */
+.sb-notepad {
+    position: relative;
+    background: #fffdf6;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 14px;
+    padding: 14px 14px 14px 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+/* Notepad lines */
+.sb-notepad::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(to bottom,
+            rgba(76, 107, 0, 0.10) 0px,
+            rgba(76, 107, 0, 0.10) 1px,
+            transparent 1px,
+            transparent 26px);
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+/* Red margin line */
+.sb-notepad::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 14px;
+    width: 2px;
+    background: rgba(200, 60, 60, 0.35);
+    pointer-events: none;
+}
+
+.sb-notepad>* {
+    position: relative;
+    /* sit above the lines */
+    z-index: 1;
+}
+
+.sb-notepad h4,
+.sb-notepad h5 {
+    margin: 0 0 8px 0;
+    font-family: 'Libre Baskerville', serif;
+    color: var(--ink);
+}
+
+/* Paperstars-style rating parameters */
+.paperstars-rating {
+    --ps-green: #4B6B07;
+    --ps-orange: #BD7426;
+    --ps-red: #C33838;
+}
+
+.paperstars-rating .btn-group,
+.paperstars-rating .btn-group-vertical {
+    width: 100%;
+}
+
+.paperstars-rating label.btn:nth-of-type(1) {
+    --ps-col: var(--ps-green);
+}
+
+.paperstars-rating label.btn:nth-of-type(2) {
+    --ps-col: var(--ps-orange);
+}
+
+.paperstars-rating label.btn:nth-of-type(3) {
+    --ps-col: var(--ps-red);
+}
+
+.paperstars-rating input[type="radio"].btn-check+label.btn {
+    width: 100%;
+    border-radius: 999px !important;
+    padding: 7px 12px;
+    text-align: left;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 2px solid var(--ps-col) !important;
+    color: var(--ps-col) !important;
+}
+
+.paperstars-rating label.btn {
+    line-height: 1.2;
+}
+
+.paperstars-rating label.btn+input[type="radio"].btn-check+label.btn,
+.paperstars-rating .btn-group-vertical>*+* {
+    margin-top: 14px;
+}
+.paperstars-rating input[type="radio"].btn-check:checked+label.btn {
+    background: var(--ps-col) !important;
+    border-color: var(--ps-col) !important;
+    color: #ffffff !important;
+}
+
+.paperstars-rating label.btn:hover {
+    filter: brightness(0.98);
+}
+
+.paperstars-rating label.btn:focus,
+.paperstars-rating label.btn:focus-visible,
+.paperstars-rating input[type="radio"].btn-check:focus+label.btn {
+    outline: none !important;
+    box-shadow: none !important;
+}

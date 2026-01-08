@@ -4,6 +4,7 @@ library(shinydashboardPlus)
 library(bslib)
 library(tidyverse)
 library(markdown)
+library(shinyWidgets)
 
 nav_order_list <- c(
   "introduction",

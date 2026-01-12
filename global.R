@@ -5,6 +5,7 @@ library(bslib)
 library(tidyverse)
 library(markdown)
 library(shinyWidgets)
+library(knitr)
 
 nav_order_list <- c(
   "introduction",

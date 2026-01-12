@@ -21,8 +21,8 @@ Discussion
 Let's get started with a walkthrough of this paper:
 
 <div style="width:100%; height:600px;">
-  <iframe 
-    src="https://doi.org/10.1371/journal.pone.0314262"
+  <iframe
+    src="assets/Uchida_2024.pdf"
     width="100%"
     height="100%"
     style="border:none;"

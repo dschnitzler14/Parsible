@@ -27,6 +27,8 @@ ui <- bslib::page_navbar(
   tags$link(rel="stylesheet", href="styles.css"),
   tags$link(rel="stylesheet", href="css/paper_stack.css"),
   tags$link(rel = "stylesheet", type = "text/css", href = "css/highlights.css"),
+  tags$script(src = "js/highlight_click_state.js"),
+  tags$link(rel = "stylesheet", href = "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"),
   tags$meta(name = "viewport", content = "width=device-width, initial-scale=1.0")
 ),
 

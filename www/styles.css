@@ -446,65 +446,86 @@ a.action-button.highlight.shiny-bound-input:active {
     font-family: 'Libre Baskerville', serif;
     color: var(--ink);
 }
-
-/* Paperstars-style rating parameters */
-.paperstars-rating {
-    --ps-green: #4B6B07;
-    --ps-orange: #BD7426;
-    --ps-red: #C33838;
+.strategies-main {
+    max-height: calc(100vh - 32px);
+    overflow: auto;
 }
 
-.paperstars-rating .btn-group,
-.paperstars-rating .btn-group-vertical {
-    width: 100%;
+/* ===============================
+   Paperstars – Overall Star Rating
+   =============================== */
+.paperstars-stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    padding-top: 10px;
+    white-space: nowrap;
 }
 
-.paperstars-rating label.btn:nth-of-type(1) {
-    --ps-col: var(--ps-green);
+.paperstars-svg-star {
+    display: inline-block;
+    flex: 0 0 auto;
 }
 
-.paperstars-rating label.btn:nth-of-type(2) {
-    --ps-col: var(--ps-orange);
+/* ===============================
+   Toolbox
+   =============================== */
+.tool-card {
+    border-radius: 18px;
+    overflow: hidden;
 }
 
-.paperstars-rating label.btn:nth-of-type(3) {
-    --ps-col: var(--ps-red);
+.tool-card.tool-card-click {
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.paperstars-rating input[type="radio"].btn-check+label.btn {
-    width: 100%;
-    border-radius: 999px !important;
-    padding: 7px 12px;
-    text-align: left;
-    background: #ffffff !important;
-    box-shadow: none !important;
+.tool-card.tool-card-click * {
+    cursor: pointer;
+}
+
+.tool-card.tool-card-click:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+}
+
+.tool-card.tool-card-click .card-body,
+.tool-card.tool-card-click .bslib-card-body {
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.75rem;
+}
+
+.tool-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.35rem;
+}
+
+.tool-card-content h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 650;
+    color: #2f3b14;
+}
+
+.tool-card-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #5f6f2a;
+}
+
+.tool-cta {
+    margin-top: 0.6rem;
     font-size: 0.9rem;
     font-weight: 600;
-    border: 2px solid var(--ps-col) !important;
-    color: var(--ps-col) !important;
-}
-
-.paperstars-rating label.btn {
-    line-height: 1.2;
-}
-
-.paperstars-rating label.btn+input[type="radio"].btn-check+label.btn,
-.paperstars-rating .btn-group-vertical>*+* {
-    margin-top: 14px;
-}
-.paperstars-rating input[type="radio"].btn-check:checked+label.btn {
-    background: var(--ps-col) !important;
-    border-color: var(--ps-col) !important;
-    color: #ffffff !important;
-}
-
-.paperstars-rating label.btn:hover {
-    filter: brightness(0.98);
-}
-
-.paperstars-rating label.btn:focus,
-.paperstars-rating label.btn:focus-visible,
-.paperstars-rating input[type="radio"].btn-check:focus+label.btn {
-    outline: none !important;
-    box-shadow: none !important;
+    color: #2f3b14;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(47, 59, 20, 0.08);
 }

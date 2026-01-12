@@ -1,17 +1,44 @@
 # Results
 
 ## Weight gain rate (Fig 1A)
-There were no significant differences between the Int and Control groups with respect to the rate of weight gain. In contrast, the Iso group had a significantly higher weight gain from the start of the experiment to day 20, just before the end of the experiment, compared to the Control group on days 16, 18, and 20 (p= 0.007, 0.012, 0.01, respectively).
+There were no significant differences between the Int and Control groups with respect to the rate of weight gain. In contrast, the `r actionLink(ns("results1"), "📝 Iso group had a significantly higher weight gain from the start of the experiment to day 20, just before the end of the experiment, compared to the Control group on days 16, 18, and 20 ", class = "highlight_yellow")``r actionLink(ns("results2"), "🚩 (p= 0.007, 0.012, 0.01, respectively).", class = "highlight_pink")`.
 
 ## Food intake (Fig 1B) 
-Food intake was not significantly different between the Int and Control groups. On the other hand, food intake in the Iso group increased significantly after day 10 compared to that in the Control group.
+Food intake was not significantly different between the Int and Control groups. On the other hand, food intake in the Iso group `r actionLink(ns("results3"), "🚩 increased significantly", class = "highlight_pink")`. after day 10 compared to that in the Control group.
 
 ## Locomotor activity (Fig 1C)
-Locomotor activity determined by nanotag analysis was found to be significantly reduced in the Iso group compared to that in the Int group during the light period (p= 0.023). In the dark phase, the active phase of the rats in the Iso group showed a significant decrease compared to that in both the Control and Int groups (p<0.001).
+Locomotor activity determined by nanotag analysis was found to be `r actionLink(ns("results4"), "📝 significantly reduced in the Iso group compared to that in the Int group during the light period (p= 0.023). In the dark phase, the active phase of the rats in the Iso group showed a significant decrease compared to that in both the Control and Int groups (p<0.001).", class = "highlight_yellow")`. 
+
+<figure style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/strategies_figures/strategies_fig1.jpeg"
+       style="max-width: 600px; width: 100%; height: auto;"
+       alt="Figure 1">
+  <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #555;">
+    <strong>Fig 1.</strong> Comparison of weight gain rate, food intake, locomotor activity between the Control, Iso, and Int groups. (a) Weight gain rate (b) Food intake &#40;c&#41; Locomotor activity `r actionLink(ns("results5"), "🚩 (n = 7–8)", class = "highlight_pink")`.*p&lt;0.05 (Tukey’s test). Control group, group- housed; iso group, isolated; Int, intervention.
+  </figcaption>
+</figure>
+
 
 ## Muscle to body weight ratio (Fig 2)
-The masseter muscle-to-body weight ratio was not significantly different between the Int and Control groups. On the other hand, the ratio in the Iso group was significantly lower than the Control group (p = 0.002). Similarly, the lower extremity muscle/body weight ratio in the Iso group was significantly lower than the Control group (p= 0.004).
+The masseter muscle-to-body weight ratio was not significantly different between the Int and Control groups. `r actionLink(ns("results6"), "📝 On the other hand, the ratio in the Iso group was significantly lower than the Control group (p = 0.002). Similarly, the lower extremity muscle/body weight ratio in the Iso group was significantly lower than the Control group (p= 0.004).", class = "highlight_yellow")`
+
+<figure style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/strategies_figures/strategies_fig2.jpeg"
+       style="max-width: 600px; width: 100%; height: auto;"
+       alt="Figure 2">
+  <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #555;">
+    <strong>Fig 2.</strong> Comparison of muscle weight to body weight ratio between the Control, Iso, and Int groups. (a) Masseter muscle (b) Lower limb muscle (n = 8).*p&lt;0.05 (Tukey’s test). Control group, group-housed; iso group, isolated; Int, intervention.
+  </figcaption>
+</figure>
 
 ## Plasma protein concentration (Fig 3)
-Plasma corticosterone levels were not significantly different between the Int and Control groups. However, there was significant difference between the Iso and Control groups with respect to the plasma concentration (p= 0.033). Plasma acylated ghrelin levels were significantly lower in the Iso group than in the Control and Int groups (p= 0.001 and 0.009, respectively). Plasma myostatin levels were not significantly different between the Int and Control groups. However, plasma myostatin levels were significantly higher in the Iso group than in the Int group (p= 0.03).
+Plasma corticosterone levels were not significantly different between the Int and Control groups. `r actionLink(ns("results7"), "📝 However, there was significant difference between the Iso and Control groups with respect to the plasma concentration (p= 0.033). Plasma acylated ghrelin levels were significantly lower in the Iso group than in the Control and Int groups (p= 0.001 and 0.009, respectively). Plasma myostatin levels were not significantly different between the Int and Control groups. However, plasma myostatin levels were significantly higher in the Iso group than in the Int group (p= 0.03).", class = "highlight_yellow")`
 
+<figure style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/strategies_figures/strategies_fig3.jpeg"
+       style="max-width: 600px; width: 100%; height: auto;"
+       alt="Figure 3">
+  <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #555;">
+    <strong>Fig 3.</strong> Comparison of plasma corticosterone, ghrelin, and myostatin concentrations between the Control, Iso, and Int groups. (a) corticosterone (b) ghrelin &#40;c&#41; myostatin `r actionLink(ns("results8"), "🚩 (n = 4)", class = "highlight_pink")`.*p&lt;0.05 (Tukey’s test). Control group, group-housed; iso group, isolated; Int, intervention.
+  </figcaption>
+</figure>

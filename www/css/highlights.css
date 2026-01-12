@@ -14,20 +14,20 @@
     font-weight: inherit !important;
 }
 
-.prose a.action-button[class^="highlight_"],
-.prose a.action-button[class^="highlight_"]:link,
-.prose a.action-button[class^="highlight_"]:visited,
-.prose a.action-button[class^="highlight_"]:hover,
-.prose a.action-button[class^="highlight_"]:active,
-.prose a.action-button[class^="highlight_"]:focus,
-.prose a.action-button[class^="highlight_"]:focus-visible,
-.prose a.shiny-bound-input.action-button[class^="highlight_"],
-.prose a.shiny-bound-input.action-button[class^="highlight_"]:link,
-.prose a.shiny-bound-input.action-button[class^="highlight_"]:visited,
-.prose a.shiny-bound-input.action-button[class^="highlight_"]:hover,
-.prose a.shiny-bound-input.action-button[class^="highlight_"]:active,
-.prose a.shiny-bound-input.action-button[class^="highlight_"]:focus,
-.prose a.shiny-bound-input.action-button[class^="highlight_"]:focus-visible {
+.prose a.action-button[class*="highlight_"],
+.prose a.action-button[class*="highlight_"]:link,
+.prose a.action-button[class*="highlight_"]:visited,
+.prose a.action-button[class*="highlight_"]:hover,
+.prose a.action-button[class*="highlight_"]:active,
+.prose a.action-button[class*="highlight_"]:focus,
+.prose a.action-button[class*="highlight_"]:focus-visible,
+.prose a.shiny-bound-input.action-button[class*="highlight_"],
+.prose a.shiny-bound-input.action-button[class*="highlight_"]:link,
+.prose a.shiny-bound-input.action-button[class*="highlight_"]:visited,
+.prose a.shiny-bound-input.action-button[class*="highlight_"]:hover,
+.prose a.shiny-bound-input.action-button[class*="highlight_"]:active,
+.prose a.shiny-bound-input.action-button[class*="highlight_"]:focus,
+.prose a.shiny-bound-input.action-button[class*="highlight_"]:focus-visible {
     /* absolutely no underline, regardless of Bootstrap reboot */
     text-decoration: none !important;
     text-decoration-line: none !important;
@@ -51,8 +51,10 @@
     position: relative !important;
     padding: 0 2px !important;
     background-repeat: no-repeat !important;
-    background-size: 100% 0.6em !important;
-    background-position: 0 85% !important;
+    --marker-h: 0.9em;
+    --marker-y: 0.12em;
+    background-size: 100% var(--marker-h) !important;
+    background-position: 0 calc(100% - var(--marker-y)) !important;
 
     cursor: pointer !important;
 
@@ -60,21 +62,21 @@
 }
 
 /* Hover: slightly fuller marker */
-.prose a.action-button[class^="highlight_"]:hover,
-.prose a.shiny-bound-input.action-button[class^="highlight_"]:hover {
-    background-size: 100% 0.75em !important;
+.prose a.action-button[class*="highlight_"]:hover,
+.prose a.shiny-bound-input.action-button[class*="highlight_"]:hover {
+    background-size: 100% calc(var(--marker-h) + 0.12em) !important;
 }
 
 /* Keyboard focus */
-.prose a.action-button[class^="highlight_"]:focus-visible,
-.prose a.shiny-bound-input.action-button[class^="highlight_"]:focus-visible {
+.prose a.action-button[class*="highlight_"]:focus-visible,
+.prose a.shiny-bound-input.action-button[class*="highlight_"]:focus-visible {
     outline: 2px solid rgba(0, 0, 0, 0.35) !important;
     outline-offset: 2px !important;
 }
 
 /* Optional: subtle second swipe for "marker" texture */
-.prose a.action-button[class^="highlight_"]::after,
-.prose a.shiny-bound-input.action-button[class^="highlight_"]::after {
+.prose a.action-button[class*="highlight_"]::after,
+.prose a.shiny-bound-input.action-button[class*="highlight_"]::after {
     content: "";
     position: absolute;
     left: -1px;
@@ -106,4 +108,16 @@
 
 .prose a.highlight_orange {
     background-image: linear-gradient(rgba(255, 204, 128, 0.65), rgba(255, 204, 128, 0.65)) !important;
+}
+
+
+.prose a.action-button[class*="highlight_"].is-clicked,
+.prose a.shiny-bound-input.action-button[class*="highlight_"].is-clicked {
+    background-size: 100% var(--marker-h) !important;
+    filter: saturate(0.6) opacity(0.55) !important;
+}
+
+.prose a.action-button[class*="highlight_"].is-clicked::after,
+.prose a.shiny-bound-input.action-button[class*="highlight_"].is-clicked::after {
+    opacity: 0.18 !important;
 }

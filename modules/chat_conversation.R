@@ -1,3 +1,43 @@
+# chat_device_ui <- function(id,
+#                            title = "Chat",
+#                            subtitle = NULL,
+#                            device = c("phone", "tablet"),
+#                            height = NULL) {
+#   ns <- NS(id)
+#   device <- match.arg(device)
+
+#   bslib::card(
+#     class = paste("cd-card", paste0("cd-", device)),
+#     bslib::card_header(
+#       div(
+#         class = "cd-topbar",
+#         div(
+#           class = "cd-topbar-left",
+#           div(class = "cd-avatar"),
+#           div(
+#             class = "cd-titlewrap",
+#             div(class = "cd-title", title),
+#             if (!is.null(subtitle)) div(class = "cd-subtitle", subtitle)
+#           )
+#         ),
+#         div(class = "cd-topbar-right", bsicons::bs_icon("three-dots-vertical"))
+#       )
+#     ),
+#     bslib::card_body(
+#       style = if (!is.null(height)) paste0("height:", height, ";") else NULL,
+#       div(
+#         class = "cd-device",
+#         div(
+#           class = "cd-screen",
+#           div(
+#             class = "cd-chat",
+#             uiOutput(ns("chat"))
+#           )
+#         )
+#       )
+#     )
+#   )
+# }
 chat_device_ui <- function(id,
                            title = "Chat",
                            subtitle = NULL,
@@ -6,24 +46,23 @@ chat_device_ui <- function(id,
   ns <- NS(id)
   device <- match.arg(device)
 
-  bslib::card(
-    class = paste("cd-card", paste0("cd-", device)),
-    bslib::card_header(
+  div(
+    class = paste("cd-wrap", paste0("cd-", device)),
+    div(
+      class = "cd-topbar",
       div(
-        class = "cd-topbar",
+        class = "cd-topbar-left",
+        div(class = "cd-avatar"),
         div(
-          class = "cd-topbar-left",
-          div(class = "cd-avatar"),
-          div(
-            class = "cd-titlewrap",
-            div(class = "cd-title", title),
-            if (!is.null(subtitle)) div(class = "cd-subtitle", subtitle)
-          )
-        ),
-        div(class = "cd-topbar-right", bsicons::bs_icon("three-dots-vertical"))
-      )
+          class = "cd-titlewrap",
+          div(class = "cd-title", title),
+          if (!is.null(subtitle)) div(class = "cd-subtitle", subtitle)
+        )
+      ),
+      div(class = "cd-topbar-right", bsicons::bs_icon("three-dots-vertical"))
     ),
-    bslib::card_body(
+    div(
+      class = "cd-body",
       style = if (!is.null(height)) paste0("height:", height, ";") else NULL,
       div(
         class = "cd-device",
@@ -38,6 +77,7 @@ chat_device_ui <- function(id,
     )
   )
 }
+
 
 chat_device_server <- function(id,
                                md_dir,

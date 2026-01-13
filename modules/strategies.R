@@ -524,16 +524,31 @@ strategies_module_ui <- function(id) {
           ),
           layout_sidebar(
             sidebar = sidebar(
-              width = "40%",
+              width = "25%",
               title = "Popular Generative AI",
+              
               bslib::navset_pill_list(
-                id = ns("ai_toc"),
-                well = FALSE,
-                selected = "gpt",
-                bslib::nav_panel(title = "ChatGPT", value = "gpt"),
-                bslib::nav_panel("Claude", value = "claude"),
-                bslib::nav_panel("Anara", value = "anara")
-              )
+                  id = ns("ai_toc"),
+                  well = FALSE,
+                  selected = "gpt",
+
+                  nav_panel("ChatGPT", value = "gpt"),
+                  nav_panel("Claude", value = "claude"),
+                  nav_panel("Anara", value = "anara"),
+
+                  bslib::nav_item(tags$hr(class = "ai-sidebar-divider")),
+
+                  
+
+                  nav_panel(
+                    title = tagList(
+                      bs_icon("trophy"),
+                      tags$span("The Verdict")
+                    ),
+                    value = "verdict"
+                  )
+                )
+
             ),
             card(
               card_header("Can't I just use AI?"),
@@ -599,8 +614,10 @@ output$ai_section_body <- renderUI({
     uiOutput(ns("ai_gpt"))
   } else if (input$ai_toc == "claude") {
     uiOutput(ns("ai_claude"))
-  } else {
+  } else if (input$ai_toc == "anara") {
     uiOutput(ns("ai_anara"))
+  } else {
+    verdict_module_ui(ns("verdict"))
   }
 })
 
@@ -618,6 +635,8 @@ chat_device_server(
   "anara_chat",
   md_dir = "markdown/english/chat_device/anara"
 )
+
+verdict_module_server("verdict", process_markdown)
 
   ###
 

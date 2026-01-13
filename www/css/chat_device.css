@@ -1,4 +1,16 @@
-/* www/chat_device.css */
+/* www/chat_device.css
+
+.card-body:has(.cd-wrap) {
+    overflow: visible !important;
+}
+
+.cd-wrap {
+    width: 100%;
+}
+
+.cd-body {
+    width: 100%;
+}
 
 .cd-card {
     border: 0 !important;
@@ -55,7 +67,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10px 0 4px;
+    padding: 10px 0 0;
 }
 
 .cd-screen {
@@ -67,6 +79,8 @@
         0 18px 50px rgba(0, 0, 0, 0.10),
         inset 0 0 0 2px rgba(47, 59, 0, 0.12);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .cd-phone .cd-screen {
@@ -91,9 +105,217 @@
 }
 
 .cd-chat {
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: 44px 14px 18px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-bottom: 18px;
+}
+
+.cd-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.cd-row-you {
+    justify-content: flex-end;
+}
+
+.cd-row-them {
+    justify-content: flex-start;
+}
+
+.cd-bubble-avatar img {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    object-fit: cover;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+.cd-bubble-wrap {
+    max-width: 78%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cd-bubble {
+    border-radius: 18px;
+    padding: 10px 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    line-height: 1.25;
+}
+
+.cd-bubble-you {
+    background: rgba(76, 107, 0, 0.14);
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px rgba(76, 107, 0, 0.18);
+    border-bottom-right-radius: 6px;
+}
+
+.cd-bubble-them {
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px rgba(47, 59, 0, 0.10);
+    border-bottom-left-radius: 6px;
+}
+
+.cd-time {
+    font-size: 0.75rem;
+    opacity: 0.65;
+    padding: 0 6px;
+}
+
+.cd-bubble .prose,
+.cd-bubble p,
+.cd-bubble ul,
+.cd-bubble ol {
+    margin: 0;
+}
+
+.cd-bubble ul,
+.cd-bubble ol {
+    padding-left: 1.1rem;
+    margin-top: 0.35rem;
+}
+
+.cd-bubble code {
+    background: rgba(0, 0, 0, 0.06);
+    padding: 0.1rem 0.3rem;
+    border-radius: 8px;
+} */
+
+/* www/chat_device.css */
+
+.card-body:has(.cd-wrap) {
+    overflow: visible !important;
+}
+
+.cd-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cd-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.cd-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+}
+
+.cd-topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cd-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: rgba(47, 59, 0, 0.12);
+    box-shadow: inset 0 0 0 2px rgba(47, 59, 0, 0.12);
+}
+
+.cd-titlewrap {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.cd-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #2f3b00;
+}
+
+.cd-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    margin-top: 2px;
+}
+
+.cd-topbar-right {
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+}
+
+.cd-device {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 0;
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+.cd-screen {
+    position: relative;
+    width: min(670px, 100%);
     height: 100%;
-    padding: 44px 14px 14px;
-    overflow: auto;
+    max-height: 100%;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 28px;
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.10),
+        inset 0 0 0 2px rgba(47, 59, 0, 0.12);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.cd-phone .cd-screen {
+    aspect-ratio: auto;
+}
+
+.cd-tablet .cd-screen {
+    aspect-ratio: auto;
+    border-radius: 26px;
+}
+
+.cd-screen::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 22px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.cd-chat {
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: 44px 14px 18px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cd-chat::after {
+    content: "";
+    display: block;
+    height: 24px;
 }
 
 .cd-row {

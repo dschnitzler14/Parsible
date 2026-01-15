@@ -423,6 +423,8 @@ strategies_module_ui <- function(id) {
                       class = "strategies-main",
                       div(
                         class = "paper-box",
+                        tags$h3("What questions are they trying to answer?"),
+                        p("Match the questions to the answers"),
                         matching_game_ui(ns("match1"))
                       )
                     )
@@ -435,7 +437,8 @@ strategies_module_ui <- function(id) {
                       class = "strategies-main",
                       div(
                         class = "paper-box",
-                        
+                        #pause_results_section_ui(ns("results_figs"))
+                        pause_flashcards_ui(ns("pause_results"))
                       )
                     )
                 )
@@ -730,7 +733,10 @@ strategies_module_server <- function(id, parent_session, nav_order_list, process
   }
 
   pause_flashcards_server("pause_intro", dictionary = pause_intro_dictionary)
-  matching_game_server("match1", cards = cards, pairs = pairs)
+  matching_game_server("match1")
+  pause_flashcards_server("pause_results", dictionary = pause_results_dictionary)
+
+  #matching_game_server("results_figs")
 
   ###
 output$ai_gpt <- renderUI({

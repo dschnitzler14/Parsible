@@ -20,7 +20,7 @@ theme <- bslib::bs_theme(
 )
 
 ui <- bslib::page_navbar(
-  #title = "Lecturi",
+  
   title = tagList(
   fontawesome::fa("readme"),
   " Lecturi"
@@ -28,8 +28,8 @@ ui <- bslib::page_navbar(
   id = "topnav",
   theme = theme,
 
-
 tags$head(
+  shinyjs::useShinyjs(),
   tags$link(rel = "icon", type = "image/x-icon", href = "favicon.ico"),
   tags$link(rel="stylesheet", href="css/00_tokens.css"),
   tags$link(rel="stylesheet", href="css/01_background.css"),

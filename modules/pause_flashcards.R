@@ -45,7 +45,7 @@ pause_flashcards_server <- function(id, dictionary) {
         return(
           tagList(
             div(class = "flashcard-success-title", "Nice work!"),
-            div(class = "flashcard-success-body", "You’ve completed this Pause Quiz. You can go back to review any card."),
+            div(class = "flashcard-success-body", "You’ve completed this Quiz."),
             div(
               class = "flashcard-footer",
               actionButton(ns("back"), "Back", class = "flashcard-btn flashcard-btn-secondary")
@@ -57,9 +57,23 @@ pause_flashcards_server <- function(id, dictionary) {
       d <- dictionary[[rv$i]]
       values <- get_answers(d)
 
+      fig_ui <- NULL
+      if (!is.null(d$figure_src) && nzchar(d$figure_src)) {
+        fig_ui <- div(
+          class = "flashcard-figure",
+          tags$img(
+            src = d$figure_src,
+            alt = if (!is.null(d$figure_alt)) d$figure_alt else "",
+            class = "flashcard-figure-img"
+          ),
+          if (!is.null(d$figure_caption)) div(class = "flashcard-figure-caption", d$figure_caption)
+        )
+      }
+
       check_label <- if (identical(rv$state, "correct_ready_next")) "Next" else "Check"
 
       tagList(
+        fig_ui,
         div(class = "flashcard-question", d$question),
         shinyWidgets::radioGroupButtons(
           inputId = ns("choice"),

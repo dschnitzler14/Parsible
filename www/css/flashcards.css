@@ -1,3 +1,18 @@
+.flashcard,
+.flashcard * {
+    overflow: visible;
+}
+
+.flashcard {
+    max-height: none;
+    height: auto;
+}
+
+.flashcard .card-body,
+.flashcard-body {
+    overflow: visible;
+    max-height: none;
+}
 
 .flashcard {
     max-width: 720px;
@@ -171,4 +186,39 @@
     opacity: 0.95;
     margin-bottom: 6px;
     color: #3a4733;
+}
+
+.flashcard-figure {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.flashcard-figure-img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.flashcard-figure-caption {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+
+/* .flashcard .flashcard-figure img.flashcard-figure-img {
+    width: 100px !important;
+    height: auto !important;
+    max-width: 100px !important;
+    display: block !important;
+} */
+
+.flashcard-figure {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,124 +1,61 @@
-.match-card {
+
+.mg-btn {
     width: 100%;
     text-align: left;
-    border-radius: 16px;
-    border: 1px solid rgba(43, 54, 43, 0.22);
-    background: #fffdf6;
-    padding: 0;
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
-    transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
-}
-
-.match-card:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
-    border-color: rgba(43, 54, 43, 0.34);
-}
-
-.match-card-inner {
-    padding: 16px 16px;
-}
-
-.match-card-inner h3 {
-    margin: 0 0 6px 0;
-    font-size: 1.05rem;
-    font-weight: 750;
-}
-
-.match-card-inner p {
-    margin: 0;
-    opacity: 0.9;
-}
-
-.match-card.is-selected {
-    background: #f1f5e6;
-    border-color: rgba(107, 127, 59, 0.85);
-    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.16);
-}
-
-.match-card.is-matched {
-    background: #eef6f0;
-    border-color: rgba(56, 125, 80, 0.75);
-}
-
-.match-card.is-wrong {
-    background: #fff5f2;
-    border-color: rgba(160, 74, 58, 0.75);
-}
-
-.match-message {
-    border-radius: 14px;
+    margin-bottom: 10px;
+    border-radius: 12px;
     padding: 12px 14px;
-    margin-bottom: 12px;
-    border: 1px solid rgba(43, 54, 43, 0.18);
-    background: rgba(255, 255, 255, 0.8);
-    font-weight: 650;
+    font-weight: 600;
+    line-height: 1.35;
+    background-clip: padding-box;
+    transition: background-color 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
 }
 
-.match-message.hint {
-    border-color: rgba(43, 54, 43, 0.22);
+
+.mg-btn.btn-outline-primary {
+    background-color: #eef3dc;
+    border: 1.5px solid #7a8f2a;
+    color: #3f4a1d;
 }
 
-.match-message.success {
-    border-color: rgba(56, 125, 80, 0.55);
-    background: #eef6f0;
+
+.mg-btn.btn-outline-secondary {
+    background-color: #fff6e3;
+    border: 1.5px solid #b9a46a;
+    color: #4a3f24;
 }
 
-.match-message.error {
-    border-color: rgba(160, 74, 58, 0.55);
-    background: #fff5f2;
+
+.mg-btn:hover {
+    background-color: #f5f7ec;
 }
 
-.match-card.is-matched {
-    border-width: 2px;
+
+.mg-btn.btn-primary {
+    background-color: #7a8f2a;
+    border-color: #6b7e22;
+    color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(122, 143, 42, 0.25);
 }
 
-.match-card.pair-1.is-matched {
-    border-color: #2f6f4e;
-    background: rgba(47, 111, 78, 0.10);
+
+.mg-btn.btn-success {
+    background-color: #6f8a3a;
+    border-color: #5f772f;
+    color: #ffffff;
 }
 
-.match-card.pair-2.is-matched {
-    border-color: #6b4f1d;
-    background: rgba(107, 79, 29, 0.10);
+
+.mg-btn.btn-danger {
+    background-color: #c96b5a;
+    border-color: #b85c4c;
+    color: #ffffff;
 }
 
-.match-card.pair-3.is-matched {
-    border-color: #2d4f7c;
-    background: rgba(45, 79, 124, 0.10);
-}
 
-.match-card.pair-4.is-matched {
-    border-color: #7b2d3f;
-    background: rgba(123, 45, 63, 0.10);
-}
-
-.match-card.pair-5.is-matched {
-    border-color: #4a3c7a;
-    background: rgba(74, 60, 122, 0.10);
-}
-
-.match-card.pair-6.is-matched {
-    border-color: #1f6d7a;
-    background: rgba(31, 109, 122, 0.10);
-}
-
-.match-card.pair-7.is-matched {
-    border-color: #7a5a1f;
-    background: rgba(122, 90, 31, 0.10);
-}
-
-.match-card.pair-8.is-matched {
-    border-color: #3f6b2d;
-    background: rgba(63, 107, 45, 0.10);
-}
-
-.match-card.pair-9.is-matched {
-    border-color: #7a3c1f;
-    background: rgba(122, 60, 31, 0.10);
-}
-
-.match-card.pair-10.is-matched {
-    border-color: #2d6b5f;
-    background: rgba(45, 107, 95, 0.10);
+.mg-btn.btn-success {
+    pointer-events: none;
+    cursor: default;
 }

@@ -1,0 +1,3 @@
+# Methods
+
+Rats were maintained on either a standard chow or high-fat diet prior to behavioural testing. Plasma corticosterone levels were measured using enzyme-linked immunosorbent assays. `r actionLink(ns("practice_wrong_section4"), "This approach enabled us to determine whether dietary fat intake alters stress-related behaviour.", class = "invisible_yellow")` Data were analysed using two-way ANOVA.

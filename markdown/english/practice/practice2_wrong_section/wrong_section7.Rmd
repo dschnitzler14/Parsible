@@ -1,0 +1,3 @@
+# Discussion
+
+The present findings demonstrate that sleep disruption alters both behaviour and gene expression in the prefrontal cortex. These results align with previous reports linking sleep loss to impaired executive function. `r actionLink(ns("practice_wrong_section7"), "Mice underwent a ten-day sleep fragmentation protocol prior to behavioural assessment.", class = "invisible_yellow")`

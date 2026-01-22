@@ -1,0 +1,3 @@
+# Introduction: Worked Example
+
+The regulation of sleep is critical for cognitive performance and emotional wellbeing. Disruptions to normal sleep–wake cycles have been linked to impairments in attention, memory, and mood across species. `r actionLink(ns("practice_wrong_section1"), "In sleep-deprived mice, open-field exploration was significantly reduced relative to controls.", class = "highlight_yellow")` Previous studies have highlighted the sensitivity of prefrontal circuits to sleep loss

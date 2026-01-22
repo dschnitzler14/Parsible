@@ -54,6 +54,8 @@ tags$head(
   tags$link(rel = "stylesheet", href = "css/matching_game.css"),
   tags$link(rel = "stylesheet", href = "css/sentence_checklist.css"),
   tags$link(rel = "stylesheet", href = "css/sorting.css"),
+  tags$link(rel = "stylesheet", href = "css/flag_practice.css"),
+  tags$link(rel = "stylesheet", href = "css/instruction_cards.css"),
 
   tags$script(src="js/highlight_click_state.js"),
 

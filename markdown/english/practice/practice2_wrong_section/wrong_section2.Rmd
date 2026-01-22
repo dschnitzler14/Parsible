@@ -1,0 +1,3 @@
+# Introduction
+
+Dietary composition is known to influence metabolic health and stress responsiveness. High-fat diets have been associated with alterations in endocrine signalling and behaviour in animal models. `r actionLink(ns("practice_wrong_section2"), "Rats were maintained on either a control or high-fat diet for four weeks prior to behavioural assessment.", class = "invisible_yellow")`. However, the mechanisms linking diet to stress-related outcomes remain poorly understood.

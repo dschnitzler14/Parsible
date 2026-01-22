@@ -676,6 +676,7 @@ strategies_module_ui <- function(id) {
                   nav_panel("ChatGPT", value = "gpt"),
                   nav_panel("Claude", value = "claude"),
                   nav_panel("Anara", value = "anara"),
+                  nav_panel("Consensus", value = "consensus"),
 
                   bslib::nav_item(tags$hr(class = "ai-sidebar-divider")),
 
@@ -731,8 +732,6 @@ strategies_module_server <- function(id, parent_session, nav_order_list, process
 output$strategies_introduction <- renderUI({
     md_ui("english/strategies/introduction_strategy.Rmd")
   })
-
-#here
 
 
 observeEvent(input$intro1, {
@@ -1350,7 +1349,12 @@ output$understanding_box1 <- renderUI({
       })
 
 
-sentence_checklist_server("understanding_checklist", dictionary_names = sentence_checklist_dictionary_names, dictionary_values = sentence_checklist_dictionary_values, dictionary_correct = sentence_checklist_dictionary_correct, label = "Tick the statements you agree with:")
+sentence_checklist_server(
+  "understanding_checklist",
+  dictionary = understanding_checklist_dictionary,
+  dictionary_correct = understanding_checklist_dictionary_correct,
+  label = "Tick the statements you agree with:"
+)
 
 # Reflection_server----
 
@@ -1645,6 +1649,16 @@ output$ai_anara <- renderUI({
   )
 })
 
+output$ai_consensus <- renderUI({
+  chat_device_ui(
+    ns("consensus_chat"),
+    title = "Consensus",
+    subtitle = "Let's try Consensus",
+    device = "phone",
+    height = "650px"
+  )
+})
+
 output$ai_section_body <- renderUI({
   req(input$ai_toc)
 
@@ -1654,6 +1668,8 @@ output$ai_section_body <- renderUI({
     uiOutput(ns("ai_claude"))
   } else if (input$ai_toc == "anara") {
     uiOutput(ns("ai_anara"))
+  } else if (input$ai_toc == "consensus") {
+    uiOutput(ns("ai_consensus"))
   } else {
     verdict_module_ui(ns("verdict"))
   }
@@ -1672,6 +1688,11 @@ chat_device_server(
 chat_device_server(
   "anara_chat",
   md_dir = "markdown/english/chat_device/anara"
+)
+
+chat_device_server(
+  "consensus_chat",
+  md_dir = "markdown/english/chat_device/consensus"
 )
 
 verdict_module_server("verdict", process_markdown)

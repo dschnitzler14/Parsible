@@ -1,0 +1,3 @@
+# Methods
+
+Adult male mice were housed individually under standard laboratory conditions with ad libitum access to food and water. Animals were exposed to a sleep fragmentation protocol for ten consecutive days.`r actionLink(ns("practice_wrong_section3"), "This manipulation resulted in increased locomotor activity during behavioural testing.", class = "invisible_yellow")` Behaviour was assessed using the open field test.

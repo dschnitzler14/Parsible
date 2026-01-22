@@ -96,7 +96,7 @@ practice_module_server <- function(id, parent_session, nav_order_list, process_m
       if (identical(key, "practice1")) practice_intro_mystery_module_server("intro_mystery_module", process_rmd_fragment = process_rmd_fragment)
       if (identical(key, "practice2")) practice_discussion_claims_spec_module_server("discussion_claims_spec_module")
       if (identical(key, "practice3")) practice_build_a_paper_module_server("build_a_paper_module")
-      if (identical(key, "practice4")) practice_what_does_not_belong_module_server("what_does_not_belong_module")
+      if (identical(key, "practice4")) practice_what_does_not_belong_module_server("what_does_not_belong_module", process_rmd_fragment = process_rmd_fragment, process_markdown = process_markdown)
       if (identical(key, "practice5")) practice_green_red_flag_module_server("green_red_flag_module")
       if (identical(key, "practice6")) practice_your_turn_module_server("your_turn_module")
     })

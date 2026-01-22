@@ -1,0 +1,3 @@
+# Results
+
+Following oxidative stress exposure, cultured neurons showed increased expression of antioxidant enzymes. Cell survival was significantly higher in treated cultures than in controls.`r actionLink(ns("practice_wrong_section6"), "Oxidative stress was used here to model cellular conditions relevant to neurodegenerative disease.", class = "invisible_yellow")`

@@ -1,0 +1,11 @@
+## Introduction
+Cyclic adenosine monophosphate (cAMP) levels in the lymphoblasts and leukocytes of patients with major depressive disorder (MDD) have been reported to be downregulated compared to in controls. cAMP is a derivative of adenosine triphosphate (ATP), and low ATP turnover has been reported in the state of hypometabolism associated with human MDD and with mammalian hibernation due to suppression of mitochondrial metabolism. Similarities have been noted between many state-dependent neurobiological changes associated with MDD in humans and with mammalian hibernation.
+
+## Methods
+To compare cAMP levels between human MDD and mammalian hibernation and to investigate whether cAMP downregulation is another state-dependent neurobiological finding, we measured cAMP concentrations in lysed leukocytes, plasma, and serum in serial blood specimens from nine female captive black bears (*Ursus americanus*; CBBs), and cortisol levels in serum from 10 CBBs.
+
+## Results
+Cortisol levels were significantly higher during hibernation in CBBs, confirming previous findings in hibernating black bears and similar to findings in humans with MDD. cAMP levels were significantly lower during hibernation versus active states (pre-hibernation and exit from hibernation) and were similar to the cAMP downregulation reported in MDD patients versus euthymic patients or controls. cAMP level changes during the different states (hibernation, pre-hibernation, active) confirm their state-dependent status.
+
+## Discussion
+These findings are similar to the neurobiological findings associated with the hypometabolism (metabolic depression) observed during mammalian hibernation and reported during MDD. A sudden increase in cAMP levels was observed before entrance into pre-hibernation and during exit from hibernation. Further investigation is suggested into the possible role of elevated cAMP levels in initiation of the chain reaction of changes in gene expression, proteins, and enzymes leading to the suppression of mitochondrial metabolism and to low ATP turnover. This process leads to hypometabolism, the old adaptive mechanism that is used by organisms for energy preservation and is associated with both mammalian hibernation and human MDD.

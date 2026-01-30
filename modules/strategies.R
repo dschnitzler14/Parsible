@@ -390,18 +390,56 @@ strategies_module_ui <- function(id) {
               card(
                 card_header("Summary of Findings"),
                 card_body(
-                  div(
-                      class = "strategies-main",
-                      div(
-                        class = "paper-box",
-                        p("Why did they do this study?"),
-                        p("How did they do the study?"),
-                        p("What did they find?"),
-                        p("What do the results mean?")
+                  # div(
+                  #   class = "strategies-main",
+                    div(
+                      class = "fill-blanks",
+
+                      tags$div(
+                        class = "fill-blanks-line",
+                        tags$span("In this study, the primary outcome was"),
+                        tags$span(
+                          class = "blank",
+                          selectInput(
+                            ns("outcome"),
+                            NULL,
+                            c("anxiety", "memory", "locomotion"),
+                            width = NULL
+                          )
+                        ),
+                        tags$span(", measured using the"),
+                        tags$span(
+                          class = "blank",
+                          selectInput(
+                            ns("assay"),
+                            NULL,
+                            c("EPM", "OFT", "MWM"),
+                            width = NULL
+                          )
+                        ),
+                        tags$span(". The authors report a"),
+                        tags$span(
+                          class = "blank",
+                          selectInput(
+                            ns("direction"),
+                            NULL,
+                            c("significant increase", "significant decrease", "no change"),
+                            width = NULL
+                          )
+                        ),
+                        tags$span("compared with controls.")
+                      ),
+
+                      tags$div(
+                        class = "fill-blanks-output",
+                        tags$strong("Your summary: "),
+                        textOutput(ns("sentence_out"))
                       )
                     )
+                  #)
                 )
               ),
+
               card(
                 card_header("Discussion Predictions"),
                 card_body(
@@ -1220,6 +1258,16 @@ output$pause_text1 <- renderUI({
 pause_flashcards_server("pause_intro", dictionary = pause_intro_dictionary) # flashcards for understanding introduction
 matching_game_server("match1") # matching game for methods
 pause_flashcards_server("pause_results", dictionary = pause_results_dictionary) # flashcards for understanding results
+
+
+output$sentence_out <- renderText({
+      paste0(
+        "In this study, the primary outcome was ", input$outcome,
+        ", measured using the ", input$assay,
+        ". The authors report a ", input$direction,
+        " compared with controls."
+      )
+    })
 
 # Discussion_server----
 

@@ -1,0 +1,49 @@
+.fill-blanks-line {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px;
+    line-height: 1.8;
+}
+
+.fill-blanks-line .blank {
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.fill-blanks-line .blank>.shiny-input-container,
+.fill-blanks-line .blank>.form-group,
+.fill-blanks-line .blank>div {
+    display: inline-flex !important;
+    align-items: baseline;
+    margin: 0 !important;
+}
+
+.fill-blanks-line .blank label,
+.fill-blanks-line .blank .control-label {
+    display: none !important;
+}
+
+.fill-blanks-line .blank select.form-select,
+.fill-blanks-line .blank select.form-control {
+    width: auto !important;
+    min-width: 120px;
+    border: none !important;
+    border-bottom: 2px solid currentColor !important;
+    border-radius: 0 !important;
+    padding: 0 8px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    height: auto !important;
+    line-height: 1.6 !important;
+}
+
+.fill-blanks-line .blank select.form-select:focus,
+.fill-blanks-line .blank select.form-control:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.fill-blanks-output {
+    margin-top: 12px;
+}

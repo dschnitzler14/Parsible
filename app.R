@@ -57,6 +57,8 @@ tags$head(
   tags$link(rel = "stylesheet", href = "css/flag_practice.css"),
   tags$link(rel = "stylesheet", href = "css/instruction_cards.css"),
   tags$link(rel = "stylesheet", type = "text/css", href = "css/highlighter.css"),
+  tags$link(rel = "stylesheet", type = "text/css", href = "css/fill_in_the_blanks.css"),
+
 
   tags$script(src="js/highlight_click_state.js"),
   tags$script(src = "js/highlighter.js"),

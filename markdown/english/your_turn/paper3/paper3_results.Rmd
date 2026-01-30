@@ -1,0 +1,27 @@
+## Study 1: Anxiety-like behaviour in LAB and HAB rats
+
+LAB rats displayed a 46% entry rate into the open arms of the EPM (Figure 2A), spending approximately 30% of the 5-min test period in the open arms (Figure 2B). In contrast, none of the HAB rats entered the open arms during the test period (Figure 2A; p < .0001), spending 100% of the test period in the closed arms (Figure 2B; p < .0001). The number of closed arm entries, an index of locomotor activity, was lower in HAB rats (1.63 ± 0.38 entries/5 min) compared with LAB rats (7.63 ± 0.71 entries/5 min) (Figure 2C; p < .0001). Thus, the HAB rats used in this study present with a marked hyperanxiety phenotype.
+
+## Study 2: Spontaneous feeding behaviour in LAB and HAB rats
+
+Average total daily food intake in HAB rats was reduced by 16% (Figure 3A; p = .017 versus LAB rats). This was due to a 35% reduction in light phase food consumption (Figure 3B; p = .004), dark-phase food intake not being significantly affected (Figure 3B; p = .060). As a result, HAB rats consumed proportionately more of their daily intake during the dark phase (6.5% higher) than LAB rats (Figure 3C; p = .040).
+
+Analysis of the feeding videos of individual animals revealed that the mild hypophagia observed in HAB rats occurred in the absence of any significant changes in the duration of time spent at the food hopper (Figure 3D), or in the number of individual feeding events (Figure 3G).
+
+Using two-way ANOVA to analyse temporal feeding patterns revealed a significant effect of time (p < .0001), no overall effect of phenotype (p = .146), and no significant interaction between these factors (p = .322), with both LAB and HAB rats showing the typical dark-phase acceleration in feeding and a marked midnight nadir in the duration of feeding (Figure 3J,K). Hourly feeding duration in HAB rats was higher than in their LAB counterparts at 11:00–12:00 and 20:00–21:00 h and lower at 15:00–16:00, 21:00–22:00 and 07:00–08:00 h (Figure 3K; p < .05), indicating a faster commencement of dark-phase feeding and a faster decline in light-phase feeding.
+
+It is interesting to note that, in the context of this hypophagia, body weight gain during the 48 h food monitoring period in HAB rats was 73% higher than in LAB rats (7.38 ± 0.86 g vs. 4.25 ± 1.46 g; p = .043; data not shown), but this was not maintained over the full 24-day study period.
+
+## Study 3: Ghrelin and corticosterone secretion in LAB and HAB rats
+
+Two-way ANOVA revealed an effect of feeding status on total (p = .020) and unacylated ghrelin (UAG; p = .018). Although anxiety status influenced acylated ghrelin (AG) (p = .019), the impact on total and UAG was not significant (p = .052; .083).
+
+Although total and UAG levels in fed HAB rats were comparable to those in fed LAB rats (Figure 4A,C), mean circulating AG levels in fed HAB rats were only 22% of that in fed LAB rats (Figure 4B; p = .257 vs. fed LAB). As expected, a 24-h fast elevated circulating total ghrelin in LAB rats by 57% (p = .022 vs. fed LAB; Figure 4A). This was due to a 58% elevation in UAG (p = .020; Figure 4C), mean circulating AG levels (Figure 4B) and the AG:UAG ratio (Figure 4D) being 138% and 75% of that in fully-fed LAB rats (p = .871 and > .999).
+
+In contrast, this impact of fasting on the ghrelin system was abolished in HAB rats; total ghrelin (Figure 4A) and UAG (Figure 4C) levels in fasted HAB rats were 68% and 71% of those in fasted LAB rats (p = .044 and .060 vs. fasted LAB rats). Interestingly, circulating AG levels in fasted HAB rats were only 25% of that in fasted LAB rats (Figure 4B; p = .099 vs. fasted LAB rats), the AG:UAG ratio responding in parallel (Figure 4D; p = .546).
+
+Although characterising HPA axis activity from terminal samples is impeded by the ultradian nature of corticosterone secretion, mean circulating corticosterone in fed HAB rats was 250% of that in fed LAB rats (p = .380; Figure 4E). However, mean corticosterone levels in fasted LAB rats were 168% of that in fed LAB rats (p > .999), whereas the mean corticosterone level in fasted HAB rats was only 34% of that in fed HAB rats (p = .301).
+
+## Study 4: Quantification of adult hippocampal neurogenesis in LAB and HAB rats
+
+Quantification of AHN in the DG revealed that the number of newborn neurones (BrdU⁺/NeuN⁺) in the whole DG of HAB rats was elevated by 68% in the subgranular zone (SGZ; p = .0006; Figure 5A) and by 103% in the granule cell layer (GCL; p = .0001; Figure 5A). This augmentation of neurogenesis was replicated in both the rostral and caudal portions of the DG (p < .01; Figure 5B,C) and was observed in both the upper and lower blades (p < .0001; data not shown). This proliferation was specific to neuronal populations, as there were no parallel increases in the population of newborn non-neuronal (BrdU⁺/NeuN⁻) cells (Figure 5D).

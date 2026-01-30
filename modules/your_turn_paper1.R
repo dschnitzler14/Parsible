@@ -1,4 +1,4 @@
-your_turn_paper_geet_ui <- function(id) {
+your_turn_paper1_ui <- function(id) {
   ns <- NS(id)
 
   bslib::page_fluid(
@@ -628,33 +628,32 @@ your_turn_paper_geet_ui <- function(id) {
 )
 
 }
-your_turn_paper_geet_server <- function(id, process_markdown, process_rmd_fragment) {
+your_turn_paper1_server <- function(id, process_markdown, process_rmd_fragment) {
   moduleServer(id, function(input, output, session) {
 
     ns <- session$ns
-
      md_ui <- function(path, ...) {
     process_rmd_fragment(path, ns = ns, base_dir = "markdown", ...)
   }
 
   output$paper1_title_abstract <- renderUI({
-    md_ui("english/your_turn/paper1_geet/paper1_title_abstract.Rmd")
+    md_ui("english/your_turn/paper1/paper1_title_abstract.Rmd")
   })
 
   output$paper1_introduction <- renderUI({
-    md_ui("english/your_turn/paper1_geet/paper1_intro.Rmd")
+    md_ui("english/your_turn/paper1/paper1_intro.Rmd")
   })
 
   output$paper1_methods <- renderUI({
-    md_ui("english/your_turn/paper1_geet/paper1_methods.Rmd")
+    md_ui("english/your_turn/paper1/paper1_methods.Rmd")
   })
 
   output$paper1_results <- renderUI({
-      md_ui("english/your_turn/paper1_geet/paper1_results.Rmd")
+      md_ui("english/your_turn/paper1/paper1_results.Rmd")
     })
   
   output$paper1_discussion <- renderUI({
-    md_ui("english/your_turn/paper1_geet/paper1_discussion.Rmd")
+    md_ui("english/your_turn/paper1/paper1_discussion.Rmd")
   })
 
 

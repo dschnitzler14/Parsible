@@ -1,0 +1,52 @@
+## Materials
+
+The cyclic AMP (direct) colorimetric ELISA kit and the cortisol ELISA kit were obtained from Assay Designs Inc. (Ann Arbor, MI, United States). All other chemicals were of reagent grade.
+
+## Subjects
+
+Serial blood samples were obtained every 15 days from 11 female captive black bears (CBBs) 3 to 21 years of age (mean age 11, SD 6.67), six of which were pregnant. These CBBs were kept in captivity from October to April at the Center for Ursid Research at Virginia Polytechnic Institute and State University (VPI) in Blacksburg, VA, United States. One of these CBBs was captive from October 2002 to May 15, 2003; seven, from October 2003 to May 15, 2004; and three, from October 2004 to May 15, 2005. Ages of the CBBs from which specimens were obtained for analysis were 3–8 years (n = 3 for cAMP levels, and n = 4 for cortisol levels), 9–15 years (n = 4), and older than 15 years (n = 2).
+
+Although specimens were obtained from 11 CBBs from October 2002 to May 2005, only nine were included in the analyses for cAMP levels, and 10 for serum cortisol levels. One CBB, 2 years of age, was excluded from the cortisol and cAMP level analyses because it never fell into hibernation, and a second one was excluded from cAMP analyses because only one cAMP specimen was obtained. During the active state after captivity, in October, only a few cAMP specimens were received and thus were excluded from analysis. The serum cortisol specimens obtained in October also were excluded from analysis because of the sudden increase in levels resulting from the stress of captivity.
+
+## Trapping and immobilization of animals
+
+All of the CBBs were captured in the George Washington National Forest and Jefferson National Forest in western Virginia. They were trapped in either Aldrich leg-hold snares or culvert traps, and all were anesthetized with a 2:1 mixture of ketamine hydrochloride (Ketaset®, Fort Dodge Animal Health, Fort Dodge, IA, United States) and xylazine hydrochloride (Rompum®, Bayer Corporation, Shawnee Mission, KS, United States) (concentration 300 mg/mL) at a dose rate of 1 mL per 45 kg body mass. Telazol® was not used. No CBBs were in a trap for more than 20 h, and most were in traps for less than 12 h. All CBBs were healthy when the blood samples were drawn.
+
+Protocols for handling wild black bears and CBBs were approved by the VPI Animal Care Committee and the Institutional Animal Care and Use Committee at the New York State Institute for Basic Research in Developmental Disabilities (IBR). For further details, see Tsiouris et al. (37) and Donahue et al. (50).
+
+Captive black bears entered hibernation proper between late December and January 1—not by November 1, as in most black bears in the wild (32, 41)—because of food availability and the higher temperature of the quarters in which they were kept captive. Each CBB was fed a daily ration of 2,000 g of dry high-protein (23%) dog food until November 30. Rations were cut to 1,000 g on December 1, to 500 g on December 10, and to 250 g on December 20. Feeding was terminated on December 30 and not resumed until April 1. Pregnant CBBs gave birth to their cubs during the last week of January without exiting the hibernation state. CBBs exited the hibernation state and became active in late March through April 1 similarly to black bears in the wild.
+
+## States during captivity
+
+Active state: After captivity; October 1–October 31.
+
+Pre-hibernation state: November 1–December 18 (early December).
+
+Proper hibernation state: December 19 (late December)–March 18 (early March).
+
+Exit from hibernation / active state: March 19 (late March)–May 15.
+
+## Black bear blood and sera
+
+The number of blood specimens obtained from the nine CBBs for cAMP levels was 58, and the number of serum specimens obtained from 10 CBBs for cortisol levels was 137. Sera were prepared on-site and stored frozen at VPI until shipped. Whole-blood samples were collected in heparinized tubes and immediately shipped overnight to IBR on ice packs. Because only one specimen was obtained from each of four CBBs at the end of April after exit from hibernation, they were not included in the analysis.
+
+## Harvesting of black bear leukocytes
+
+Whole blood was centrifuged for 10 min at 2,000 × g (4°C). The buffy coat was collected and washed once in tris-buffered saline (TBS). The cells were collected by centrifugation, and the pellets were suspended in TBS, aliquoted, and stored at −80°C until needed.
+
+## Assay of protein concentration
+
+Protein concentrations were determined by the method of Lowry et al. (51) using bovine serum albumin as standard.
+
+## cAMP levels in black bear leukocytes
+### Preparation of leukocytes
+
+Blood was drawn from female CBBs in heparinized (green-top) tubes and shipped by overnight express from VPI to IBR. The tubes were centrifuged at 800 × g for 15 min at room temperature (RT). The plasma and buffy coat were removed to clean tubes and centrifuged at 2,000 × g for 15 min at RT. The plasma was removed, and the cells were washed with isotonic tris-buffered saline (TBS; pH 8.0) and re-centrifuged. The washing was repeated once. The cells were re-suspended in TBS, quick-frozen on dry ice, and stored at −80°C.
+
+### Assay of adenosine 3′,5′-cAMP
+
+The concentration of cAMP in leukocytes was determined using a direct cAMP colorimetric ELISA kit (Assay Designs Inc., Ann Arbor, MI, United States), following the manufacturer’s protocol. This kit is designed for use with cell culture and tissue and includes 0.1 M HCl, which is used to lyse the cells, stop endogenous phosphodiesterase (PDE) activity, and stabilize the released cAMP. The 0.1% HCl-treated samples were analyzed directly in a microtiter plate without extraction, drying, or reconstitution. Because the sample-to-sample yield of leukocytes was variable, aliquots of the cells were removed to measure total protein concentration, after which the cAMP values were normalized to 100 μg of total protein.
+
+### Cortisol levels in black bear sera
+
+The levels of cortisol in black bear sera were determined using the cortisol ELISA kit (Assay Designs Inc.) following the manufacturer’s protocol.

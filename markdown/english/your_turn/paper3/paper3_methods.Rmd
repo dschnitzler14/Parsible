@@ -1,0 +1,25 @@
+Animals
+
+The animal procedures reported here were performed at the University of Regensburg in accordance with international guidelines on the ethical use of animals, including the Guide for the Care and Use of Laboratory Animals by the National Institutes of Health, Bethesda, MD, USA, and the ARRIVE guidelines and were approved by the government of Unterfranken, Bavaria, Germany.
+
+Eight male HAB and eight male LAB rats (9–10 weeks old) were selected from an outbred Wistar rat colony according to their performance in an elevated plus maze (EPM) test, HAB rats being defined as those showing <5% of the test time in the open arm of the EPM and LAB rats >45% of the time in the EPM open arm. These rats were kept pair-housed in standard rat cages under conditions of 12 h light/12 h dark (lights on at 07:00 h), with diet and water available ad libitum.
+
+Study 1: Anxiety-like behaviour in LAB and HAB rats
+
+At 9 weeks of age, all HAB and LAB offspring were placed individually in an EPM for 5 min without prior handling, to assess basic levels of anxiety-related behaviour. The time spent on and the number of entries into the open arms were recorded as indications of anxiety-related behaviour, whereas the number of entries into the closed arms indicated locomotor activity.
+
+Study 2: Spontaneous feeding behaviour in LAB and HAB rats
+
+Given the anxiogenic effects of social isolation, single housing of HAB rats is not advisable and, therefore, accurate measurement of individual food intake in metabolic cages is not achievable. To overcome this, pair-housed animals received food via cage side-mounted food hoppers containing crushed chow. After acclimatisation, food intake was measured at the beginning and end of the light phase for two consecutive days. Feeding behaviour was video recorded for 24 h and analysed to quantify the number and duration of feeding events during light and dark phases.
+
+Study 3: Ghrelin and corticosterone secretion in LAB and HAB rats
+
+To examine whether the observed differences in anxiety-related behaviour and AHN between HAB and LAB rats may be related to altered ghrelin secretion, rats were either ad libitum-fed or fasted for 24 h. Trunk blood was collected, processed, and circulating ghrelin (total and acylated) and corticosterone were quantified by ELISA.
+
+Study 4: Quantification of adult hippocampal neurogenesis in LAB and HAB rats
+
+Rats were administered BrdU via intraperitoneal injection. Brains were collected, sectioned, and immunostained for BrdU and NeuN. Newborn neurons (BrdU⁺/NeuN⁺) and newborn non-neuronal cells (BrdU⁺/NeuN⁻) were quantified in the dentate gyrus.
+
+Statistics
+
+Statistical comparison was performed by Student's unpaired t-test and two-way ANOVA with Bonferroni post hoc test. Data shown are mean ± SEM.

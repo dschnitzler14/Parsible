@@ -1,16 +1,14 @@
 ## Welcome: How to Read a Scientific Paper
 
-Are you feeling overwhelmed with reading papers? Are you wondering where to even start?
+Are you feeling overwhelmed by scientific papers? Are you unsure where to start, what to focus on, or how to understand the key points?
 
-Well, reading primary scientific literature, in other words "papers", can feel like a lot, especially if no one has ever explained how you’re supposed to read them.
+Reading primary scientific literature, also called research papers or journal articles, is a core skill for university study. It is essential for undergraduate students, postgraduate students, and educators teaching research methods, critical thinking, and evidence-based practice. If no one has ever shown you how to read a scientific paper, it can feel confusing and time-consuming.
 
-This app is here to change that.
+This app is here to help you learn and practice reading papers!
 
-Instead of throwing a full paper at you and hoping for the best, this app breaks the process down into small, manageable steps and shows you what to focus on at each stage.
+Instead of giving you a full paper and expecting you to figure it out alone, this app teaches you a practical step-by-step method for reading a scientific paper efficiently and confidently. You will learn how to read a research article, understand scientific terminology, identify the hypothesis, interpret results, and evaluate how strong the evidence is.
 
-Work through this app to learn how to read a science paper!
-
----
+## Work through this app to learn how to read a science paper.
 
 <div style="
   border-left: 6px solid #0d6efd;
@@ -85,4 +83,5 @@ There’s no time limit, and no penalty for guessing.
 
 You don’t need to read the whole paper first.  
 Just start with the next section and take it step by step.
+
 </div>

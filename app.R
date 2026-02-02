@@ -30,8 +30,9 @@ ui <- bslib::page_navbar(
   theme = theme,
 
 tags$head(
+  tags$title("Parsible - Learn to Read a Paper"),
   shinyjs::useShinyjs(),
-  tags$link(rel = "icon", type = "image/x-icon", href = "favicon.ico"),
+  tags$link(rel = "icon", type = "image/x-icon", href = "favicon.png"),
   tags$link(rel="stylesheet", href="css/00_tokens.css"),
   tags$link(rel="stylesheet", href="css/01_background.css"),
   tags$link(rel="stylesheet", href="css/02_layout.css"),
@@ -63,13 +64,25 @@ tags$head(
   tags$script(src="js/highlight_click_state.js"),
   tags$script(src = "js/highlighter.js"),
   tags$script(src = "js/emoji_picker.js"),
+  tags$script(src = "js/dyslexia-toggle.js"),
   
 
   tags$link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap"),
   tags$link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"),
   tags$link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"),
 
-  tags$meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  tags$meta(name="viewport", content="width=device-width, initial-scale=1.0"),
+
+  tags$link(
+  rel = "stylesheet",
+  href = "https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-regular.css"
+  ),
+  tags$style(HTML("
+    body.dyslexia-font,
+    body.dyslexia-font * {
+      font-family: 'OpenDyslexic', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif !important;
+    }
+  "))
 ),
 
 
@@ -158,6 +171,14 @@ tags$head(
     class = "ps-topmenu-link"
   )
 ),
+
+  nav_item(
+    actionLink(
+      "toggle_dyslexia_font",
+      "Toggle Dyslexia-friendly font On/Off",
+      class = "ps-topmenu-link"
+    )
+  )
   ),
 
 

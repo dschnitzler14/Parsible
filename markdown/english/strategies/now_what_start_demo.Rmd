@@ -1,0 +1,14 @@
+Why don't you give it a try?
+
+- `r actionLink(ns("start_demo1"), "📝 Click on this sentence to highlight a general note, then check out the sidebar!", class = "highlight_yellow")` 
+
+- What happens when you come across some unknown terminology or vocabulary (especially if English is not your primary language)? Click on the purple highlighted word, such as `r actionLink(ns("start_demo2"), "✏️ excitotoxicity", class = "highlight_purple")`.
+
+- Use the blue to highlight questions that arise, for example: `r actionLink(ns("start_demo3"), "❓ Neuronal loss was assessed using standard histological methods", class = "highlight_blue")`
+
+- Let's use green for green flags! These are the things we like to see in a paper, for example `r actionLink(ns("start_demo4"), "✅ power analysis", class = "highlight_green")`
+
+- Yellow warnings are for things that make you pause but aren’t necessarily wrong, such as `r actionLink(ns("start_demo5"), "⚠️ n=6", class = "highlight_orange")`
+
+- Red flags are for serious concerns or potential problems, for example `r actionLink(ns("start_demo6"), "🚩 no correction for multiple comparisons", class = "highlight_red")`
+

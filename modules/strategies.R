@@ -27,6 +27,17 @@ strategies_module_ui <- function(id) {
               fg = "inherit",
               padding = "0px",
               gap = "1px",
+              
+              div(
+                  class = "sb-notepad",
+                  tags$h4("Notes"),
+                  uiOutput(ns("strategies_start_demo1_click")),
+                  uiOutput(ns("strategies_start_demo2_click")),
+                  uiOutput(ns("strategies_start_demo3_click")),
+                  uiOutput(ns("strategies_start_demo4_click")),
+                  uiOutput(ns("strategies_start_demo5_click")),
+                ),
+
               ),
               card(
                 card_header("Advice"),
@@ -54,9 +65,7 @@ strategies_module_ui <- function(id) {
               fg = "inherit",
               padding = "0px",
               gap = "1px",
-                #div(
-                  # class = "sb-white",
-                  # tags$h4("Title"),
+                
                   paperstars_rating_ui(
                       id = ns("title_rating"),
                       label = "What did you think of the title?",
@@ -66,14 +75,14 @@ strategies_module_ui <- function(id) {
                       selected = character(0)
                     ),
                   
-                #),
+                
               ),
               card(
                 class = "paperstars-instructions-card",
                 card_header("Title and Abstract Instructions"),
                 card_body(
                   div(
-                    
+                    uiOutput(ns("title_abstract_instruction_text"))
                   )
                 )
               ),
@@ -81,18 +90,7 @@ strategies_module_ui <- function(id) {
                   class = "paper-box",
                   uiOutput(ns("strategies_title_abstract"))
                 ),
-              # card(
-              #   card_header("Title and Abstract"),
-              #   card_body(
-              #     div(
-              #         class = "strategies-main",
-              #         div(
-              #           class = "paper-box",
-              #           uiOutput(ns("strategies_title_abstract"))
-              #         )
-              #       )
-              #   )
-              # )
+              
             )
           ),
           nav_panel(
@@ -133,7 +131,7 @@ strategies_module_ui <- function(id) {
                 card_header("Introduction Instructions"),
                 card_body(
                   div(
-                    
+                    uiOutput(ns("intro_instruction_text"))
                   )
                 )
               ),
@@ -141,18 +139,7 @@ strategies_module_ui <- function(id) {
                 class = "paper-box",
                 uiOutput(ns("strategies_introduction"))
               ),
-              # card(
-              #   card_header("Introduction"),
-              #   card_body(
-              #     div(
-              #         class = "strategies-main",
-              #         div(
-              #           class = "paper-box",
-              #           uiOutput(ns("strategies_introduction"))
-              #         )
-              #       )
-              #   )
-              # )
+              
             )
           ),
           nav_panel(
@@ -239,7 +226,7 @@ strategies_module_ui <- function(id) {
                 card_header("Methods Instructions"),
                 card_body(
                   div(
-                    
+                    uiOutput(ns("methods_instruction_text"))
                   )
                 )
               ),
@@ -247,18 +234,7 @@ strategies_module_ui <- function(id) {
                 class = "paper-box",
                 uiOutput(ns("strategies_methods"))
               ),
-              # card(
-              #   card_header("Methods"),
-              #   card_body(
-              #       div(
-              #         class = "strategies-main",
-              #         div(
-              #           class = "paper-box",
-              #           uiOutput(ns("strategies_methods"))
-              #         )
-              #       )
-              #     )
-              # )
+              
             )
           ),
           nav_panel(
@@ -322,7 +298,7 @@ strategies_module_ui <- function(id) {
                 card_header("Results Instructions"),
                 card_body(
                   div(
-                    
+                    uiOutput(ns("results_instruction_text"))
                   )
                 )
               ),
@@ -330,18 +306,7 @@ strategies_module_ui <- function(id) {
                 class = "paper-box",
                 uiOutput(ns("strategies_results"))
               )
-              # card(
-              #   card_header("Results"),
-              #   card_body(
-              #     div(
-              #         class = "strategies-main",
-              #         div(
-              #           class = "paper-box",
-              #           uiOutput(ns("strategies_results"))
-              #         )
-              #       )
-              #   )
-              # )
+              
             )
           ),
           nav_panel(
@@ -596,7 +561,7 @@ strategies_module_ui <- function(id) {
                 card_header("Discussion Instructions"),
                 card_body(
                   div(
-                    
+                    uiOutput(ns("discussion_instruction_text"))
                   )
                 )
               ),
@@ -604,18 +569,7 @@ strategies_module_ui <- function(id) {
                 class = "paper-box",
                 uiOutput(ns("strategies_discussion"))
               ),
-              # card(
-              #   card_header("Discussion"),
-              #   card_body(
-              #     div(
-              #         class = "strategies-main",
-              #         div(
-              #           class = "paper-box",
-              #           uiOutput(ns("strategies_discussion"))
-              #         )
-              #       )
-              #   )
-              # )
+              
             )
           ),
           nav_panel(
@@ -819,12 +773,9 @@ strategies_module_ui <- function(id) {
                 )
 
             ),
-            # card(
-            #   card_header("Can't I just use AI?"),
-            #   card_body(
+           
                 uiOutput(ns("ai_section_body")),
-            #   )
-            # )
+          
           )
         )
         )
@@ -846,16 +797,92 @@ strategies_module_server <- function(id, parent_session, nav_order_list, process
     process_rmd_fragment(path, ns = ns, base_dir = "markdown", ...)
   }
 
+
+
+observeEvent(input$start_demo1, {
+  output$strategies_start_demo1_click <- renderUI({
+    tagList(
+      tags$ul(
+        tags$li("📝 Great job! We've got a general note.")
+      )
+    )
+  })
+})
+
+observeEvent(input$start_demo2, {
+  output$strategies_start_demo2_click <- renderUI({
+    tagList(
+      tags$ul(
+        tags$li("✏️ excitotoxicity = nerve cells suffer damage or death from pathologically high levels of neurotransmitters")
+      )
+    )
+  })
+})
+
+observeEvent(input$start_demo3, {
+  output$strategies_start_demo3_click <- renderUI({
+    tagList(
+      tags$ul(
+        tags$li("❓ How was neuronal loss quantified? Cell counts? Area loss?")
+      )
+    )
+  })
+})
+
+observeEvent(input$start_demo4, {
+  output$strategies_start_demo4_click <- renderUI({
+    tagList(
+      tags$ul(
+        tags$li("✅ Green flag! This is what we like to see.")
+      )
+    )
+  })
+})
+
+
+observeEvent(input$start_demo4, {
+  output$strategies_start_demo4_click <- renderUI({
+    tagList(
+      tags$ul(
+        tags$li("⚠️ Amber flag - while small sample sizes like n=6 are quite common, that doesn't make it right! Eyes open for reasons - convenience sampling or difficult population to sample from (e.g. wild animals), or even just an acknowledgement of this in the discussion!")
+      )
+    )
+  })
+})
+
+observeEvent(input$start_demo5, {
+  output$strategies_start_demo5_click <- renderUI({
+    tagList(
+      tags$ul(
+        tags$li("🚩 Red flag - yikes! Something like this is a red flag!")
+      )
+    )
+  })
+})
+
+
  output$strategies_advice_box1 <- renderUI({
         process_markdown("strategies/now_what_start.md")
       })
 
 # Title_and_Abstract_server----
+
+output$title_abstract_instruction_text <- renderUI({
+  process_markdown("strategies/title_abstract_instructions.md")
+})
+
   output$strategies_title_abstract <- renderUI({
   md_ui("english/strategies/title_abstract_strategy.Rmd")
 })
 
+
+
 # Intro_server----
+
+output$intro_instruction_text <- renderUI({
+  process_markdown("strategies/intro_instructions.md")
+})
+
 output$strategies_introduction <- renderUI({
     md_ui("english/strategies/introduction_strategy.Rmd")
   })
@@ -914,6 +941,10 @@ observeEvent(input$intro_vocab1, {
 
 
 # Methods_server----
+
+output$methods_instruction_text <- renderUI({
+  process_markdown("strategies/methods_instructions.md")
+})
 
 output$strategies_methods <- renderUI({
     md_ui("english/strategies/methods_strategy.Rmd")
@@ -1241,6 +1272,9 @@ observeEvent(input$methods17_2, {
 
 # Results_server----
 
+output$results_instruction_text <- renderUI({
+  process_markdown("strategies/results_instructions.md")
+})
 
   output$strategies_results <- renderUI({
     md_ui("english/strategies/results_strategy.Rmd")
@@ -1356,6 +1390,10 @@ output$sentence_out <- renderText({
     })
 
 # Discussion_server----
+
+output$discussion_instruction_text <- renderUI({
+  process_markdown("strategies/discussion_instructions.md")
+})
 
   output$strategies_discussion <- renderUI({
     md_ui("english/strategies/discussion_strategy.Rmd")

@@ -2098,66 +2098,99 @@ observeEvent(input$open_box_ai_1, {
   )
 }, ignoreInit = TRUE)
 
-
 observeEvent(input$open_box_ai_2, {
   open_chat_device_modal(
-    "Let's ask Claude",
-    "General LLM",
-    ns("ai_claude")
+    chat_device_ui(
+      ns("claude_chat"),
+      device = "phone",
+      height = "650px"
+    ),
+    size = "l"
   )
 }, ignoreInit = TRUE)
-
-output$ai_claude <- renderUI({
-  chat_device_ui(
-    ns("claude_chat"),
-    device = "phone",
-    height = "650px"
-  )
-})
 
 observeEvent(input$open_box_ai_3, {
   open_chat_device_modal(
-    "Let's ask Anara",
-    "Science LLM",
-    ns("ai_anara")
+    chat_device_ui(
+      ns("anara_chat"),
+      device = "phone",
+      height = "650px"
+    ),
+    size = "l"
   )
 }, ignoreInit = TRUE)
-
-output$ai_anara <- renderUI({
-  chat_device_ui(
-    ns("anara_chat"),
-    device = "phone",
-    height = "650px"
-  )
-})
 
 observeEvent(input$open_box_ai_4, {
-  open_ai_modal(
-    "Let's ask Consensus",
-    "Science LLM",
-    ns("ai_consensus")
+  open_chat_device_modal(
+    chat_device_ui(
+      ns("consensus_chat"),
+      device = "phone",
+      height = "650px"
+    ),
+    size = "l"
   )
 }, ignoreInit = TRUE)
 
-output$ai_consensus <- renderUI({
-  chat_device_ui(
-    ns("consensus_chat"),
-    device = "phone",
-    height = "650px"
-  )
-})
+
+# observeEvent(input$open_box_ai_2, {
+#   open_chat_device_modal(
+#     "Let's ask Claude",
+#     "General LLM",
+#     ns("ai_claude")
+#   )
+# }, ignoreInit = TRUE)
+
+# output$ai_claude <- renderUI({
+#   chat_device_ui(
+#     ns("claude_chat"),
+#     device = "phone",
+#     height = "650px"
+#   )
+# })
+
+# observeEvent(input$open_box_ai_3, {
+#   open_chat_device_modal(
+#     "Let's ask Anara",
+#     "Science LLM",
+#     ns("ai_anara")
+#   )
+# }, ignoreInit = TRUE)
+
+# output$ai_anara <- renderUI({
+#   chat_device_ui(
+#     ns("anara_chat"),
+#     device = "phone",
+#     height = "650px"
+#   )
+# })
+
+# observeEvent(input$open_box_ai_4, {
+#   open_ai_modal(
+#     "Let's ask Consensus",
+#     "Science LLM",
+#     ns("ai_consensus")
+#   )
+# }, ignoreInit = TRUE)
+
+# output$ai_consensus <- renderUI({
+#   chat_device_ui(
+#     ns("consensus_chat"),
+#     device = "phone",
+#     height = "650px"
+#   )
+# })
 
 observeEvent(input$open_box_ai_5, {
-  open_ai_modal(
-    "The Verdict",
-    "How do the LLMs stack up?",
-    ns("ai_verdict")
-  )
-}, ignoreInit = TRUE)
 
-output$ai_verdict <- renderUI({
+  output$ai_verdict <- renderUI({
   verdict_module_ui(ns("verdict"))
+  
 })
+})
+
+# output$ai_verdict <- renderUI({
+#   verdict_module_ui(ns("verdict"))
+# })
 
 chat_device_server(
   "gpt_chat",

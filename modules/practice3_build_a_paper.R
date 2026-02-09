@@ -1,7 +1,7 @@
 practice_build_a_paper_module_ui <- function(id, dictionary) {
   ns <- NS(id)
   tagList(
-    card(
+    div(
       class = "paperstars-instructions-card",
       card_header("Instructions"),
       card_body(
@@ -10,17 +10,17 @@ practice_build_a_paper_module_ui <- function(id, dictionary) {
         )
       )
     ),
-    card(
-      card(
-      card_body(
+    # card(
+    #   card(
+    #   card_body(
         div(
           class = "strategies-main",
 
     sortable_ui(ns("build_a_paper_sortable"), randomised_build_a_paper_dictionary)
     )
-      )
-    )
-    )
+      #)
+    #)
+    #)
   )
 }
 

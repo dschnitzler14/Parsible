@@ -1,4 +1,4 @@
-On the simplest level, the authors are the people who contributed to paper. There are very clear and strict rules that define who can be an author on a paper and you must demonstrate meaningful contribution. On some papers you can find the exact breakdown of who did what in a section called ["CRediT"](https://credit.niso.org/) or simply "Author Contribution". In cases where someone has contributed, but not enough to be an author they will be thanked in the acknowledgement section.
+On the simplest level, the authors are the people who contributed to paper. There are very clear and strict rules that define who can be an author on a paper and you must demonstrate meaningful contribution. On some papers you can find the exact breakdown of who did what in a section called <a href="https://credit.niso.org/" target="_blank" rel="noopener noreferrer">CRediT</a> or simply "Author Contribution". In cases where someone has contributed, but not enough to be an author they will be thanked in the acknowledgement section.
 
 <div style="
   border-left: 6px solid #0d6efd;

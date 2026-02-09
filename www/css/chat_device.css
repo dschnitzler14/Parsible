@@ -1,117 +1,44 @@
-.modal:has(.cd-screen) .modal-dialog,
-.modal:has(.cd-screen) .modal-dialog.modal-sm,
-.modal:has(.cd-screen) .modal-dialog.modal-lg,
-.modal:has(.cd-screen) .modal-dialog.modal-xl {
+.ps-chatdevice-modal.modal {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 28px !important;
+}
+
+.ps-chatdevice-modal.modal .modal-dialog,
+.ps-chatdevice-modal.modal .modal-dialog.modal-sm,
+.ps-chatdevice-modal.modal .modal-dialog.modal-lg,
+.ps-chatdevice-modal.modal .modal-dialog.modal-xl {
     max-width: none !important;
-    width: fit-content !important;
-    margin: 24px auto !important;
-    padding: 0 !important;
+    width: auto !important;
+    margin: 0 !important;
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
-    display: flex !important;
-    justify-content: center !important;
 }
 
-.modal:has(.cd-screen) .modal-content {
+.ps-chatdevice-modal.modal .modal-content {
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-    padding: 0 !important;
-    width: fit-content !important;
-    justify-content: center !important;
 }
 
-.modal:has(.cd-screen) .modal-header,
-.modal:has(.cd-screen) .modal-footer {
+.ps-chatdevice-modal.modal .modal-header,
+.ps-chatdevice-modal.modal .modal-footer {
     display: none !important;
 }
 
-.modal:has(.cd-screen) .modal-body {
+.ps-chatdevice-modal.modal .modal-body {
     padding: 0 !important;
     background: transparent !important;
 }
 
-.modal:has(.cd-screen) .ps-modal-body {
-    padding: 0 !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-}
-
-.card-body:has(.cd-wrap),
-.card-body:has(.cd-screen) {
+.ps-chatdevice-modal.modal .card-body:has(.cd-screen),
+.ps-chatdevice-modal.modal .card-body:has(.cd-wrap) {
     overflow: visible !important;
 }
 
-.cd-wrap {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.cd-body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-}
-
-.cd-topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 10px 12px;
-}
-
-.cd-topbar-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.cd-avatar {
-    width: 34px;
-    height: 34px;
-    border-radius: 999px;
-    background: rgba(47, 59, 0, 0.12);
-    box-shadow: inset 0 0 0 2px rgba(47, 59, 0, 0.12);
-}
-
-.cd-titlewrap {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-}
-
-.cd-title {
-    font-weight: 700;
-    font-size: 1rem;
-    color: #2f3b00;
-}
-
-.cd-subtitle {
-    font-size: 0.85rem;
-    opacity: 0.75;
-    margin-top: 2px;
-}
-
-.cd-topbar-right {
-    opacity: 0.7;
-    display: flex;
-    align-items: center;
-}
-
-.cd-device {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0 0;
-    flex: 1 1 auto;
-    min-height: 0;
-}
 
 .cd-screen {
     position: relative;
@@ -150,10 +77,53 @@
     background: rgba(0, 0, 0, 0.08);
 }
 
+.cd-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 30;
+
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+
+    border: 1px solid rgba(31, 35, 24, 0.18);
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
+
+    display: grid;
+    place-items: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.cd-close::before,
+.cd-close::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background: rgba(31, 35, 24, 0.70);
+}
+
+.cd-close::before {
+    transform: rotate(45deg);
+}
+
+.cd-close::after {
+    transform: rotate(-45deg);
+}
+
+.cd-close:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(31, 35, 24, 0.26);
+}
+
 .cd-chat {
     flex: 1 1 auto;
     min-height: 0;
-    padding: 44px 14px 18px;
+    padding: 54px 14px 18px;
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
@@ -237,12 +207,4 @@
     background: rgba(0, 0, 0, 0.06);
     padding: 0.1rem 0.3rem;
     border-radius: 8px;
-}
-
-.modal:has(.cd-screen) .modal-dialog {
-    pointer-events: none !important;
-}
-
-.modal:has(.cd-screen) .modal-content {
-    pointer-events: auto !important;
 }

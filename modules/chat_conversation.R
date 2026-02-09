@@ -7,6 +7,12 @@ chat_device_ui <- function(id,
   div(
     class = paste0("cd-screen cd-", device),
     style = if (!is.null(height)) paste0("height:", height, ";") else NULL,
+    tags$button(
+      type = "button",
+      class = "cd-close",
+      `data-bs-dismiss` = "modal",
+      `aria-label` = "Close"
+    ),
     div(
       class = "cd-chat",
       uiOutput(ns("chat"))

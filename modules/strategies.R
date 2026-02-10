@@ -364,7 +364,7 @@ strategies_module_ui <- function(id) {
               card_body(
                 div(
                   class = "strategies-main",
-                  pause_flashcards_ui(ns("pause_intro")),
+                  pause_flashcards_ui(ns("pause_intro"), "Background Understanding"),
                 )
               )
             ),
@@ -384,7 +384,7 @@ strategies_module_ui <- function(id) {
               card_body(
                 div(
                   class = "strategies-main",
-                  pause_flashcards_ui(ns("pause_results"))
+                  pause_flashcards_ui(ns("pause_results"), "Examine the Results")
                 ),
               )
             ),
@@ -826,34 +826,64 @@ strategies_module_ui <- function(id) {
         ),
 
         div(
-            class = "ps-guide ps-what-paper",
-          div(
-              class = "ps-step ps-step-5 ps-topic-card",
-              `data-card-id` = "what-paper-52",
-              bslib::card_body(
-                class = "ps-topic-click",
-                actionButton(ns("open_box_ai_5"), label = NULL, class = "ps-topic-btn"),
+          class = "ps-guide ps-what-paper",
+        bslib::card(
+            class = "ps-step ps-step-5 ps-topic-card",
+            `data-card-id` = "what-paper-52",
+            bslib::card_body(
+              class = "ps-topic-click",
+              actionButton(ns("open_box_ai_5"), label = NULL, class = "ps-topic-btn"),
+              tags$div(
+                class = "ps-step-inner",
                 tags$div(
-                  class = "ps-step-inner",
+                  class = "ps-step-title ps-topic-title",
+                  tags$span(class = "ps-step-num", "5"),
                   tags$div(
-                    class = "ps-step-title ps-topic-title",
-                    tags$span(class = "ps-step-num", "5"),
-                    tags$div(
-                      class = "ps-topic-title-text",
-                      tags$h3("The Verdict"),
-                      tags$p(class = "ps-topic-subtitle", "How did the LLMs do?")
-                    )
-                  ),
-                  tags$div(
-                    class = "ps-tool-cta",
-                    bs_icon("trophy"),
-                    tags$span("Open the Verdict")
+                    class = "ps-topic-title-text",
+                    tags$h3("The Verdict"),
+                    tags$p(class = "ps-topic-subtitle", "How did the LLMs do?")
                   )
+                ),
+                tags$div(
+                  class = "ps-tool-cta",
+                  bs_icon("trophy"),
+                  tags$span("Open the Verdict")
                 )
               )
+            )
           )
-        #)
-        ),
+          )
+
+
+        # div(
+        #     class = "ps-guide ps-what-paper",
+        #   div(
+        #       class = "ps-step ps-step-5 ps-topic-card",
+        #       `data-card-id` = "what-paper-52",
+        #       bslib::card_body(
+        #         class = "ps-topic-click",
+        #         actionButton(ns("open_box_ai_5"), label = NULL, class = "ps-topic-btn"),
+        #         tags$div(
+        #           class = "ps-step-inner",
+        #           tags$div(
+        #             class = "ps-step-title ps-topic-title",
+        #             tags$span(class = "ps-step-num", "5"),
+        #             tags$div(
+        #               class = "ps-topic-title-text",
+        #               tags$h3("The Verdict"),
+        #               tags$p(class = "ps-topic-subtitle", "How did the LLMs do?")
+        #             )
+        #           ),
+        #           tags$div(
+        #             class = "ps-tool-cta",
+        #             bs_icon("trophy"),
+        #             tags$span("Open the Verdict")
+        #           )
+        #         )
+        #       )
+        #   )
+        # #)
+        # ),
       )
 
         )
@@ -1595,7 +1625,7 @@ observeEvent(input$results8, {
 })
 
 # Pause_server----
-
+ 
 output$pause_text1 <- renderUI({
     process_markdown("strategies/pause1.md")
   })
@@ -1750,6 +1780,10 @@ observeEvent(input$discussion10, {
 # Understanding_server----
 
 
+output$understanding_instruction_text <- renderUI({
+  process_markdown("strategies/understanding_instructions.md")
+})
+
 output$understanding_box1 <- renderUI({
         process_markdown("strategies/understanding.md")
       })
@@ -1763,6 +1797,10 @@ sentence_checklist_server(
 )
 
 # Reflection_server----
+
+output$reflection_instruction_text <- renderUI({
+  process_markdown("strategies/reflection_instructions.md")
+})
 
 ## Rating
 
@@ -2058,22 +2096,6 @@ output$ai_instruction_text <- renderUI({
   process_markdown("strategies/ai_instructions.md")
 })
 
-# open_ai_modal <- function(title, subtitle, ui_id) {
-#   showModal(
-#     modalDialog(
-#       title = tags$div(
-#         class = "ps-modal-title",
-#         tags$div(class = "ps-modal-title-main", title),
-#         tags$div(class = "ps-modal-title-sub", subtitle)
-#       ),
-#       div(class = "ps-modal-body prose", uiOutput(ui_id)),
-#       easyClose = TRUE,
-#       footer = modalButton("Close"),
-#       size = "l"
-#     )
-#   )
-# }
-
 open_chat_device_modal <- function(ui_expr, size = "l") {
   showModal(
     modalDialog(
@@ -2131,66 +2153,22 @@ observeEvent(input$open_box_ai_4, {
   )
 }, ignoreInit = TRUE)
 
-
-# observeEvent(input$open_box_ai_2, {
-#   open_chat_device_modal(
-#     "Let's ask Claude",
-#     "General LLM",
-#     ns("ai_claude")
-#   )
-# }, ignoreInit = TRUE)
-
-# output$ai_claude <- renderUI({
-#   chat_device_ui(
-#     ns("claude_chat"),
-#     device = "phone",
-#     height = "650px"
-#   )
-# })
-
-# observeEvent(input$open_box_ai_3, {
-#   open_chat_device_modal(
-#     "Let's ask Anara",
-#     "Science LLM",
-#     ns("ai_anara")
-#   )
-# }, ignoreInit = TRUE)
-
-# output$ai_anara <- renderUI({
-#   chat_device_ui(
-#     ns("anara_chat"),
-#     device = "phone",
-#     height = "650px"
-#   )
-# })
-
-# observeEvent(input$open_box_ai_4, {
-#   open_ai_modal(
-#     "Let's ask Consensus",
-#     "Science LLM",
-#     ns("ai_consensus")
-#   )
-# }, ignoreInit = TRUE)
-
-# output$ai_consensus <- renderUI({
-#   chat_device_ui(
-#     ns("consensus_chat"),
-#     device = "phone",
-#     height = "650px"
-#   )
-# })
-
 observeEvent(input$open_box_ai_5, {
+  showModal(
+    modalDialog(
+      title = "The Verdict",
+      easyClose = TRUE,
+      size = "l",
+      uiOutput(ns("verdict_text"))
+    )
+  )
+}, ignoreInit = TRUE)
 
-  output$ai_verdict <- renderUI({
-  verdict_module_ui(ns("verdict"))
-  
-})
+output$verdict_text <- renderUI({
+  process_markdown("chat_device/verdict.md")
 })
 
-# output$ai_verdict <- renderUI({
-#   verdict_module_ui(ns("verdict"))
-# })
+
 
 chat_device_server(
   "gpt_chat",
@@ -2211,8 +2189,6 @@ chat_device_server(
   "consensus_chat",
   md_dir = "markdown/english/chat_device/consensus"
 )
-
-verdict_module_server("verdict", process_markdown)
 
 # nav_buttons_server----
 

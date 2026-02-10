@@ -1,0 +1,3 @@
+In this final step, take a moment to reflect on this paper - what were the strengths, what were the weaknesses? Do you think this study was rigorous? Using the rating system you have been using throughout, a star rating is calculated, rating this paper from 1-5 stars, just like a book on Goodreads. I would encourage you to write a little review of your own - you can see mine below.
+
+If your rating or review doesn't match mine, that is totally okay! This is entirely objective and your opinion matters here! Maybe you even picked up on things that I missed, or maybe you disagree with me about the importance of a particular aspect. All absolutely valid!

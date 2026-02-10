@@ -16,8 +16,9 @@ body>.container-fluid {
 
 .strategies-main {
     max-height: calc(100vh - 32px);
-    overflow: hidden;
+    /* overflow: hidden; */
     background: F2EDD2 !important;
+    overflow-y: scroll;
 }
 
 .strategies-main .paper-box {

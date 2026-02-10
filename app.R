@@ -67,6 +67,7 @@ tags$head(
   tags$script(src = "js/emoji_picker.js"),
   tags$script(src = "js/card-complete.js"),
   tags$script(src = "js/fig_nav_keys.js"),
+  tags$script(src = "js/modal-scroll-fix.js"),
   
 
   tags$link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap"),
@@ -212,6 +213,13 @@ tags$head(
     class = "ps-topmenu-link"
   )
 ),
+ nav_item(
+  shiny::actionLink(
+    inputId = "open_bib",
+    label = "Bibliography",
+    class = "ps-topmenu-link"
+  )
+)
 
   
   ),
@@ -313,6 +321,27 @@ observeEvent(input$open_about, {
 
 output$about_text <- renderUI({
         process_markdown("about.md")
+      })
+
+observeEvent(input$open_bib, {
+  showModal(
+    modalDialog(
+      title = "Bibliography",
+      size = "l",
+      easyClose = TRUE,
+      footer = modalButton("Close"),
+
+      div(
+        class = "ps-about-modal",
+        uiOutput("bib_text")
+      )
+    )
+  )
+})
+
+
+output$bib_text <- renderUI({
+        process_markdown("bibliography.md")
       })
 
 

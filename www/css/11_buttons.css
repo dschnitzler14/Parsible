@@ -35,7 +35,7 @@ a.action-button.highlight.shiny-bound-input:active {
 
 .fun-btn-primary {
     background-color: var(--accent-green) !important;
-    color: #ffffff !important;
+    color: #ffffff !important
 }
 
 .fun-btn-primary:hover,

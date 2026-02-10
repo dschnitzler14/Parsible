@@ -1,3 +1,3 @@
 # Results
 
-Environmental enrichment was associated with increased expression of neuronal growth markers in the hippocampus. Enriched mice also performed better on the novel object recognition task compared with standard-housed controls. `r actionLink(ns("practice_wrong_section5"), "Together, these findings suggest that hippocampal plasticity plays a key role in learning.", class = "invisible_yellow")`
+Environmental enrichment was associated with increased expression of neuronal growth markers in the hippocampus. Enriched mice also performed better on the novel object recognition task compared with standard-housed controls. `r actionLink(ns("practice_wrong_section5"), "Based on previous studies, these findings suggest that hippocampal plasticity plays a key role in learning.", class = "invisible_yellow")`

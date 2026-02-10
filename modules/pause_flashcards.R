@@ -1,4 +1,4 @@
-pause_flashcards_ui <- function(id) {
+pause_flashcards_ui <- function(id, quiz_name = "Quiz") {
   ns <- NS(id)
 
   tagList(
@@ -6,7 +6,7 @@ pause_flashcards_ui <- function(id) {
       class = "flashcard",
       div(
         class = "flashcard-header",
-        span(class = "flashcard-title", "Quiz"),
+        span(class = "flashcard-title", quiz_name),
         uiOutput(ns("progress"))
       ),
       div(

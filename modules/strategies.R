@@ -70,7 +70,7 @@ strategies_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title",
-                tags$h3("⚓️ TL;DR — How to read a paper")
+                tags$h3("⚓️ TL;DR - How to read a paper")
               ),
               uiOutput(ns("strategies_intro_tldr"))
             )

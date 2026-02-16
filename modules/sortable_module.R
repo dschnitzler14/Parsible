@@ -96,7 +96,7 @@ sortable_server <- function(id, dictionary, dictionary_intro, dictionary_methods
         )
       } else {
         output$sorting_feedback <- renderUI(
-          div(class = "alert alert-info lecturi-alert", "Nearly there — some statements are in the wrong section.")
+          div(class = "alert alert-info lecturi-alert", "Nearly there - some statements are in the wrong section.")
         )
       }
 

@@ -98,32 +98,6 @@ what_is_a_paper_module_ui <- function(id) {
           )
         ),
 
-        # bslib::card(
-        #   class = "ps-step ps-step-4 ps-topic-card",
-        #   `data-card-id` = "what-paper-4",
-        #   bslib::card_body(
-        #     class = "ps-topic-click",
-        #     actionButton(ns("open_box4"), label = NULL, class = "ps-topic-btn"),
-        #     tags$div(
-        #       class = "ps-step-inner",
-        #       tags$div(
-        #         class = "ps-step-title ps-topic-title",
-        #         tags$span(class = "ps-step-num", "4"),
-        #         tags$div(
-        #           class = "ps-topic-title-text",
-        #           tags$h3("History of Publishing"),
-        #           tags$p(class = "ps-topic-subtitle", "How we got from letters to modern journals.")
-        #         )
-        #       ),
-        #       tags$div(
-        #         class = "ps-tool-cta",
-        #         bs_icon("book"),
-        #         tags$span("Open chapter")
-        #       )
-        #     )
-        #   )
-        # ),
-
         bslib::card(
           class = "ps-step ps-step-4 ps-topic-card",
           `data-card-id` = "what-paper-4",

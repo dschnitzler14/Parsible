@@ -1,4 +1,4 @@
-citing_module_ui <- function(id) {
+citing_module_ui <- function(id) { 
   ns <- NS(id)
 
   bslib::page_fluid(
@@ -21,7 +21,7 @@ citing_module_ui <- function(id) {
         class = "ps-step-grid",
 
         bslib::card(
-          class = "ps-step ps-step-1",
+          class = "ps-step ps-step-1 ps-static-card",
           bslib::card_body(
             tags$div(
               class = "ps-step-inner",
@@ -36,7 +36,7 @@ citing_module_ui <- function(id) {
         ),
 
         bslib::card(
-          class = "ps-step ps-step-2",
+          class = "ps-step ps-step-2 ps-static-card",
           bslib::card_body(
             tags$div(
               class = "ps-step-inner",
@@ -51,14 +51,14 @@ citing_module_ui <- function(id) {
         ),
 
         bslib::card(
-          class = "ps-step ps-step-3",
+          class = "ps-step ps-step-3 ps-static-card",
           bslib::card_body(
             tags$div(
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title",
                 tags$span(class = "ps-step-num", "3"),
-                tags$h3("Use DOIs and stable links")
+                tags$h3("In-text vs reference list")
               ),
               uiOutput(ns("citing_step3_text"))
             )
@@ -66,7 +66,7 @@ citing_module_ui <- function(id) {
         ),
 
         bslib::card(
-          class = "ps-step ps-step-4",
+          class = "ps-step ps-step-4 ps-static-card",
           bslib::card_body(
             tags$div(
               class = "ps-step-inner",
@@ -81,14 +81,14 @@ citing_module_ui <- function(id) {
         ),
 
         bslib::card(
-          class = "ps-step ps-step-5",
+          class = "ps-step ps-step-5 ps-static-card",
           bslib::card_body(
             tags$div(
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title",
                 tags$span(class = "ps-step-num", "5"),
-                tags$h3("In-text vs reference list")
+                tags$h3("Use DOIs and stable links")
               ),
               uiOutput(ns("citing_step5_text"))
             )
@@ -96,14 +96,14 @@ citing_module_ui <- function(id) {
         ),
 
         bslib::card(
-          class = "ps-step ps-step-6",
+          class = "ps-step ps-step-6 ps-static-card",
           bslib::card_body(
             tags$div(
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title",
                 tags$span(class = "ps-step-num", "6"),
-                tags$h3("Cite figures, tables, and datasets")
+                tags$h3("Do I need to cite X?")
               ),
               uiOutput(ns("citing_step6_text"))
             )
@@ -111,7 +111,7 @@ citing_module_ui <- function(id) {
         ),
 
         bslib::card(
-          class = "ps-step ps-step-7",
+          class = "ps-step ps-step-7 ps-static-card",
           bslib::card_body(
             tags$div(
               class = "ps-step-inner",
@@ -126,34 +126,19 @@ citing_module_ui <- function(id) {
         ),
 
         bslib::card(
-          class = "ps-step ps-step-8",
+          class = "ps-step ps-step-8 ps-static-card",
           bslib::card_body(
             tags$div(
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title",
                 tags$span(class = "ps-step-num", "8"),
-                tags$h3("Example citations")
+                tags$h3("Use a reference manager")
               ),
               uiOutput(ns("citing_step8_text"))
             )
           )
         ),
-
-        bslib::card(
-          class = "ps-step ps-step-9",
-          bslib::card_body(
-            tags$div(
-              class = "ps-step-inner",
-              tags$div(
-                class = "ps-step-title",
-                tags$span(class = "ps-step-num", "9"),
-                tags$h3("Use a reference manager (optional)")
-              ),
-              uiOutput(ns("citing_step9_text"))
-            )
-          )
-        )
       ),
 
       div(
@@ -170,6 +155,38 @@ citing_module_server <- function(id, parent_session, nav_order_list, process_mar
 
 output$citing_intro_text1 <- renderUI({
   process_markdown("citing/citing_intro.md")
+})
+
+output$citing_step1_text <- renderUI({
+  process_markdown("citing/citing_step1_text.md")
+})
+
+output$citing_step2_text <- renderUI({
+  process_markdown("citing/citing_step2_text.md")
+})
+
+output$citing_step3_text <- renderUI({
+  process_markdown("citing/citing_step3_text.md")
+})
+
+output$citing_step4_text <- renderUI({
+  process_markdown("citing/citing_step4_text.md")
+})
+
+output$citing_step5_text <- renderUI({
+  process_markdown("citing/citing_step5_text.md")
+})
+
+output$citing_step6_text <- renderUI({
+  process_markdown("citing/citing_step6_text.md")
+})
+
+output$citing_step7_text <- renderUI({
+  process_markdown("citing/citing_step7_text.md")
+})
+
+output$citing_step8_text <- renderUI({
+  process_markdown("citing/citing_step8_text.md")
 })
 
     nav_buttons_server(

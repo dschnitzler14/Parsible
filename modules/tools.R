@@ -217,6 +217,27 @@ tools_module_ui <- function(id) {
             class = "ps-step ps-tool-card",
             bslib::card_body(
               class = "ps-tool-click",
+              onclick = "window.open('https://paperstars.org/','_blank')",
+              tags$div(
+                class = "ps-step-inner",
+                tags$div(
+                  class = "ps-step-title ps-tool-title",
+                  tags$div(class = "ps-linkout", "↗"),
+                  tags$div(
+                    class = "ps-tool-title-text",
+                    tags$h3("Paperstars"),
+                    tags$p(class = "ps-tool-subtitle", "Rate and review scientific papers")
+                  )
+                ),
+                tags$div(class = "ps-tool-cta", "Go to site")
+              )
+            )
+          ),
+
+          bslib::card(
+            class = "ps-step ps-tool-card",
+            bslib::card_body(
+              class = "ps-tool-click",
               onclick = "window.open('https://web.hypothes.is/','_blank')",
               tags$div(
                 class = "ps-step-inner",
@@ -234,26 +255,26 @@ tools_module_ui <- function(id) {
             )
           ),
 
-          bslib::card(
-            class = "ps-step ps-tool-card",
-            bslib::card_body(
-              class = "ps-tool-click",
-              onclick = "window.open('https://paperstars.org/','_blank')",
-              tags$div(
-                class = "ps-step-inner",
-                tags$div(
-                  class = "ps-step-title ps-tool-title",
-                  tags$div(class = "ps-linkout", "↗"),
-                  tags$div(
-                    class = "ps-tool-title-text",
-                    tags$h3("Paperstars"),
-                    tags$p(class = "ps-tool-subtitle", "Rate and review scientific papers")
-                  )
-                ),
-                tags$div(class = "ps-tool-cta", "Go to site")
-              )
-            )
-          ),
+          # bslib::card(
+          #   class = "ps-step ps-tool-card",
+          #   bslib::card_body(
+          #     class = "ps-tool-click",
+          #     onclick = "window.open('https://paperstars.org/','_blank')",
+          #     tags$div(
+          #       class = "ps-step-inner",
+          #       tags$div(
+          #         class = "ps-step-title ps-tool-title",
+          #         tags$div(class = "ps-linkout", "↗"),
+          #         tags$div(
+          #           class = "ps-tool-title-text",
+          #           tags$h3("Paperstars"),
+          #           tags$p(class = "ps-tool-subtitle", "Rate and review scientific papers")
+          #         )
+          #       ),
+          #       tags$div(class = "ps-tool-cta", "Go to site")
+          #     )
+          #   )
+          # ),
 
           bslib::card(
             class = "ps-step ps-tool-card",

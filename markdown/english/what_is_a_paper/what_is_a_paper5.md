@@ -1,29 +1,59 @@
 # Different Types of Publication
 
-Science is an iterative process, and so is scientific publishing.
-
 ## Traditional/ Pay-walled
-In traditional publishing, you submit a paper to a journal, which gets passed to an editor or editorial team. They will look over it and decide whether or not they would like to publish your work. At this point, your paper gets passed to peer reviewers - these are your _peers_ in the field. The editor will contact different reviewers asking them to read your paper and give their feedback and comments. This can sometimes take time, as peer review is _voluntary_, meaning peer reviewers do not get paid for their work, but most scientists will engage in it because they understand the importance of scientific publishing. The reviewers are people who understand the work too - for example if you submit a paper about stress and metabolism, the editor will find reviewers who understand this particular area of research. It can get a little tricky though, finding peer reviewers who are experts in niche or novel methods.
-
-Peer review is often done blinded - either the reviewers can't see your details, and more commonly, you cannot see who the reviewers are. When they have read your paper and added their feedback, the paper will be returned to you with comments. At this point, you make the suggested edits or sometimes head back to the lab for additional work, to make a stronger or more convincing argument. Sometimes though, you might disagree and have a good reason for doing so, which is also a valid response. When you are ready, you resubmit this to the reviewers, who will look over your response and your changes. Once everyone is happy, the paper is finally accepted for publication.
 
 If you are publishing in a traditional journal, you will have to be "Article Processing Charges" (APCs) - these fees can be quite high, depending on the journal you are publishing in. Additionally, if you opt to have your paper published Open Access, the fees can be even higher.
 
-There are different tiers of Open Acess within traditional journals - green and gold. Green means the paper is embagoed for a while and stays behind a paywall for a certain length of time, while gold means that it is immediately accessible.
+There are different tiers of Open Acess within traditional journals - green and gold. Green means the paper is embargoed for a while and stays behind a paywall for a certain length of time, before the author can share the paper freely, while gold means that it is immediately accessible.
 
-Remember, unless you publish Open Acess, readers have to pay to access and read your paper too. Usually, University and Institute libraries pay these fees - which is why you may be asked to "log in via your Institue" when you visit a site to read a paper.
+Remember, unless you publish Open Acess, readers have to pay to access and read your paper too. Usually, University and Institute libraries pay these fees, which is why you may be asked to "log in via your Institue" when you visit a site to read a paper.
 
-You might be asking yourself at this point why people opt for the traditional route and the answer is: metrics, visibility, and perceived credibility. Traditional journals are indexed and have "Journal Impact Factors", meaning you can gain "Science Points", which in turn can influence your opportunities - this is where the "publish or perish" idea comes in (more on this in "What is Wrong"). In addition, many more people access big, well-known traditional journals, so your paper could be read by more people. However, the argument can be made that most researchers use large databases to search for specific keywords, meaning your paper will likely be read by the people in the field anyway. Finally, the perceived credibility of a journal can influence how your paper is perceived. XXXX
+So, between the author paying to publish a paper, reviewers (and often editors) working on a volunatary basis, and readers needing to pay for access to the paper, you might be asking yourself at this point why people opt for the traditional route.
+
+The answer is: metrics, visibility, and perceived credibility. Traditional journals are indexed in major citation databases and often have a Journal Impact Factor - metrics that can influence hiring, promotion, funding decisions, and institutional rankings, feeding into the familiar “publish or perish” culture (more on this in "What is Wrong").
+
+Large, well-known journals also tend to have broad readership and strong brand recognition, which can increase exposure. That said, many researchers now search via databases using keywords, meaning relevant work is often discovered regardless of the journal. Finally, perceived credibility matters: papers in prestigious journals may initially be judged more favourably simply because of where they are published, even though the true quality of a study depends on its methods, analysis, and transparency rather than the journal’s name.
 
 ### Predatory Journals & Paper Mills
-I should briefly mention predatory journals at this point - these are journals that will actively try to recruit you and promise you big rewards, i.e. higher metrics. Paper Mills 
+
+It’s also important to briefly mention predatory journals at this point. These are journals that actively solicit submissions, often through persistent email invitations that can sound flattering, and promise fast publication, impressive metrics, or international visibility. However, they typically lack genuine peer review, proper editorial oversight, and transparent publishing standards. Their primary goal is financial profit, not research integrity.
+
+Publishing in a predatory journal can damage a researcher’s credibility, as the work may not have been rigorously reviewed or meaningfully evaluated.
+
+Closely related are paper mills. These are organisations that produce and sell fabricated or heavily manipulated manuscripts to researchers, often for a fee. This might include fake data, recycled images, or entirely invented studies. Paper mills undermine scientific trust at a much deeper level because they introduce research that may never have actually been conducted.
+
+Both predatory journals and paper mills exploit pressure within academia, such as the “publish or perish” culture, but they operate outside legitimate scholarly standards.
+
+You can check a journal’s legitimacy using recognised resources such as:
+
+- <a href="https://doaj.org/" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right ps-link-icon"></i> Directory of Open Access Journals (DOAJ)</a> - indexes vetted open access journals
+- <a href="https://publicationethics.org/" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right ps-link-icon"></i> Committee on Publication Ethics (COPE)</a> - lists member publishers committed to ethical standards
+- <a href="https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right ps-link-icon"></i> Journal Citation Reports (JCR)</a> - provides verified impact metrics
+
+You can also look for transparent peer-review policies, named editorial board members with institutional affiliations, and clear publisher information.
+
+When reading (or publishing), it is important to consider not just what the paper says, but where it is published and whether the journal follows recognised academic practices. You can check
 
 ## Diamond Open Access
 
-This type of publishing uses a very similar model to tradional publishing, but it is entirely free - no publication fees (APCs), no paywall, no financial gain from publishing. The downside to this, at least for some researchers, is that Diamond Open Access 
+This type of publishing uses a very similar model to tradional publishing, but it is entirely free - no publication fees (APCs), no paywall, no financial gain from publishing. The downside to this, at least for some researchers, is that Diamond Open Access journals often operate with more limited financial resources. This can mean fewer staff, slower processing times, less marketing visibility, and sometimes lower perceived prestige compared to large commercial publishers. In some fields, they may also have smaller readerships.
+
+However, the core principle is accessibility: research is freely available to read and free to publish, removing financial barriers on both sides. These works are no less rigorous than "traditional" publishing and still undergo editorial and peer review processes.
 
 ## Pre-Print
 
-Pre-prints are a fantastic way to publish your papers quickly 
+Pre-prints are a fantastic way to share your research quickly. A pre-print is a full draft of a research paper that is made publicly available before formal peer review. This allows findings to be disseminated rapidly, which can be particularly important in fast-moving fields.
+
+However, pre-prints have not yet undergone traditional peer review. That does not automatically mean they are low quality, many are later published in reputable journals, but it does mean you should read them with extra care. Think of them as research that is in progress rather than research that has passed formal editorial scrutiny.
+
+Pre-print servers are platforms for sharing, not journals. Their goal is speed and accessibility.
 
 ## PCI & PRC Models
+
+New publishing models are also emerging that rethink how peer review works.
+
+- PCI (Peer Community In) is a system where researchers publicly review and recommend pre-prints. Instead of submitting to a traditional journal first, authors post their work as a pre-print and then undergo open peer review. If the work meets the required standards, it receives a recommendation from the community.
+
+- The Publish–Review–Curate (PRC) model, adopted by eLife, reorders traditional publishing by making research publicly available first (usually as a preprint), then conducting peer review openly, and finally curating or assessing the work rather than accepting or rejecting it in a binary way. Instead of acting as a gatekeeper, eLife publishes all reviewed papers along with the reviewer reports and an editorial assessment that summarises the strength of the evidence. This shifts the focus away from journal-based prestige and toward transparent evaluation, allowing readers to see both the research and the expert critique and judge the work for themselves.
+
+Both models aim to make peer review more transparent, efficient, and less wasteful. They also highlight an important point: publishing is evolving, and the traditional journal model is not the only way research can be evaluated and shared.

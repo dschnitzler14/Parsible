@@ -98,6 +98,32 @@ what_is_a_paper_module_ui <- function(id) {
           )
         ),
 
+        # bslib::card(
+        #   class = "ps-step ps-step-4 ps-topic-card",
+        #   `data-card-id` = "what-paper-4",
+        #   bslib::card_body(
+        #     class = "ps-topic-click",
+        #     actionButton(ns("open_box4"), label = NULL, class = "ps-topic-btn"),
+        #     tags$div(
+        #       class = "ps-step-inner",
+        #       tags$div(
+        #         class = "ps-step-title ps-topic-title",
+        #         tags$span(class = "ps-step-num", "4"),
+        #         tags$div(
+        #           class = "ps-topic-title-text",
+        #           tags$h3("History of Publishing"),
+        #           tags$p(class = "ps-topic-subtitle", "How we got from letters to modern journals.")
+        #         )
+        #       ),
+        #       tags$div(
+        #         class = "ps-tool-cta",
+        #         bs_icon("book"),
+        #         tags$span("Open chapter")
+        #       )
+        #     )
+        #   )
+        # ),
+
         bslib::card(
           class = "ps-step ps-step-4 ps-topic-card",
           `data-card-id` = "what-paper-4",
@@ -111,8 +137,8 @@ what_is_a_paper_module_ui <- function(id) {
                 tags$span(class = "ps-step-num", "4"),
                 tags$div(
                   class = "ps-topic-title-text",
-                  tags$h3("History of Publishing"),
-                  tags$p(class = "ps-topic-subtitle", "How we got from letters to modern journals.")
+                  tags$h3("Different Types of Publication"),
+                  tags$p(class = "ps-topic-subtitle", "Preprints, articles, reviews, and more.")
                 )
               ),
               tags$div(
@@ -137,8 +163,8 @@ what_is_a_paper_module_ui <- function(id) {
                 tags$span(class = "ps-step-num", "5"),
                 tags$div(
                   class = "ps-topic-title-text",
-                  tags$h3("Different Types of Publication"),
-                  tags$p(class = "ps-topic-subtitle", "Preprints, articles, reviews, and more.")
+                  tags$h3("Problems with Scientific Publishing"),
+                  tags$p(class = "ps-topic-subtitle", "Bias, incentives, paywalls, and reproducibility.")
                 )
               ),
               tags$div(
@@ -163,8 +189,8 @@ what_is_a_paper_module_ui <- function(id) {
                 tags$span(class = "ps-step-num", "6"),
                 tags$div(
                   class = "ps-topic-title-text",
-                  tags$h3("Problems with Scientific Publishing"),
-                  tags$p(class = "ps-topic-subtitle", "Bias, incentives, paywalls, and reproducibility.")
+                  tags$h3("What is Open Science?"),
+                  tags$p(class = "ps-topic-subtitle", "Science should be collaborative - enter Open Science Practices")
                 )
               ),
               tags$div(
@@ -187,32 +213,6 @@ what_is_a_paper_module_ui <- function(id) {
               tags$div(
                 class = "ps-step-title ps-topic-title",
                 tags$span(class = "ps-step-num", "7"),
-                tags$div(
-                  class = "ps-topic-title-text",
-                  tags$h3("What is Open Science?"),
-                  tags$p(class = "ps-topic-subtitle", "Science should be collaborative - enter Open Science Practices")
-                )
-              ),
-              tags$div(
-                class = "ps-tool-cta",
-                bs_icon("book"),
-                tags$span("Open chapter")
-              )
-            )
-          )
-        ),
-
-        bslib::card(
-          class = "ps-step ps-step-8 ps-topic-card",
-          `data-card-id` = "what-paper-8",
-          bslib::card_body(
-            class = "ps-topic-click",
-            actionButton(ns("open_box8"), label = NULL, class = "ps-topic-btn"),
-            tags$div(
-              class = "ps-step-inner",
-              tags$div(
-                class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "8"),
                 tags$div(
                   class = "ps-topic-title-text",
                   tags$h3("Good ≠ Perfect"),
@@ -285,15 +285,15 @@ what_is_a_paper_module_server <- function(id, parent_session, nav_order_list, pr
       )
     }, ignoreInit = TRUE)
 
-    observeEvent(input$open_box4, {
-      open_md_modal(
-        "History of Publishing",
-        "How we got from letters to modern journals.",
-        "what_is_a_paper/what_is_a_paper4.md"
-      )
-    }, ignoreInit = TRUE)
+    # observeEvent(input$open_box4, {
+    #   open_md_modal(
+    #     "History of Publishing",
+    #     "How we got from letters to modern journals.",
+    #     "what_is_a_paper/what_is_a_paper4.md"
+    #   )
+    # }, ignoreInit = TRUE)
 
-    observeEvent(input$open_box5, {
+    observeEvent(input$open_box4, {
       open_md_modal(
         "Different Types of Publication",
         "Preprints, articles, reviews, and more.",
@@ -301,7 +301,7 @@ what_is_a_paper_module_server <- function(id, parent_session, nav_order_list, pr
       )
     }, ignoreInit = TRUE)
 
-    observeEvent(input$open_box6, {
+    observeEvent(input$open_box5, {
       open_md_modal(
         "Problems with Scientific Publishing",
         "Bias, incentives, paywalls, and reproducibility.",
@@ -309,7 +309,7 @@ what_is_a_paper_module_server <- function(id, parent_session, nav_order_list, pr
       )
     }, ignoreInit = TRUE)
 
-    observeEvent(input$open_box7, {
+    observeEvent(input$open_box6, {
       open_md_modal(
         "What is Open Science?",
         "Sharing methods, data, code, and more.",
@@ -317,10 +317,10 @@ what_is_a_paper_module_server <- function(id, parent_session, nav_order_list, pr
       )
     }, ignoreInit = TRUE)
 
-    observeEvent(input$open_box8, {
+    observeEvent(input$open_box7, {
       open_md_modal(
         "Good ≠ Perfect",
-        "How to read critically without doomspiralling.",
+        "How to read critically without being a perfectionist.",
         "what_is_a_paper/what_is_a_paper8.md"
       )
     }, ignoreInit = TRUE)

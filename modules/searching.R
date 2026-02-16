@@ -159,80 +159,80 @@ searching_module_ui <- function(id) {
 
 
     ####
-    bslib::card(
-      class = "ps-searching-card",
-      bslib::card_body(
-        div(
-          class = "ps-searching",
-          tags$h3(class = "ps-search-title", "Try Boolean searching (OpenAlex)"),
-          tags$p(
-            class = "ps-search-help",
-            "Type a query using UPPERCASE boolean operators: AND, OR, NOT. Parentheses work too."
-          ),
+    # bslib::card(
+    #   class = "ps-searching-card",
+    #   bslib::card_body(
+    #     div(
+    #       class = "ps-searching",
+    #       tags$h3(class = "ps-search-title", "Try Boolean searching (OpenAlex)"),
+    #       tags$p(
+    #         class = "ps-search-help",
+    #         "Type a query using UPPERCASE boolean operators: AND, OR, NOT. Parentheses work too."
+    #       ),
 
-          div(
-            class = "ps-search-topwrap",
-            div(
-              class = "ps-search-row",
-              div(
-                class = "ps-searchbar ps-searchbar-wide",
-                textInput(
-                  ns("oa_query"),
-                  label = NULL,
-                  value = "(climate OR weather) AND adaptation NOT politics",
-                  placeholder = "Search by title, author, DOI, keyword…"
-                ),
-                actionButton(ns("run_search"), HTML("&rarr;"), class = "ps-search-go")
-              )
-            ),
-            div(
-              class = "ps-sort-row",
-              div(
-                class = "ps-sort",
-                tags$div(class = "ps-sort-label", "Sort"),
-                selectInput(
-                  ns("sort_mode"),
-                  label = NULL,
-                  choices = c(
-                    "Relevance" = "relevance_score:desc",
-                    "Citations" = "cited_by_count:desc"
-                  ),
-                  selected = "relevance_score:desc"
-                )
-              )
-            )
-          ),
+    #       div(
+    #         class = "ps-search-topwrap",
+    #         div(
+    #           class = "ps-search-row",
+    #           div(
+    #             class = "ps-searchbar ps-searchbar-wide",
+    #             textInput(
+    #               ns("oa_query"),
+    #               label = NULL,
+    #               value = "(climate OR weather) AND adaptation NOT politics",
+    #               placeholder = "Search by title, author, DOI, keyword…"
+    #             ),
+    #             actionButton(ns("run_search"), HTML("&rarr;"), class = "ps-search-go")
+    #           )
+    #         ),
+    #         div(
+    #           class = "ps-sort-row",
+    #           div(
+    #             class = "ps-sort",
+    #             tags$div(class = "ps-sort-label", "Sort"),
+    #             selectInput(
+    #               ns("sort_mode"),
+    #               label = NULL,
+    #               choices = c(
+    #                 "Relevance" = "relevance_score:desc",
+    #                 "Citations" = "cited_by_count:desc"
+    #               ),
+    #               selected = "relevance_score:desc"
+    #             )
+    #           )
+    #         )
+    #       ),
 
-          div(
-            class = "ps-example-row",
-            actionButton(ns("ex_and"), "Example: AND", class = "ps-pill"),
-            actionButton(ns("ex_or"), "Example: OR", class = "ps-pill"),
-            actionButton(ns("ex_not"), "Example: NOT", class = "ps-pill")
-          ),
+    #       div(
+    #         class = "ps-example-row",
+    #         actionButton(ns("ex_and"), "Example: AND", class = "ps-pill"),
+    #         actionButton(ns("ex_or"), "Example: OR", class = "ps-pill"),
+    #         actionButton(ns("ex_not"), "Example: NOT", class = "ps-pill")
+    #       ),
 
-          div(
-            class = "ps-meta-row",
-            div(
-              class = "ps-control ps-control-n",
-              tags$span(class = "ps-control-label", "Results to show"),
-              numericInput(ns("n_results"), label = NULL, value = 10, min = 5, max = 50, step = 5)
-            ),
-            div(
-              class = "ps-control ps-control-url",
-              checkboxInput(ns("show_url"), "Show OpenAlex request URL", value = FALSE)
-            )
-          ),
+    #       div(
+    #         class = "ps-meta-row",
+    #         div(
+    #           class = "ps-control ps-control-n",
+    #           tags$span(class = "ps-control-label", "Results to show"),
+    #           numericInput(ns("n_results"), label = NULL, value = 10, min = 5, max = 50, step = 5)
+    #         ),
+    #         div(
+    #           class = "ps-control ps-control-url",
+    #           checkboxInput(ns("show_url"), "Show OpenAlex request URL", value = FALSE)
+    #         )
+    #       ),
 
-          conditionalPanel(
-            condition = sprintf("input['%s'] == true", ns("show_url")),
-            tags$pre(class = "ps-requrl", textOutput(ns("req_url")))
-          ),
+    #       conditionalPanel(
+    #         condition = sprintf("input['%s'] == true", ns("show_url")),
+    #         tags$pre(class = "ps-requrl", textOutput(ns("req_url")))
+    #       ),
 
-          tags$div(class = "ps-status", textOutput(ns("status"))),
-          div(class = "ps-results", DT::DTOutput(ns("results_tbl")))
-        )
-      )
-    ),
+    #       tags$div(class = "ps-status", textOutput(ns("status"))),
+    #       div(class = "ps-results", DT::DTOutput(ns("results_tbl")))
+    #     )
+    #   )
+    # ),
     nav_buttons_ui(ns("nav_controls"))
   )
   

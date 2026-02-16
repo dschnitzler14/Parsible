@@ -11,6 +11,4 @@ In this section, you’ll learn:
 - how to use Boolean logic (AND, OR, NOT) to control what appears in your results
 - how to quickly judge whether a paper is worth reading further
 
-These strategies work whether you’re doing background reading for a course, preparing for a journal club, or starting a research project. You don’t need to read everything, you just need to know how to search smartly.
-
-Once you’ve read through the guide, you can try it out yourself below and practice building searches that return fewer, better, and more relevant papers.
+These strategies work whether you’re doing background reading for a course, preparing for a journal club, or starting a research project. You don’t need to read everything, you just need to know how to search effectively.

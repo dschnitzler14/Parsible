@@ -26,3 +26,18 @@
 .nav-title-text {
     margin-left: 0.5rem;
 }
+
+.ps-open-link {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ps-link-icon {
+    margin-left: 6px;
+    font-size: 0.85em;
+    opacity: 0.75;
+}
+
+.ps-open-link:hover .ps-link-icon {
+    opacity: 1;
+}

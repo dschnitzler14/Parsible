@@ -13,7 +13,6 @@ library(purrr)
 library(fontawesome)
 library(whisker)
 library(sortable)
-library(rsconnect)
 
 nav_order_list <- c(
   "introduction",

@@ -2,7 +2,7 @@
 
 ## Traditional/ Pay-walled
 
-If you are publishing in a traditional journal, you will have to be "Article Processing Charges" (APCs) - these fees can be quite high, depending on the journal you are publishing in. Additionally, if you opt to have your paper published Open Access, the fees can be even higher.
+If you are publishing in a traditional journal, you will have to pay "Article Processing Charges" (APCs) - these fees can be quite high, depending on the journal you are publishing in. Additionally, if you opt to have your paper published Open Access, the fees can be even higher.
 
 There are different tiers of Open Acess within traditional journals - green and gold. Green means the paper is embargoed for a while and stays behind a paywall for a certain length of time, before the author can share the paper freely, while gold means that it is immediately accessible.
 
@@ -32,11 +32,11 @@ You can check a journal’s legitimacy using recognised resources such as:
 
 You can also look for transparent peer-review policies, named editorial board members with institutional affiliations, and clear publisher information.
 
-When reading (or publishing), it is important to consider not just what the paper says, but where it is published and whether the journal follows recognised academic practices. You can check
+When reading (or publishing), it is important to consider not just what the paper says, but where it is published and whether the journal follows recognised academic practices.
 
 ## Diamond Open Access
 
-This type of publishing uses a very similar model to tradional publishing, but it is entirely free - no publication fees (APCs), no paywall, no financial gain from publishing. The downside to this, at least for some researchers, is that Diamond Open Access journals often operate with more limited financial resources. This can mean fewer staff, slower processing times, less marketing visibility, and sometimes lower perceived prestige compared to large commercial publishers. In some fields, they may also have smaller readerships.
+This type of publishing uses a very similar model to tradional publishing, but it is entirely free - no publication fees (APCs), no paywall, no financial gain from publishing. The downside to this, at least for some researchers, is that Diamond Open Access journals often operate with more limited financial resources. This can mean fewer staff, slower processing times, less marketing visibility, and sometimes lower perceived prestige compared to large commercial publishers. Additionally, Diamond Open Access journals do not have traditional metrics, such as a Journal Impact Factor, which in turn means that the researcher cannot advance their personal H-Index.Finally, in some fields, they may also have smaller readerships.
 
 However, the core principle is accessibility: research is freely available to read and free to publish, removing financial barriers on both sides. These works are no less rigorous than "traditional" publishing and still undergo editorial and peer review processes.
 

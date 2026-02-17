@@ -15,69 +15,6 @@ strategies_module_ui <- function(id) {
           )
         )
       ),
-    
-
-     bslib::layout_columns(
-        col_widths = c(3, 3, 3, 3),
-        class = "ps-step-grid",
-
-        bslib::card(
-          class = "ps-step ps-static-card",
-          bslib::card_body(
-            tags$div(
-              class = "ps-step-inner",
-              tags$div(
-                class = "ps-step-title",
-                tags$h3("📚 Why are we reading this paper?")
-              ),
-              uiOutput(ns("strategies_intro_why"))
-            )
-          )
-        ),
-
-        bslib::card(
-          class = "ps-step ps-static-card",
-          bslib::card_body(
-            tags$div(
-              class = "ps-step-inner",
-              tags$div(
-                class = "ps-step-title",
-                tags$h3("🔬 What if you don’t understand all the technical jargon?")
-              ),
-              uiOutput(ns("strategies_intro_jargon"))
-            )
-          )
-        ),
-
-        bslib::card(
-          class = "ps-step ps-static-card",
-          bslib::card_body(
-            tags$div(
-              class = "ps-step-inner",
-              tags$div(
-                class = "ps-step-title",
-                tags$h3("⏩️ What you can safely ignore (on your first read)")
-              ),
-              uiOutput(ns("strategies_intro_ignore"))
-            )
-          )
-        ),
-
-        bslib::card(
-          class = "ps-step ps-static-card",
-          bslib::card_body(
-            tags$div(
-              class = "ps-step-inner",
-              tags$div(
-                class = "ps-step-title",
-                tags$h3("⚓️ TL;DR - How to read a paper")
-              ),
-              uiOutput(ns("strategies_intro_tldr"))
-            )
-          )
-        ),
-
-     ),
 
      bslib::card(
         class = "ps-step ps-static-card",
@@ -909,22 +846,6 @@ strategies_module_server <- function(id, parent_session, nav_order_list, process
 
 output$strategies_intro <- renderUI({
   process_markdown("strategies/strategies_intro_text.md")
-})
-
-output$strategies_intro_why <- renderUI({
-  process_markdown("strategies/strategies_intro_why_text.md")
-})
-
-output$strategies_intro_jargon <- renderUI({
-  process_markdown("strategies/strategies_intro_jargon_text.md")
-})
-
-output$strategies_intro_ignore <- renderUI({
-  process_markdown("strategies/strategies_intro_ignore_text.md")
-})
-
-output$strategies_intro_tldr <- renderUI({
-  process_markdown("strategies/strategies_intro_tldr_text.md")
 })
 
 output$strategies_intro_highlighter <- renderUI({

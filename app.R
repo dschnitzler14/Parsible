@@ -117,6 +117,15 @@ tags$head(
 
   nav_panel(
     title = tagList(
+      bs_icon("journal-text"),
+      " Advice"
+    ),
+    value = "advice",
+    advice_module_ui("advice")
+  ),
+
+  nav_panel(
+    title = tagList(
       bs_icon("puzzle"),
       " Strategies"
     ),
@@ -349,6 +358,7 @@ output$bib_text <- renderUI({
   what_is_a_paper_module_server("what_is_a_paper", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
   anatomy_module_server("anatomy", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown)
   strategies_module_server("strategies", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown, process_rmd_fragment = process_rmd_fragment)
+  advice_module_server("advice", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown, process_rmd_fragment = process_rmd_fragment)
   stats_module_server("stats", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown, process_rmd_fragment = process_rmd_fragment)
   practice_module_server("practice", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown, process_rmd_fragment = process_rmd_fragment)
   practice_your_turn_module_server("your_turn", parent_session = session, nav_order_list = nav_order_list, process_markdown = process_markdown, process_rmd_fragment = process_rmd_fragment)

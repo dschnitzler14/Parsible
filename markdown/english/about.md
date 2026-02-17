@@ -1,13 +1,13 @@
-## About the Paper Reading App
+## About Parsible
 
-This Paper Reading App is a teaching-focused web app designed to help students learn how to read scientific papers effectively.
+Parsible is a teaching-focused web app designed to help students learn how to read scientific papers effectively.
 
 Rather than focusing on speed or shortcuts, the app emphasises:
 
 - understanding paper structure
 - developing reading strategies
 - learning how to interpret figures and methods
-- reflecting critically on evidence
+- developing critical reading skills
 
 It is intended for use in undergraduate and postgraduate teaching, journal clubs, and self-guided study.
 
@@ -16,6 +16,8 @@ It is intended for use in undergraduate and postgraduate teaching, journal clubs
 ## Cite this app
 
 If you use this app in teaching, workshops, or research training, please cite it as:
+
+Schnitzler, D. PaperReader (Version 1.0) [Computer software]. https://github.com/dschnitzler14/paper_reading
 
 ---
 

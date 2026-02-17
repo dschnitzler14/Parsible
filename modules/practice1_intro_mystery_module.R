@@ -13,7 +13,23 @@ practice_intro_mystery_module_ui <- function(id) {
     
         
         div(
-          class = "paper-box",
+          class = "paper-box", 
+        tags$div(
+          tags$h3("Microbiota alteration is associated with the development of stress-induced despair behavior "),
+          tags$h4("Marin, I. A., Goertz, J. E., Ren, T., Rich, S. S., Onengut-Gumuscu, S., Farber, E., Wu, M., Overall, C. C., Kipnis, J., & Gaultier, A."),
+          tags$h4("Scientific Reports, 7(1), 43859."),
+          tags$h4("2017"),
+          tags$a(
+            href = "https://doi.org/10.1038/srep43859",
+            target = "_blank",
+            rel = "noopener noreferrer",
+            class = "ps-guide-paper-link",
+            tagList(
+              "Go to paper",
+              bs_icon("box-arrow-up-right")
+            )
+          ),
+          ),
           uiOutput(ns("mystery_intro1")),
           uiOutput(ns("practice_intro1_mystery1_click"))
         
@@ -43,6 +59,11 @@ practice_intro_mystery_module_server <- function(id, process_rmd_fragment) {
   md_ui <- function(path, ...) {
     process_rmd_fragment(path, ns = ns, base_dir = "markdown", ...)
   }
+
+   output$mystery_intro_text <- renderUI({
+      md_ui("english/practice/practice1_mystery/mystery_intro_section_intro.md")
+    })
+
 
     output$mystery_intro1 <- renderUI({
       md_ui("english/practice/practice1_mystery/intro1.Rmd")

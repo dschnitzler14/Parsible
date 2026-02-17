@@ -144,3 +144,79 @@ body.dyslexia-font .ps-navswitch .form-check-label {
 .navbar .navbar-brand .svg-inline--fa path {
     fill: currentColor !important;
 }
+
+/* paper strategy nav */
+
+.ps-reading-tabs-stack {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ps-reading-tabs-stack>.bslib-navset {
+    width: 100%;
+}
+
+.ps-tab-nav-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.ps-tab-nav {
+    width: min(520px, 100%);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    gap: 16px;
+
+    padding: 14px 16px;
+    border-radius: 18px;
+
+    background: rgba(43, 54, 43, 0.045);
+    border: 1px solid rgba(43, 54, 43, 0.14);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+}
+
+.ps-tab-nav .ps-nav-prev,
+.ps-tab-nav .ps-nav-next {
+    border-radius: 999px !important;
+    padding: 10px 18px !important;
+
+    font-weight: 700 !important;
+    font-size: 0.92rem !important;
+    letter-spacing: 0.02em;
+
+    border: 1px solid rgba(43, 54, 43, 0.24) !important;
+    background: rgba(255, 253, 246, 0.90) !important;
+    color: rgba(43, 54, 43, 0.92) !important;
+
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) !important;
+    transition: transform 140ms ease, background 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+    min-width: 150px;
+}
+
+.ps-tab-nav .ps-nav-next {
+    background: rgba(75, 107, 7, 0.16) !important;
+    border-color: rgba(75, 107, 7, 0.30) !important;
+}
+
+.ps-tab-nav .ps-nav-prev:hover,
+.ps-tab-nav .ps-nav-prev:focus,
+.ps-tab-nav .ps-nav-next:hover,
+.ps-tab-nav .ps-nav-next:focus {
+    background: rgba(75, 107, 7, 0.22) !important;
+    border-color: rgba(75, 107, 7, 0.40) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06), 0 14px 22px rgba(0, 0, 0, 0.08) !important;
+    outline: none !important;
+}
+
+.ps-tab-nav .ps-nav-prev:disabled,
+.ps-tab-nav .ps-nav-next:disabled {
+    opacity: 0.45 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    cursor: not-allowed !important;
+}

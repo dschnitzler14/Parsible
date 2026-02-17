@@ -1,44 +1,38 @@
-## About Parsible
+Parsible is a teaching-focused web app designed to help students learn how to read scientific papers effectively and critically.
 
-Parsible is a teaching-focused web app designed to help students learn how to read scientific papers effectively.
-
-Rather than focusing on speed or shortcuts, the app emphasises:
+This app emphasises:
 
 - understanding paper structure
 - developing reading strategies
 - learning how to interpret figures and methods
 - developing critical reading skills
 
-It is intended for use in undergraduate and postgraduate teaching, journal clubs, and self-guided study.
+It is intended for use in undergraduate and postgraduate teaching, self-guided study, or as a resource for anyone with an interest in understanding scientific literature.
 
----
-
-## Cite this app
+## Cite Parsible
 
 If you use this app in teaching, workshops, or research training, please cite it as:
 
-Schnitzler, D. PaperReader (Version 1.0) [Computer software]. https://github.com/dschnitzler14/paper_reading
+Schnitzler, D. Parsible (Version 1.0) [Computer software]. https://github.com/dschnitzler14/Parsible
 
----
-
-## Also see
+## Related Projects:
 
 ### BlinkR
 
-[BlinkR](https://github.com/dschnitzler14/BlinkR) is a companion teaching app.
+<a href="https://github.com/dschnitzler14/BlinkR" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right ps-link-icon"></i> BlinkR </a> supports learning of scientific research processes through guided workflows, from hypothesis development to statistical analysis with R.
 
-Together, BlinkR and the Paper Reading App support complementary skills in scientific literacy.
+It aims to teach the fundamentals of experimental design, good research practices, and basic statistical analysis in R.
 
 ### Paperstars
 
-Paperstars is a platform for rating and reviewing papers based on quality, clarity, and strength.
+<a href="https://paperstars.org/" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right ps-link-icon"></i> Paperstars</a> is a platform for rating and reviewing papers based on quality - like Goodreads, but for sceince.
 
-Learn more at:  
-https://paperstars.org/
+Across both academia and industry, Paperstars creates visible, community-driven signals of research quality that reward rigour, openness, and good methodology alongside the existing metrics. This offers an additional lens to identify robust, reproducible work and potential collaborators, without relying solely on journal reputation or citation counts. Crucially, Paperstars adds a human layer of judgement: the kind of contextual and common-sense evaluation that even scientific AI tools cannot reliably provide. The long-term goal is to reduce wasted time and money across the research ecosystem by making quality work easier to identify and improve reproducibility. Overall, we want to support progress and innovation through integrity and good scientific practices.
 
-Or follow us on Bluesky!
+## About the Author
 
----
+Parsible, BlinkR, and Paperstars have all been developed by me, <a href="https://dschnitzler.co.uk/" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right ps-link-icon"></i> Dr Daniela Schnitzler </a>.
 
-- GitHub:
-- Bluesky:
+I am a postdoctoral researcher at the Medical School Berlin working across neuroscience and education. I am guided by my committent to integrity, transparency, and a love of learning, which lead me to thinking about how all niches of the research ecosystem can flourish and grow. As such, much of my work focuses on supporting rigorous research practices, improving scientific education, and creating spaces where real scholarship is valued over speed or output.
+
+My projects prioritise fundamental human creativity and reasoning in an increasingly automated world.

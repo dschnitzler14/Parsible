@@ -1,1 +1,1 @@
-In this exercise you will focus on finding the gap in the research
+In this exercise you will focus on finding the gap in the research. Read over these real introductions and click on any of the sentences that describe what is _not_ known - where the gaps in our understanding are, that are going to be addressed by these respective studies.

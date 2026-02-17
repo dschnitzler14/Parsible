@@ -235,13 +235,13 @@ claims3_checklist_dictionary_correct <- c(
 flag_dictionary_correct <- list(
   flag_1  = "1",
   flag_2  = "1",
-  flag_3  = "3",
-  flag_4  = "2",
-  flag_5  = "2",
+  flag_3  = c("2", "3"),
+  flag_4  = c("2", "3"),
+  flag_5  = c("2", "3"),
   flag_6  = "1",
-  flag_7  = "2",
+  flag_7  = c("2", "3"),
   flag_8  = "2",
-  flag_9  = "2",
+  flag_9  = c("2", "3"),
   flag_10 = "1"
 )
 

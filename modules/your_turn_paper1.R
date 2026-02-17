@@ -94,7 +94,7 @@ your_turn_paper1_ui <- function(id) {
                 ),
 
                 div(
-                class = "paper-box",
+                class = "paper-box paper-box-hl",
                 highlighter_toolbar_ui(".prose"),
                 uiOutput(ns("paper1_title_abstract"))
               ),

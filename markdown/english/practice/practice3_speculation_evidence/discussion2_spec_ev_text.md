@@ -1,0 +1,1 @@
+Rats were maintained on a high-fat diet for four weeks before undergoing an acute stress task. Circulating hormone levels were measured using ELISA, and stress-related behaviour was assessed using a forced swim test. High-fat diet animals showed elevated corticosterone levels and increased immobility during the task.

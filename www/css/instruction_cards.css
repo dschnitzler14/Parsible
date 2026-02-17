@@ -87,15 +87,15 @@
     overflow: hidden;
 
     border-radius: 18px;
-    padding: 16px 18px 16px 44px;
-    margin-top: 16px;
+    padding: 18px 20px 18px 48px;
+    margin-top: 18px;
 
-    background: rgba(255, 255, 255, 0.34);
-    border: 1px solid rgba(31, 35, 24, 0.14);
+    background: #ffffff;
+    border: 1px solid rgba(31, 35, 24, 0.22);
 
     box-shadow:
-        0 10px 22px rgba(0, 0, 0, 0.08),
-        0 1px 0 rgba(255, 255, 255, 0.45) inset;
+        0 16px 32px rgba(0, 0, 0, 0.12),
+        0 2px 0 rgba(255, 255, 255, 0.7) inset;
 }
 
 .paperstars-instructions-card .ps-callout::before {
@@ -117,11 +117,11 @@
     pointer-events: none;
 
     background-image:
-        radial-gradient(rgba(75, 107, 7, 0.06) 1px, transparent 1px),
-        radial-gradient(rgba(189, 116, 38, 0.05) 1px, transparent 1px);
+        radial-gradient(rgba(75, 107, 7, 0.05) 1px, transparent 1px),
+        radial-gradient(rgba(189, 116, 38, 0.04) 1px, transparent 1px);
     background-position: 0 0, 14px 14px;
     background-size: 28px 28px;
-    opacity: 0.22;
+    opacity: 0.12;
 }
 
 .paperstars-instructions-card .ps-callout strong {
@@ -165,8 +165,8 @@
 }
 
 .paperstars-instructions-card .ps-callout-goals {
-    background: rgba(75, 107, 7, 0.06);
-    border-color: rgba(75, 107, 7, 0.18);
+    background: rgba(75, 107, 7, 0.12);
+    border-color: rgba(75, 107, 7, 0.32);
 }
 
 .paperstars-instructions-card .ps-callout-goals::before {
@@ -178,8 +178,8 @@
 }
 
 .paperstars-instructions-card .ps-callout-rate {
-    background: rgba(189, 116, 38, 0.07);
-    border-color: rgba(189, 116, 38, 0.20);
+    background: rgba(189, 116, 38, 0.14);
+    border-color: rgba(189, 116, 38, 0.35);
 }
 
 .paperstars-instructions-card .ps-callout-rate::before {
@@ -191,10 +191,9 @@
 }
 
 .paperstars-instructions-card .ps-callout-warning {
-    background: rgba(189, 116, 38, 0.08);
-    border-color: rgba(189, 116, 38, 0.26);
+    background: rgba(189, 116, 38, 0.18);
+    border-color: rgba(145, 68, 28, 0.45);
 }
-
 .paperstars-instructions-card .ps-callout-warning::before {
     background: linear-gradient(180deg, rgba(145, 68, 28, 1), rgba(189, 116, 38, 0.60));
 }
@@ -204,8 +203,8 @@
 }
 
 .paperstars-instructions-card .ps-callout-how {
-    background: rgba(31, 35, 24, 0.045);
-    border-color: rgba(31, 35, 24, 0.16);
+    background: rgba(31, 35, 24, 0.08);
+    border-color: rgba(31, 35, 24, 0.30);
 }
 
 .paperstars-instructions-card .ps-callout-how::before {
@@ -217,8 +216,8 @@
 }
 
 .paperstars-instructions-card .ps-callout-reflect {
-    background: rgba(75, 107, 7, 0.05);
-    border-color: rgba(75, 107, 7, 0.16);
+    background: rgba(75, 107, 7, 0.10);
+    border-color: rgba(75, 107, 7, 0.28);
 }
 
 .paperstars-instructions-card .ps-callout-reflect::before {
@@ -230,8 +229,8 @@
 }
 
 .paperstars-instructions-card .ps-callout-stretch {
-    background: rgba(45, 78, 118, 0.055);
-    border-color: rgba(45, 78, 118, 0.18);
+    background: rgba(45, 78, 118, 0.12);
+    border-color: rgba(45, 78, 118, 0.32);
 }
 
 .paperstars-instructions-card .ps-callout-stretch::before {

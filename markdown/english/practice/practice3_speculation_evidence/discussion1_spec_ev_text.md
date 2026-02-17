@@ -1,0 +1,1 @@
+Adult mice were subjected to a 10-day sleep fragmentation protocol, after which behaviour was assessed using an open field test. Brain tissue from the prefrontal cortex was analysed using quantitative PCR, revealing increased expression of genes associated with synaptic signalling. Sleep-disrupted mice also showed increased locomotor activity during the light phase.

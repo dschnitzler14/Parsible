@@ -66,3 +66,21 @@ a.action-button.highlight.shiny-bound-input:active {
     justify-content: center;
     margin-top: 18px;
 }
+
+
+/* modal close */
+
+.modal-footer .btn.btn-default {
+    background-color: #5f6f3a;
+    border-color: #5f6f3a;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 0.5rem 1.25rem;
+}
+
+.modal-footer .btn.btn-default:hover {
+    background-color: #4e5c2f;
+    border-color: #4e5c2f;
+    color: #ffffff;
+}

@@ -2,7 +2,7 @@
 
 As you’ve just seen, the AI tools make this paper sound very trustworthy and rigorous, but your human reasoning can tell that it’s not.
 
-AI systems are very good at summarising and rephrasing what a paper claims. They are much worse at noticing what’s missing, what’s weakly justified, or what simply doesn’t add up.
+AI systems _can_ be good at summarising and rephrasing what a paper claims. But they are not designed to notice what’s missing, what’s weakly justified, or what just doesn't make sense.
 
 <div style="
   border-left: 6px solid #6f42c1;

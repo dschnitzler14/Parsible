@@ -93,10 +93,10 @@ output$practice_intro <- renderUI({
 })
 
 practice_intro_mystery_module_server("intro_mystery_module", process_rmd_fragment = process_rmd_fragment)
-practice_discussion_claims_spec_module_server("discussion_claims_spec_module")
-practice_build_a_paper_module_server("build_a_paper_module")
+practice_discussion_claims_spec_module_server("discussion_claims_spec_module", process_markdown = process_markdown)
+practice_build_a_paper_module_server("build_a_paper_module", process_markdown = process_markdown)
 practice_what_does_not_belong_module_server("what_does_not_belong_module", process_rmd_fragment = process_rmd_fragment, process_markdown = process_markdown)
-practice_green_red_flag_module_server("green_red_flag_module", dictionary_correct = flag_dictionary_correct)
+practice_green_red_flag_module_server("green_red_flag_module", dictionary_correct = flag_dictionary_correct, process_markdown = process_markdown)
 
 
     nav_buttons_server(

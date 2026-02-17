@@ -19,7 +19,7 @@ practice_discussion_claims_spec_module_ui <- function(id) {
           class = "strategies-main",
           div(
             class = "paper-box",
-            p("Adult mice were subjected to a 10-day sleep fragmentation protocol, after which behaviour was assessed using an open field test. Brain tissue from the prefrontal cortex was analysed using quantitative PCR, revealing increased expression of genes associated with synaptic signalling. Sleep-disrupted mice also showed increased locomotor activity during the light phase.")
+            uiOutput(ns("discussion1_spec_ev"))
           ),
           sentence_checklist_ui(ns("claims1_checklist"))
         )
@@ -33,7 +33,8 @@ practice_discussion_claims_spec_module_ui <- function(id) {
           class = "strategies-main",
           div(
             class = "paper-box",
-            p("Rats were maintained on a high-fat diet for four weeks before undergoing an acute stress task. Circulating hormone levels were measured using ELISA, and stress-related behaviour was assessed using a forced swim test. High-fat diet animals showed elevated corticosterone levels and increased immobility during the task.")
+            uiOutput(ns("discussion2_spec_ev"))
+
           ),
           sentence_checklist_ui(ns("claims2_checklist"))
         )
@@ -47,7 +48,7 @@ practice_discussion_claims_spec_module_ui <- function(id) {
           class = "strategies-main",
           div(
             class = "paper-box",
-            p("Juvenile mice were housed in enriched or standard environments for three weeks. Learning was assessed using a novel object recognition task, and brain tissue from the hippocampus was analysed for markers of neuronal growth. Enriched mice showed increased expression of growth-related genes and improved task performance.")
+            uiOutput(ns("discussion3_spec_ev"))
           ),
           sentence_checklist_ui(ns("claims3_checklist"))
         )
@@ -56,8 +57,25 @@ practice_discussion_claims_spec_module_ui <- function(id) {
   )
 }
 
-practice_discussion_claims_spec_module_server <- function(id) {
+practice_discussion_claims_spec_module_server <- function(id, process_markdown ) {
   moduleServer(id, function(input, output, session) {
+
+
+output$discussion_claims_spec_intro_text <- renderUI({
+   process_markdown("practice/practice3_speculation_evidence/pratice3_speculation_evidence_instructions_text.md")
+})
+
+output$discussion1_spec_ev <- renderUI({
+   process_markdown("practice/practice3_speculation_evidence/discussion1_spec_ev_text.md")
+})
+
+output$discussion2_spec_ev <- renderUI({
+   process_markdown("practice/practice3_speculation_evidence/discussion2_spec_ev_text.md")
+})
+
+output$discussion3_spec_ev <- renderUI({
+   process_markdown("practice/practice3_speculation_evidence/discussion3_spec_ev_text.md")
+})
     
 sentence_checklist_server(
   "claims1_checklist",

@@ -1,0 +1,1 @@
+Juvenile mice were housed in enriched or standard environments for three weeks. Learning was assessed using a novel object recognition task, and brain tissue from the hippocampus was analysed for markers of neuronal growth. Enriched mice showed increased expression of growth-related genes and improved task performance.

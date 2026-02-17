@@ -1,0 +1,1 @@
+Read over these short discussion paragraphs and the statements below each - they contain evidence and speculation. You task is to select the evidence-based claims, based only on what you had read in these paragraphs!

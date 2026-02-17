@@ -1,4 +1,6 @@
 (function () {
+  var ENABLED_BOX_SELECTOR = ".paper-box-hl";
+
   function closest(el, sel) {
     while (el && el.nodeType === 1) {
       if (el.matches(sel)) return el;
@@ -36,7 +38,7 @@
   function removeHighlightsInRange(range) {
     var root = range.commonAncestorContainer;
     if (root.nodeType === 3) root = root.parentElement;
-    if (!root.querySelectorAll) return;
+    if (!root || !root.querySelectorAll) return;
 
     var highlights = root.querySelectorAll(".hl");
     for (var i = 0; i < highlights.length; i++) {
@@ -61,38 +63,45 @@
 
   function resolveTarget(toolbar) {
     var sel = toolbar.getAttribute("data-hl-target") || ".prose";
-    var box = closest(toolbar, ".paper-box") || toolbar.parentElement;
-    if (box) {
-      var local = box.querySelector(sel);
-      if (local) return local;
-    }
-    return document.querySelector(sel);
+    var box = closest(toolbar, ENABLED_BOX_SELECTOR);
+    if (!box) return null;
+    var local = box.querySelector(sel);
+    return local || null;
   }
 
   function findSelectedProse(range) {
     var el = range.commonAncestorContainer;
     if (el.nodeType === 3) el = el.parentElement;
-    return closest(el, ".prose");
+    if (!el) return null;
+
+    var prose = closest(el, ".prose");
+    if (!prose) return null;
+
+    var enabledBox = closest(prose, ENABLED_BOX_SELECTOR);
+    if (!enabledBox) return null;
+
+    return prose;
   }
 
-  var state = {
-    mode: "highlight",
-    colorClass: "hl-yellow",
-    activeTarget: null
-  };
+  var toolbarState = new WeakMap();
+
+  function getToolbarState(toolbar) {
+    var s = toolbarState.get(toolbar);
+    if (!s) {
+      s = { mode: "highlight", colorClass: "hl-yellow" };
+      toolbarState.set(toolbar, s);
+    }
+    return s;
+  }
 
   function setActive(toolbar, mode, colorClass) {
-    if (mode) state.mode = mode;
-    if (colorClass) state.colorClass = colorClass;
+    var s = getToolbarState(toolbar);
 
-    state.activeTarget = resolveTarget(toolbar);
+    if (mode) s.mode = mode;
+    if (colorClass) s.colorClass = colorClass;
 
-    var modeText = state.mode === "erase" ? "Erase mode" : "Highlight mode";
-    var colorText =
-      state.mode === "erase"
-        ? ""
-        : " • " + state.colorClass.replace("hl-", "").toUpperCase();
-
+    var modeText = s.mode === "erase" ? "Erase mode" : "Highlight mode";
+    var colorText = s.mode === "erase" ? "" : " • " + s.colorClass.replace("hl-", "").toUpperCase();
     setStatus(toolbar, modeText + colorText);
   }
 
@@ -102,6 +111,9 @@
 
     var toolbar = closest(btn, ".hl-toolbar");
     if (!toolbar) return;
+
+    var box = closest(toolbar, ENABLED_BOX_SELECTOR);
+    if (!box) return;
 
     var action = btn.getAttribute("data-hl-action");
 
@@ -119,7 +131,8 @@
     if (action === "clear") {
       var targetEl = resolveTarget(toolbar);
       if (targetEl) clearAll(targetEl);
-      setActive(toolbar, state.mode, state.colorClass);
+      var s = getToolbarState(toolbar);
+      setActive(toolbar, s.mode, s.colorClass);
       return;
     }
   });
@@ -134,16 +147,22 @@
     var selectedProse = findSelectedProse(range);
     if (!selectedProse) return;
 
-    state.activeTarget = selectedProse;
+    var enabledBox = closest(selectedProse, ENABLED_BOX_SELECTOR);
+    if (!enabledBox) return;
 
-    if (state.mode === "erase") {
+    var toolbar = enabledBox.querySelector(".hl-toolbar");
+    if (!toolbar) return;
+
+    var s = getToolbarState(toolbar);
+
+    if (s.mode === "erase") {
       removeHighlightsInRange(range);
       sel.removeAllRanges();
       return;
     }
 
-    var ok = applyHighlight(range, state.colorClass);
-    if (!ok) safeHighlight(range, state.colorClass);
+    var ok = applyHighlight(range, s.colorClass);
+    if (!ok) safeHighlight(range, s.colorClass);
 
     sel.removeAllRanges();
   });

@@ -24,8 +24,13 @@ practice_build_a_paper_module_ui <- function(id, dictionary) {
   )
 }
 
-practice_build_a_paper_module_server <- function(id) {
+practice_build_a_paper_module_server <- function(id, process_markdown) {
   moduleServer(id, function(input, output, session) {
+
+
+  output$wrong_section_intro_text <- renderUI({
+    process_markdown("practice/practice4_build/practice4_build_instructions_text.md")
+  })
 
     sortable_server("build_a_paper_sortable", build_a_paper_dictionary, 
                    build_a_paper_intro_dictionary,

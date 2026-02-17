@@ -48,6 +48,31 @@ strategies_module_ui <- function(id) {
       ),
 
     ),
+    div(
+      class = "ps-guide ps-intro",
+
+      bslib::card(
+        class = "ps-guide-hero",
+        bslib::card_body(
+          tags$div(
+            tags$h4("Intermittent breaking of isolation may ameliorate decrease in physical activity caused by isolation"),
+            tags$p("Uchida, A., Nakagawa, K., Yoshimi, K., Nagasawa, Y., Yamaguchi, K., Uesaka, N., & Tohara, H."),
+            tags$p("PLOS ONE, 19(11), e0314262."),
+            tags$p("2024"),
+            tags$a(
+              href = "https://doi.org/10.1371/journal.pone.0314262",
+              target = "_blank",
+              rel = "noopener noreferrer",
+              class = "ps-guide-paper-link",
+              tagList(
+                "Go to paper",
+                bs_icon("box-arrow-up-right")
+              )
+            ),
+            ),
+        )
+      )
+    ),
 
     card(
       card_header("Strategies for Reading Papers"),
@@ -56,9 +81,8 @@ strategies_module_ui <- function(id) {
           class = "ps-reading-tabs",
         navset_tab(
           id = ns("reading_tabs"),
-          
           nav_panel(
-            value = ns("title_abstract_panel"),
+            value = "strategies_title_abstract_panel",
             title = tagList(
               bs_icon("1-circle-fill"),
               " Title and Abstract"),
@@ -92,6 +116,7 @@ strategies_module_ui <- function(id) {
               )
           ),
           nav_panel(
+            value = "strategies_introduction_panel",
             title = tagList(
               bs_icon("2-circle-fill"),
               " Introduction"),
@@ -134,6 +159,7 @@ strategies_module_ui <- function(id) {
           ),
           
           nav_panel(
+            value = "strategies_methods_panel",
             title = tagList(
               bs_icon("3-circle-fill"),
               " Methods"
@@ -212,6 +238,7 @@ strategies_module_ui <- function(id) {
           ),
 
           nav_panel(
+            value = "strategies_results_panel",
             title = tagList(
               bs_icon("4-circle-fill"),
               " Results"
@@ -281,6 +308,7 @@ strategies_module_ui <- function(id) {
           ),
 
           nav_panel(
+            value = "strategies_pause_panel",
             title = tagList(
               bs_icon("pause-circle"),
               " Pause"
@@ -421,6 +449,7 @@ strategies_module_ui <- function(id) {
           ),
           
           nav_panel(
+            value = "strategies_discussion_panel",
             title = tagList(
               bs_icon("5-circle-fill"),
               " Discussion"
@@ -491,6 +520,7 @@ strategies_module_ui <- function(id) {
           ),
               
           nav_panel(
+            value = "strategies_understanding_panel",
             title = tagList(
               bs_icon("question-circle"),
               " Understanding"
@@ -523,6 +553,7 @@ strategies_module_ui <- function(id) {
           ),
         
           nav_panel(
+            value = "strategies_reflection_panel",
             title = tagList(
               bs_icon("star"),
               " Reflection"
@@ -635,6 +666,7 @@ strategies_module_ui <- function(id) {
           ),
           
           nav_panel(
+          value = "strategies_ai_panel",
           title = tagList(
             bs_icon("magic"),
             " AI"
@@ -790,41 +822,19 @@ strategies_module_ui <- function(id) {
             )
           )
           )
-
-
-        # div(
-        #     class = "ps-guide ps-what-paper",
-        #   div(
-        #       class = "ps-step ps-step-5 ps-topic-card",
-        #       `data-card-id` = "what-paper-52",
-        #       bslib::card_body(
-        #         class = "ps-topic-click",
-        #         actionButton(ns("open_box_ai_5"), label = NULL, class = "ps-topic-btn"),
-        #         tags$div(
-        #           class = "ps-step-inner",
-        #           tags$div(
-        #             class = "ps-step-title ps-topic-title",
-        #             tags$span(class = "ps-step-num", "5"),
-        #             tags$div(
-        #               class = "ps-topic-title-text",
-        #               tags$h3("The Verdict"),
-        #               tags$p(class = "ps-topic-subtitle", "How did the LLMs do?")
-        #             )
-        #           ),
-        #           tags$div(
-        #             class = "ps-tool-cta",
-        #             bs_icon("trophy"),
-        #             tags$span("Open the Verdict")
-        #           )
-        #         )
-        #       )
-        #   )
-        # #)
-        # ),
       )
 
+      ),
+  
+      ),
+      div(
+          class = "ps-tab-nav-wrap",
+          div(
+            class = "ps-tab-nav",
+            actionButton(ns("reading_prev"), "← Previous Section", class = "ps-nav-prev"),
+            actionButton(ns("reading_next"), "Next Section →", class = "ps-nav-next")
+          )
         )
-      )
         )
       ),
     
@@ -2110,6 +2120,53 @@ chat_device_server(
   "consensus_chat",
   md_dir = "markdown/english/chat_device/consensus"
 )
+
+
+# nav buttons_strategy----
+
+reading_tab_order <- c(
+  "strategies_title_abstract_panel",
+  "strategies_introduction_panel",
+  "strategies_methods_panel",
+  "strategies_results_panel",
+  "strategies_pause_panel",
+  "strategies_discussion_panel",
+  "strategies_understanding_panel",
+  "strategies_reflection_panel",
+  "strategies_ai_panel"
+)
+
+observeEvent(input$reading_next, {
+  current <- input$reading_tabs
+  i <- match(current, reading_tab_order)
+  if (!is.na(i) && i < length(reading_tab_order)) {
+    bslib::nav_select("reading_tabs", reading_tab_order[i + 1], session = session)
+  }
+})
+
+observeEvent(input$reading_prev, {
+  current <- input$reading_tabs
+  i <- match(current, reading_tab_order)
+  if (!is.na(i) && i > 1) {
+    bslib::nav_select("reading_tabs", reading_tab_order[i - 1], session = session)
+  }
+})
+
+observe({
+  current <- input$reading_tabs
+  i <- match(current, reading_tab_order)
+
+  shinyjs::toggle(
+    id = "reading_prev",
+    condition = !is.na(i) && i > 1
+  )
+
+  shinyjs::toggle(
+    id = "reading_next",
+    condition = !is.na(i) && i < length(reading_tab_order)
+  )
+})
+
 
 # nav_buttons_server----
 

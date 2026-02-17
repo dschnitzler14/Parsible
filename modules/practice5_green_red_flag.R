@@ -100,9 +100,13 @@ practice_green_red_flag_module_ui <- function(id) {
   )
 }
 
-practice_green_red_flag_module_server <- function(id, dictionary_correct) {
+practice_green_red_flag_module_server <- function(id, dictionary_correct, process_markdown) {
   moduleServer(id, function(input, output, session) {
 
+
+output$green_red_flag_intro_text <- renderUI({
+  process_markdown("practice/practice5_red_green_flag/practice5_green_red_flag_instructions_text.md")
+})
     observeEvent(input$submit_flags, {
       results <- list(
         flag_1  = input$flag_1,
@@ -118,11 +122,19 @@ practice_green_red_flag_module_server <- function(id, dictionary_correct) {
       )
 
       results_vec <- unlist(results, use.names = TRUE)
-      correct_vec <- unlist(dictionary_correct[names(results)], use.names = TRUE)
 
-      all_answered <- length(results_vec) == length(correct_vec) && !any(is.na(results_vec))
-      correct_count <- sum(results_vec == correct_vec)
-      all_correct <- all_answered && correct_count == length(correct_vec)
+      all_answered <- !any(is.null(results_vec) | is.na(results_vec))
+
+      correctness <- mapply(
+        function(name, value) {
+          value %in% dictionary_correct[[name]]
+        },
+        names(results_vec),
+        results_vec
+      )
+
+      correct_count <- sum(correctness)
+      all_correct <- all_answered && all(correctness)
       some_correct <- correct_count > 0 && !all_correct
 
       output$flag_results <- renderUI({
@@ -133,7 +145,8 @@ practice_green_red_flag_module_server <- function(id, dictionary_correct) {
         } else if (all_correct) {
           div(class = "alert alert-success lecturi-alert", "All flags correct!")
         } else if (some_correct) {
-          div(class = "alert alert-info lecturi-alert", paste0("Some flags are correct (", correct_count, "/", length(correct_vec), "), but not all."))
+          div(class = "alert alert-info lecturi-alert",
+              paste0("Some flags are correct (", correct_count, "/", length(results_vec), "), but not all."))
         } else {
           div(class = "alert alert-danger lecturi-alert", "No flags are correct.")
         }

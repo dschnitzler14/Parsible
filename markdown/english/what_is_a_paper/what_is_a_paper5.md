@@ -1,5 +1,3 @@
-# Different Types of Publication
-
 ## Traditional/ Pay-walled
 
 If you are publishing in a traditional journal, you will have to pay "Article Processing Charges" (APCs) - these fees can be quite high, depending on the journal you are publishing in. Additionally, if you opt to have your paper published Open Access, the fees can be even higher.

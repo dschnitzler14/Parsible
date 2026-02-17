@@ -16,6 +16,8 @@ stats_module_ui <- function(id) {
         )
       ),
 
+      h1("Coming Soon!"),
+
       div(
         class = "ps-guide-nav",
         nav_buttons_ui(ns("nav_controls"))

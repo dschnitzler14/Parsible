@@ -723,7 +723,7 @@ your_turn_paper2_server <- function(id, process_markdown, process_rmd_fragment) 
   output$paper2_title_abstract_instructions_text <- renderUI({
     process_markdown("your_turn/paper2/paper2_title_abstract_instructions.md")
   })
-
+ 
   output$paper2_introduction <- renderUI({
     md_ui("english/your_turn/paper2/paper2_intro.Rmd")
   })

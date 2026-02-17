@@ -1,5 +1,3 @@
-# What is Open Science?
-
 Open Science is a movement that is challenging the _status quo_, moving away from the "publish or perish" pressure, encouraging collaborative processes, and complete transparency. Open Science practices are built on the idea that science is a global public good, not a competition. Of course, researchers still want to stand out in their field, but that recognition can come from rigorous methods, careful analysis, reproducibility, and meaningful contribution rather than sheer publication count.
 
 Open Science can include practices such as:

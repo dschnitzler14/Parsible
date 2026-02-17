@@ -1,5 +1,3 @@
-# Problems with Scientific Publishing
-
 **1. Publish or perish**
 
 Academic careers are often shaped by publication count, journal prestige, and citation metrics. This pressure can incentivise quantity over quality, discourage replication studies, and reward “positive” or novel findings over careful, incremental work.

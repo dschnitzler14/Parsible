@@ -1,5 +1,3 @@
-# Science ≠ Perfect
-
 There is no such thing as a perfect model, a perfect experiment, or a perfect paper.
 
 ## What is a model?

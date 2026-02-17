@@ -11,5 +11,4 @@ Determine if this study is relevant to your reading (in this case, let's pretend
 
 <div class="ps-callout ps-callout-warning">
 <strong>Warning</strong><br>
-Abstracts summarise what the authors thought was important and can sometimes make the research sound more outstanding than it was. It is important to not rely only on an abstract.
-</div>
+Abstracts summarise what the authors thought was important and can sometimes make the research sound more outstanding than it was. It is important to not rely only on an abstract.</div>

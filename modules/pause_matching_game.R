@@ -23,27 +23,27 @@ matching_game_server <- function(id) {
       q_nanotag = "a_nanotag",
       q_elisa_cort = "a_elisa_cort",
       q_weight = "a_weight",
-      q1 = "a1",
-      q2 = "a2",
-      q3 = "a3"
+      q_muscle = "a_muscle",
+      q_ghrelin = "a_ghrelin",
+      q_myostatin = "a_myostatin"
     )
 
     q_text <- list(
       q_weight = "Does interrupting isolation reduce weight gain versus only isolation?",
-      q_nanotag = "How much do isolated rats move?",
+      q_nanotag = "Does interrupting isolatation alter locomotor activity of rats?",
       q_elisa_cort = "Does interrupting isolation make the rats less stressed?",
-      q1 = "question1 text",
-      q2 = "question2 text",
-      q3 = "question3 text"
+      q_muscle = "Does interrupting isolation attenuate muscle mass loss relative to body weight?",
+      q_ghrelin = "Does interrupting isolation alter appetite-related hormone levels?",
+      q_myostatin = "Does interrupting isolation alter muscle growth–inhibiting signals?"
     )
 
     a_text <- list(
-      a_elisa_cort = "Measure corticosterone concentrations in the plasma",
+      a_elisa_cort = "Measure plasma corticosterone concentrations using ELISA",
       a_nanotag = "Implant a device called nanotag",
       a_weight = "Measure food intake and weight gain",
-      a1 = "answer1 text",
-      a2 = "answer2 text",
-      a3 = "answer3 text"
+      a_muscle = "Dissect and weigh masseter and lower limb muscles and calculate muscle-to-body weight ratio",
+      a_ghrelin = "Measure plasma ghrelin concentrations using ELISA",
+      a_myostatin = "Measure plasma myostatin concentrations using ELISA"
     )
 
     q_ids <- names(pairs)

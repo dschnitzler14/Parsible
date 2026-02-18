@@ -1,40 +1,48 @@
-Assays of cAMP levels were performed on 137 serum samples, 58 plasma samples, and 58 samples of lysed leukocytes. Levels of cAMP from plasma samples and from lysed leukocytes were positively correlated (r = 0.49, *p* = 0.0001, *N* = 57), although samples from serum were negatively correlated with measurements of both plasma (r = −0.50, *p* = 0.0002, *N* = 50) and lysed leukocytes (r = −0.33, *p* = 0.02, *N* = 51). However, these correlations are in large part autocorrelations among repeated measures; correlations adjusted for autocorrelation are much lower (lysed leukocytes and plasma, rho = 0.07, *p* = 0.62; lysed leukocytes and serum, rho = −0.01, *p* = 0.94; plasma and serum, rho = −0.004, *p* = 0.9815) (52, 53). Measurements of cAMP levels in lysed leukocytes were used for analyses for both robustness of measurements and comparison with published research.
+## Experiment 1
 
-Before the analyses were performed, distributions of cAMP and cortisol measurements were tested for normality using the Shapiro–Wilk W test. Measurements of both factors were found to be severely skewed to the right. A square-root transformation was applied to both variables, making them acceptably normal. Comparisons of groups were performed using generalized estimating equations (GEEs) (54, 55) to avoid the distortion of variance estimates arising from autocorrelation of each bear’s multiple measurements. Robust estimates of variance were employed in all analyses. Analyses were performed using Stata version 16.1 (56).
+There were significant effects of forced treadmill exercise on cumulative food intake (0–1 h, F3,103 = 78.809, P < 0.01, 0–2 h, F3,103 = 151.865, P < 0.0001, and 0–3 h F3,103 = 223.108, P < 0.001). Fig. 1 shows that all three intensities of forced exercise, 32.5, 54 and 75.8 m/ min, significantly decreased cumulative food intake at 1, 2, and 3 h postexercise compared to the no exercise (P < 0.05). There were significant decreases in food intake for exercise at 54 m/min and exercise at 75.8 m/min, compared to exercise at 32.5 m/min at 1, 2 and 3 h post-exercise (p < 0.05). However, there were no significant differences in food intake between exercise at 54 m/min and exercise at 75.8 m/min at 1 and 2 h post-exercise (P > 0.05). The maximum numerical decrease in food intake was observed for exercise at 54 m/min. Cumulative food intake for no exercise, exercise at 32.5 m/min, exercise at 54 m/min, and exercise at 75.8 m/min were 6.2 ± 0.2 g, 3.6 ± 0.1 g, 2.5 ± 0.1 g and 2.9 ± 0.1 g, respectively (Fig. 1).
 
-Tables 1 and 2 provide the number of measurements, their means, and the standard deviations for cortisol and cAMP levels by state of hibernation, overall, and divided by pregnancy status and age group.
+<figure style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/your_turn_paper2/your_turn2_fig1.jpeg"
+       style="max-width: 600px; width: 100%; height: auto;"
+       alt="Figure 1">
+  <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #555;">
+    <strong>Fig 1.</strong> Intensity of forced treadmill exercise effect on food intake. Data are presented as means ± S.E.M. **P&lt;0.05 as compared to no exercise condition, ***P&lt;0.05 as compared to 32.5 m/min (n = 24 per group).
+  </figcaption>
+</figure>
 
-### Table 1. Cortisol levels (ng/ml) by pregnancy status and age
+## Experiment 2
+Forced treadmill exercise at 54 m/min induced significant c-Fos activation in the CeA, the CPu, the dBNST, and the PVN, VMH, DMH and LH (P < 0.05). But did not induce significant c-Fos activity in the FC. Table 1 shows the extent of c-Fos activation by brain site. Fig. 2 shows the effects of no exercise and exercise at 54 m/min on c-Fos expression in the PVN and in the CeA. Fig. 3 provides representative photomicrographs of c-Fos positive staining relative to no exercise and forced exercise in the PVN and in the CeA. The extent of c-Fos activation is clearly visible in the forced exercise sections.
 
-| Group | Subgroup | Active N | Active Mean | Active SD | Pre-hibernation N | Pre-hibernation Mean | Pre-hibernation SD | Hibernation N | Hibernation Mean | Hibernation SD | Exit N | Exit Mean | Exit SD | Total N | Total Mean | Total SD |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Total |  | 4 | 5.78 | 5.31 | 30 | 2.59 | 3.40 | 65 | 4.28 | 4.71 | 38 | 3.71 | 4.75 | 137 | 3.80 | 4.50 |
-| Pregnant? | No | 1 | 8.82 | — | 8 | 0.90 | 0.65 | 19 | 1.75 | 1.96 | 7 | 0.55 | 0.43 | 35 | 1.51 | 2.01 |
-|  | Yes | 3 | 4.77 | 6.01 | 22 | 3.20 | 3.79 | 46 | 5.32 | 5.12 | 31 | 4.43 | 4.99 | 102 | 4.58 | 4.84 |
-| Age group (years) | 3–8 | 2 | 6.46 | 7.42 | 14 | 1.97 | 3.07 | 25 | 4.02 | 5.78 | 18 | 2.95 | 4.38 | 59 | 3.29 | 4.85 |
-|  | 9–15 | 2 | 5.10 | 5.26 | 13 | 2.61 | 3.84 | 28 | 4.11 | 3.76 | 13 | 3.79 | 4.46 | 56 | 3.72 | 3.93 |
-|  | >15 | — | — | — | 3 | 5.36 | 1.99 | 12 | 5.20 | 4.50 | 7 | 5.54 | 6.28 | 22 | 5.33 | 4.72 |
+**Table 1.** Effect of exercise (2500 revs for 30 mins) on c-Fos expression in specific brain areas.
 
-*Note:* *N*, number of measurements; SD, standard deviation.
+| Brain area                          | No exercise        | Exercise            |
+|--------------------------------------|--------------------|---------------------|
+| Central nucleus of amygdala         | 13.2 ± 3.7         | 95.1 ± 7.9*         |
+| Caudate putamen                     | 18.3 ± 2.2         | 93.7 ± 10.8*        |
+| d-Bed nucleus striatal terminalis   | 25.1 ± 4.7         | 62.0 ± 17.1*        |
+| Paraventricular nucleus             | 6.6 ± 6.6          | 92.4 ± 16.3*        |
+| Ventromedial hypothalamus           | 26.8 ± 2.6         | 65.0 ± 10.3*        |
+| Dorsomedial hypothalamus            | 28.6 ± 3.6         | 115.7 ± 24.5*       |
+| Lateral hypothalamus                | 25.6 ± 4.3         | 96.3 ± 9.1*         |
+| Frontal cortex                      | 23.2 ± 6.4         | 32.5 ± 7.1          |
 
-### Table 2. Cyclic adenosine monophosphate (cAMP) levels (pmol/ml) by pregnancy status and age
+*Data presented as mean ± SEM. *P < 0.05.
 
-| Group | Subgroup | Active N | Active Mean | Active SD | Pre-hibernation N | Pre-hibernation Mean | Pre-hibernation SD | Hibernation N | Hibernation Mean | Hibernation SD | Exit N | Exit Mean | Exit SD | Total N | Total Mean | Total SD |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Total |  | 2 | 24.48 | 3.13 | 10 | 50.62 | 27.74 | 30 | 17.44 | 13.97 | 16 | 30.37 | 29.23 | 58 | 26.97 | 24.40 |
-| Pregnant? | No | 1 | 26.70 | — | 6 | 37.29 | 13.49 | 11 | 20.17 | 8.27 | 6 | 43.94 | 33.61 | 24 | 30.66 | 20.63 |
-|  | Yes | 1 | 22.27 | — | 4 | 70.63 | 33.39 | 19 | 15.86 | 16.41 | 10 | 22.23 | 24.50 | 34 | 24.37 | 26.73 |
-| Age group (years) | 3–8 | — | — | — | 2 | 28.38 | 13.13 | 11 | 15.60 | 11.85 | 7 | 21.74 | 15.34 | 20 | 19.03 | 13.26 |
-|  | 9–15 | 2 | 24.48 | 3.13 | 8 | 56.18 | 28.06 | 14 | 19.11 | 16.94 | 7 | 44.40 | 37.95 | 31 | 34.73 | 29.36 |
-|  | >15 | — | — | — | — | — | — | 5 | 16.83 | 10.57 | 2 | 11.50 | 12.62 | 7 | 15.31 | 10.38 |
+<figure style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/your_turn_paper2/your_turn2_fig2.jpeg"
+       style="max-width: 600px; width: 100%; height: auto;"
+       alt="Figure 2">
+  <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #555;">
+    <strong>Fig 2.</strong> Graphical representation showing effects of no exercise and exercise at 54 m/min on c-Fos expression in the PVN and in the CeA. Data are presented as means ± S.E.M. *P&lt;0.05 as compared to no exercise condition (n = 12 per group).
+  </figcaption>
+</figure>
 
-*Note:* *N*, number of measurements; SD, standard deviation.
-
-Figures 1–3 show cortisol and cAMP levels throughout captivity, overall, and divided by pregnancy status and age group.
-
-
-Cortisol levels were found to be very high in the sera of the CBBs after their captivity. The levels of cortisol decreased in the weeks after the start of captivity during the month of November, increased during hibernation, and decreased again after the exit from hibernation into the active state. The age and pregnancy status of the CBBs influenced the levels of cortisol, but not the direction of level changes, in the sera during the active and hibernation states. Cortisol levels were significantly higher during hibernation (mean 4.28, SD 4.71, *N* = 65) than during pre-hibernation and the exit state immediately following hibernation (mean 3.22, SD 4.22, *N* = 68, Wald chi2(1) = 9.88, *p* = 0.0017).
-
-Cyclic adenosine monophosphate levels in the lysed leukocytes of CBBs were higher in the active state after captivity and before the entrance into pre-hibernation (November and early December) than during the hibernation state (late December–early March). Levels increased again moderately at the end of hibernation (late March) during exit from hibernation (active state). The age and pregnancy status of the CBBs influenced the levels of cAMP, but not the direction of level changes, in the lysed leukocytes during the different active and hibernation states. Levels of cAMP were significantly lower during hibernation (mean 17.44, SD 13.97, *N* = 30) than during pre-hibernation and the exit state immediately following hibernation (mean 38.16, SD 29.84, *N* = 26, Wald chi2(1) = 4.24, *p* = 0.0395).
-
-Thus, the changes in the levels of cAMP in lysed leukocytes and of cortisol in serum were in opposite directions with entry into pre-hibernation: cAMP levels increased, and cortisol levels decreased. Both levels increased in late March during the exit from hibernation.
+<figure style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/your_turn_paper2/your_turn2_fig3.jpeg"
+       style="max-width: 600px; width: 100%; height: auto;"
+       alt="Figure 3">
+  <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #555;">
+    <strong>Fig 3.</strong> Sample photomicrographs showing effects of no exercise and exercise at 54 m/min on c-Fos expression in the PVN and in the CeA. Scale bar = 40 &micro;m.
+  </figcaption>
+</figure>

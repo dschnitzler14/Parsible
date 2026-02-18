@@ -1,0 +1,4 @@
+- male volunteers aged 19-22 years old
+- 2 groups: caffeine group (n=20) and placebo group (n=20)
+- each group tested twice: measured blood pressure, heart rate before and 60 min after caffeine/placebo consumption
+- caffeine administered as gelatine capsule (5mg/kg body weight), placebo as gelatine capsule

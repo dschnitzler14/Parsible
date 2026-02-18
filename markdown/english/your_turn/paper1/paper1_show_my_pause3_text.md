@@ -1,0 +1,3 @@
+- mean BP significantly increased after caffeine consumption
+- mean HR was not significantly affected by caffeine consumption
+- Note: this result is only described in the text, the table is unclear

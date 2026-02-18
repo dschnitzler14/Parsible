@@ -1,1 +1,2 @@
-pause text 1
+- caffeine is widely consumed but the findings are mixed across the literature
+- needed to address the contradictory findings in the literature on the effects of caffeine on the cardiovascular system

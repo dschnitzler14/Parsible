@@ -79,6 +79,7 @@ strategies_module_ui <- function(id) {
       card_body(
         tags$div(
           class = "ps-reading-tabs",
+          tags$div(id = ns("reading_top")),
         navset_tab(
           id = ns("reading_tabs"),
           nav_panel(
@@ -348,7 +349,7 @@ strategies_module_ui <- function(id) {
             card(
               card_body(
                 div(
-                  class = "strategies-main",
+                  #class = "strategies-main",
                   pause_flashcards_ui(ns("pause_results"), "Examine the Results")
                 ),
               )
@@ -2139,16 +2140,26 @@ reading_tab_order <- c(
 observeEvent(input$reading_next, {
   current <- input$reading_tabs
   i <- match(current, reading_tab_order)
+
   if (!is.na(i) && i < length(reading_tab_order)) {
     bslib::nav_select("reading_tabs", reading_tab_order[i + 1], session = session)
+    session$sendCustomMessage(
+      "scrollToAnchor",
+      list(id = ns("reading_top"))
+    )
   }
 })
 
 observeEvent(input$reading_prev, {
   current <- input$reading_tabs
   i <- match(current, reading_tab_order)
+
   if (!is.na(i) && i > 1) {
     bslib::nav_select("reading_tabs", reading_tab_order[i - 1], session = session)
+    session$sendCustomMessage(
+      "scrollToAnchor",
+      list(id = ns("reading_top"))
+    )
   }
 })
 

@@ -32,11 +32,12 @@ your_turn_paper1_ui <- function(id) {
       card_body(
         tags$div(
           class = "ps-reading-tabs",
+          tags$div(id = ns("reading_top")),
         navset_tab(
           id = ns("reading_tabs"),
           
           nav_panel(
-            value = ns("title_abstract_panel"),
+            value = "yourturn1_title_abstract_panel",
             title = tagList(
               bs_icon("1-circle-fill"),
               " Title and Abstract"),
@@ -101,6 +102,7 @@ your_turn_paper1_ui <- function(id) {
               )
           ),
           nav_panel(
+            value = "yourturn1_introduction_panel",
             title = tagList(
               bs_icon("2-circle-fill"),
               " Introduction"),
@@ -160,6 +162,7 @@ your_turn_paper1_ui <- function(id) {
           ),
           
           nav_panel(
+            value = "yourturn1_methods_panel",
             title = tagList(
               bs_icon("3-circle-fill"),
               " Methods"
@@ -237,6 +240,7 @@ your_turn_paper1_ui <- function(id) {
           ),
 
           nav_panel(
+            value = "yourturn1_results_panel",
             title = tagList(
               bs_icon("4-circle-fill"),
               " Results"
@@ -302,6 +306,7 @@ your_turn_paper1_ui <- function(id) {
           ),
           
           nav_panel(
+            value = "yourturn1_pause_panel",
             title = tagList(
               bs_icon("pause-circle"),
               " Pause"
@@ -418,6 +423,7 @@ your_turn_paper1_ui <- function(id) {
             )
           ),
           nav_panel(
+            value = "yourturn1_discussion_panel",
             title = tagList(
               bs_icon("5-circle-fill"),
               " Discussion"
@@ -494,6 +500,7 @@ your_turn_paper1_ui <- function(id) {
           ),
 
           nav_panel(
+            value = "yourturn1_understanding_panel",
             title = tagList(
               bs_icon("question-circle"),
               " Understanding"
@@ -612,6 +619,7 @@ your_turn_paper1_ui <- function(id) {
           ),
         
           nav_panel(
+            value = "yourturn1_reflection_panel",
             title = tagList(
               bs_icon("star"),
               " Reflection"
@@ -699,12 +707,17 @@ your_turn_paper1_ui <- function(id) {
           ),
           
         )
-      )
-        )
       ),
-    
-  nav_buttons_ui(ns("nav_controls"))
-    
+      div(
+          class = "ps-tab-nav-wrap",
+          div(
+            class = "ps-tab-nav",
+            actionButton(ns("reading_prev"), "← Previous Section", class = "ps-nav-prev"),
+            actionButton(ns("reading_next"), "Next Section →", class = "ps-nav-next")
+          )
+        )
+        )
+      ),     
 )
 
 }
@@ -771,6 +784,27 @@ observeEvent(input$show_my_pause1, {
   })
 })
 
+observeEvent(input$show_my_pause2, {
+  output$show_my_pause2_text <- renderUI({
+    process_markdown("your_turn/paper1/paper1_show_my_pause2_text.md")
+
+  })
+})
+
+observeEvent(input$show_my_pause3, {
+  output$show_my_pause3_text <- renderUI({
+    process_markdown("your_turn/paper1/paper1_show_my_pause3_text.md")
+
+  })
+})
+
+observeEvent(input$show_my_pause4, {
+  output$show_my_pause4_text <- renderUI({
+    process_markdown("your_turn/paper1/paper1_show_my_pause4_text.md")
+
+  })
+})
+
 ## Understanding
 
 observeEvent(input$show_my_understanding1, {
@@ -779,6 +813,31 @@ observeEvent(input$show_my_understanding1, {
 
   })
 })
+
+
+observeEvent(input$show_my_understanding2, {
+  output$show_my_understanding2_text <- renderUI({
+    process_markdown("your_turn/paper1/paper1_show_my_understanding2_text.md")
+
+  })
+})
+
+
+observeEvent(input$show_my_understanding3, {
+  output$show_my_understanding3_text <- renderUI({
+    process_markdown("your_turn/paper1/paper1_show_my_understanding3_text.md")
+
+  })
+})
+
+
+observeEvent(input$show_my_understanding4, {
+  output$show_my_understanding4_text <- renderUI({
+    process_markdown("your_turn/paper1/paper1_show_my_understanding4_text.md")
+
+  })
+})
+
 
   ## Rating
 
@@ -883,7 +942,7 @@ output$paper1_my_overall_stars <- renderUI({
 output$paper1_my_review_text <- renderUI({
   tags$div(
     class = "paperstars-textbox",
-    #process_markdown("strategies/overall_rating_text.md")
+    process_markdown("your_turn/paper1/paper1_my_review.md")
   )
 })
 
@@ -1078,6 +1137,60 @@ observeEvent(input$submit_review, {
   })
 })
 
-    
+    # nav buttons_strategy----
+
+reading_tab_order <- c(
+  "yourturn1_title_abstract_panel",
+  "yourturn1_introduction_panel",
+  "yourturn1_methods_panel",
+  "yourturn1_results_panel",
+  "yourturn1_pause_panel",
+  "yourturn1_discussion_panel",
+  "yourturn1_understanding_panel",
+  "yourturn1_reflection_panel"
+)
+
+observeEvent(input$reading_next, {
+  current <- input$reading_tabs
+  i <- match(current, reading_tab_order)
+
+  if (!is.na(i) && i < length(reading_tab_order)) {
+    bslib::nav_select("reading_tabs", reading_tab_order[i + 1], session = session)
+    session$sendCustomMessage(
+      "scrollToAnchor",
+      list(id = ns("reading_top"))
+    )
+  }
+})
+
+observeEvent(input$reading_prev, {
+  current <- input$reading_tabs
+  i <- match(current, reading_tab_order)
+
+  if (!is.na(i) && i > 1) {
+    bslib::nav_select("reading_tabs", reading_tab_order[i - 1], session = session)
+    session$sendCustomMessage(
+      "scrollToAnchor",
+      list(id = ns("reading_top"))
+    )
+  }
+})
+
+observe({
+  current <- input$reading_tabs
+  i <- match(current, reading_tab_order)
+
+  shinyjs::toggle(
+    id = "reading_prev",
+    condition = !is.na(i) && i > 1
+  )
+
+  shinyjs::toggle(
+    id = "reading_next",
+    condition = !is.na(i) && i < length(reading_tab_order)
+  )
+})
+
+
   })
 }

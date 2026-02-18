@@ -1,0 +1,4 @@
+- the authors will likely discuss the implications of the findings for caffeine consumption and cardiovascular health
+- they may also discuss the limitations of the study, such as the small sample size and the limited age range of the participants
+- the authors will relate the effect of caffeine on blood pressure to the existing literature and may discuss potential mechanisms for this effect (i.e. adenosine, as described in the introduction)
+- they may also discuss the lack of effect on heart rate and how this relates to previous findings in the literature

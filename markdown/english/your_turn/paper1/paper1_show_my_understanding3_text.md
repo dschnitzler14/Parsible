@@ -1,0 +1,4 @@
+- small sample size (n=20), no power analysis
+- limited age range of participants (19-22 years old)
+- only male participants were included, despite widespread caffeine use
+- poor statistical analysis - the authors did not report the statistical test used to compare the groups, and the table is unclear and likely contains errors (e.g. the mean heart rate values are identical for both placebo time points, which is unlikely)

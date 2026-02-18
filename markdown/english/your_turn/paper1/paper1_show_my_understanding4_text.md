@@ -1,0 +1,2 @@
+- the authors describe that caffeine increases arterial stiffness, but only measured blood pressure and heart rate, so this claim is not directly supported by the results
+- the authors claim an involvement of angiotensin and catecholamines in the effects of caffeine on blood pressure, but this was not directly measured in the study, so this claim is not directly supported by the results

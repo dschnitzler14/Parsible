@@ -9,11 +9,12 @@ your_turn_paper2_ui <- function(id) {
         bslib::card_body(
           tags$div(
             class = "ps-guide-hero-inner",
-            tags$h3("Downregulation of cyclic adenosine monophosphate levels in leukocytes of hibernating captive black bears is similar to reported cyclic adenosine monophosphate findings in major depressive disorder"),
-            tags$h4("Tsiouris, J. A., & Flory, M."),
-            tags$h4("2023"),
+            tags$h3("Forced treadmill exercise in the male rat: Effect on food intake and c-Fos expression"),
+            tags$p("Eccles, S., O’Hare, E., & Kim, E.-M."),
+            tags$p("Physiology & Behavior, 299, 114968."),
+            tags$p("2025"),
             tags$a(
-              href = "https://www.ijsrp.org/research-paper-0214.php?rp=P262278#citation",
+              href = "https://doi.org/10.1016/j.physbeh.2025.114968",
               target = "_blank",
               rel = "noopener noreferrer",
               class = "ps-guide-paper-link",
@@ -94,7 +95,7 @@ your_turn_paper2_ui <- function(id) {
                 ),
 
                 div(
-                class = "paper-box",
+                class = "paper-box paper-box-hl",
                 highlighter_toolbar_ui(".prose"),
                 uiOutput(ns("paper2_title_abstract"))
               ),
@@ -151,7 +152,7 @@ your_turn_paper2_ui <- function(id) {
               ),
 
               div(
-                class = "paper-box",
+                class = "paper-box paper-box-hl",
                 highlighter_toolbar_ui(".prose"),
                 uiOutput(ns("paper2_introduction"))
               ),
@@ -228,7 +229,7 @@ your_turn_paper2_ui <- function(id) {
               ),
 
               div(
-                  class = "paper-box",
+                  class = "paper-box paper-box-hl",
                   highlighter_toolbar_ui(".prose"),
                   uiOutput(ns("paper2_methods"))
                 ),
@@ -294,7 +295,7 @@ your_turn_paper2_ui <- function(id) {
                 ),
               ),
               div(
-                class = "paper-box",
+                class = "paper-box paper-box-hl",
                 highlighter_toolbar_ui(".prose"),
                 uiOutput(ns("paper2_results"))
               ),
@@ -486,7 +487,7 @@ your_turn_paper2_ui <- function(id) {
                 ),
               ),
               div(
-                class = "paper-box",
+                class = "paper-box paper-box-hl",
                 highlighter_toolbar_ui(".prose"),
                 uiOutput(ns("paper2_discussion"))
               ),

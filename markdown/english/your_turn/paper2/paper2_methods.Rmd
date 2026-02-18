@@ -1,52 +1,23 @@
-## Materials
+## Experiment 1: effect of exercise intensity on food intake
 
-The cyclic AMP (direct) colorimetric ELISA kit and the cortisol ELISA kit were obtained from Assay Designs Inc. (Ann Arbor, MI, United States). All other chemicals were of reagent grade.
+### Animals
+Twenty-four male Sprague–Dawley rats (Harlan, UK), weighing 250–275 g, were housed individually in stainless steel hanging cages with the temperature in the vivarium maintained at 22 ◦C under a reversed 12 h light/12 h dark cycle (lights on at 21:00 h), with dark phase procedures conducted under red light conditions. Subjects were given ad libitum access to water and standard laboratory diet (Rodent Chow, Harlan, UK). Food intake was measured daily at 0900 h, 1000 h, 1100 h and at 1200 h. When mean food intake between 0900 h and 1000 h reached 4–5 g (approximately two weeks of adaptation to the light cycle) the experiment began. All procedures were performed in compliance with the regulations and guidelines of the Animal Care and Ethical Review Body and were conducted in accordance with the United Kingdom Animal (Scientific Procedures) Act 1986, approved by the institutional ethical review committee and performed under Home Office Project Licence (UK).
 
-## Subjects
+### Apparatus
+A treadmill (in-house design and manufacture) consisted of a 15 mm thick clear plastic outer support framework with aluminium angle corners 31 cm high, 73 cm long and 68 cm wide. A rubberised running belt was divided by 15 cm high partitions to create five lanes. Each lane was 65 cm long and 10.5 cm wide. The track speed was controlled by variable speed drive rollers, and a revolution counter on the track lead return roller was used to record and regulate exercise intensity.
 
-Serial blood samples were obtained every 15 days from 11 female captive black bears (CBBs) 3 to 21 years of age (mean age 11, SD 6.67), six of which were pregnant. These CBBs were kept in captivity from October to April at the Center for Ursid Research at Virginia Polytechnic Institute and State University (VPI) in Blacksburg, VA, United States. One of these CBBs was captive from October 2002 to May 15, 2003; seven, from October 2003 to May 15, 2004; and three, from October 2004 to May 15, 2005. Ages of the CBBs from which specimens were obtained for analysis were 3–8 years (n = 3 for cAMP levels, and n = 4 for cortisol levels), 9–15 years (n = 4), and older than 15 years (n = 2).
+### Procedure
+Following the two-week adaptation to the light cycle, the treadmill exercise data collection began at 0900 h each day. Subjects (n = 24) were randomly assigned to two groups (Group 1 and Group 2, 12 per group). On day 1 each subject in Group 1 was exposed to forced exercise at 32.5 m/min and each subject in Group 2 was placed in a holding cage. On day 2 each subject in Group 2 was exposed to forced exercise at 32.5 m/min and each subject in Group 1 was placed in a holding cage. On day 3 each subject in Group 1 was exposed to forced exercise at 54 m/min and each subject in Group 2 was placed in a holding cage. On day 4 each subject in Group 2 was exposed to forced exercise at 54 m/min and each subject in Group 1 was placed in a holding cage. On day 5 each subject in Group 1 was exposed to forced exercise at 75.8 m/min and each subject in Group 2 was placed in a holding cage. On day 6 each subject in Group 2 was exposed to forced exercise at 75.8 m/min and each subject in Group 1 was placed in a holding cage. This series of procedures was then repeated. Each day following exercise or no exercise all rats were returned to their home cages where pre-weighed chow pellets had been placed, and food intake was measured at 1, 2 and 3 h intervals and corrected for spillage.
 
-Although specimens were obtained from 11 CBBs from October 2002 to May 2005, only nine were included in the analyses for cAMP levels, and 10 for serum cortisol levels. One CBB, 2 years of age, was excluded from the cortisol and cAMP level analyses because it never fell into hibernation, and a second one was excluded from cAMP analyses because only one cAMP specimen was obtained. During the active state after captivity, in October, only a few cAMP specimens were received and thus were excluded from analysis. The serum cortisol specimens obtained in October also were excluded from analysis because of the sudden increase in levels resulting from the stress of captivity.
+## Experiment 2: effect of forced exercise on c-Fos expression in specific brain areas
+### Procedure
+The rats were randomly assigned to exercise (n = 12) and no exercise (n = 12). The exercise rats were exposed to forced exercise at 54 m/min and the no exercise rats were placed in individual holding cages. Following exercise or no exercise all rats were returned to their home cages for 30 min, then sacrificed for histology.
 
-## Trapping and immobilization of animals
+### Histology
+Subjects were anaesthetized with 60 mg/kg sodium pentobarbital and perfused through the ascending aorta with 400 ml 0.1 M phosphate buffered saline (PBS, pH7.4), followed by 500 ml ice cold 4 % paraformaldehyde in PBS. Brains were then removed and post-fixed in 4 % paraformaldehyde in PBS overnight at 4 ◦C, and then placed in 10 % sucrose in PBS. Fixed brains were then cut at 40 μm using a cryostat, placed in cryoprotectant solution, and stored at -20 ◦C until immunohistochemistry. Storing tissue in this manner preserves antigenicity and morphology for up to 90 days. For c-Fos immunohistochemistry, sections were placed in 24-well tissue culture plates and rinsed 4 × 10 min in 0.1 M tris-buffered saline (TBS, pH 7.4). Sections were treated with 3 % H2O2 in 10 % methanol in TBS for 10 mins. After 4 × 10 min rinses with TBS sections were incubated with primary antibody (c-Fos 1:10,000 dilution, Santa Cruz, USA) in 0.0025 % gelatine and 0.5 % Triton-X in 100 ml of TBS for 48 hrs at 4 ◦C. After incubation with the Fos antiserum, sections were processed through 4 × 10 mins rinses of TBS and incubated for 1 h with biotinylated rabbit anti-goat immunoglobulin G (1:400 dilution, Ector, UK) at room temperature. After 3 × 10 min rinses with TBS, the sections were incubated with avidin-biotin complex (1:500 dilution, Elite ABC reagent, Vector) for 1 h at room temperature. After 3 × 10 min rinses with TBS, sections were placed in a solution containing 0.05 % 3,3′-diaminobenzidene tetrahydrochloride, 0.007 % nickel sulphate, and 0.006 % hydrogen peroxide for 5 mins for visualisation. After 3 × 10 min rinses with TBS, sections were mounted on gelatinised slides, dehydrated, left overnight and then coverslipped with Permount mounting medium (Vector, UK).
 
-All of the CBBs were captured in the George Washington National Forest and Jefferson National Forest in western Virginia. They were trapped in either Aldrich leg-hold snares or culvert traps, and all were anesthetized with a 2:1 mixture of ketamine hydrochloride (Ketaset®, Fort Dodge Animal Health, Fort Dodge, IA, United States) and xylazine hydrochloride (Rompum®, Bayer Corporation, Shawnee Mission, KS, United States) (concentration 300 mg/mL) at a dose rate of 1 mL per 45 kg body mass. Telazol® was not used. No CBBs were in a trap for more than 20 h, and most were in traps for less than 12 h. All CBBs were healthy when the blood samples were drawn.
+### Quantification of c-Fos expression
+Sections were viewed using a Zeiss Axioskop 2 plus microscope, and images were captured using a Zeiss AxioCam HRc, which was linked to a PC. AxioVision 3.0 was employed to analyse the images. All immunoreactive cells contained within the anatomical area of interest were counted using a telly counter. The co-ordinates of all areas examined were determined according to the atlas of Paxinos and Watson [95]. The specific co-ordinates were CPu (-0.26 to -0.40 mm), dBNST (-0.26 to -0.30 mm), PVN (-1.6 to -2.21 mm), LH (-1.8 to -2.21 mm), DMH (-2.56 to -3.14 mm), VMH (-2.56 to -3.30 mm), CeA (-2.30 to -2.80 mm), and FC (1.60 to 1.20 mm) relative to bregma.
 
-Protocols for handling wild black bears and CBBs were approved by the VPI Animal Care Committee and the Institutional Animal Care and Use Committee at the New York State Institute for Basic Research in Developmental Disabilities (IBR). For further details, see Tsiouris et al. (37) and Donahue et al. (50).
-
-Captive black bears entered hibernation proper between late December and January 1—not by November 1, as in most black bears in the wild (32, 41)—because of food availability and the higher temperature of the quarters in which they were kept captive. Each CBB was fed a daily ration of 2,000 g of dry high-protein (23%) dog food until November 30. Rations were cut to 1,000 g on December 1, to 500 g on December 10, and to 250 g on December 20. Feeding was terminated on December 30 and not resumed until April 1. Pregnant CBBs gave birth to their cubs during the last week of January without exiting the hibernation state. CBBs exited the hibernation state and became active in late March through April 1 similarly to black bears in the wild.
-
-## States during captivity
-
-Active state: After captivity; October 1–October 31.
-
-Pre-hibernation state: November 1–December 18 (early December).
-
-Proper hibernation state: December 19 (late December)–March 18 (early March).
-
-Exit from hibernation / active state: March 19 (late March)–May 15.
-
-## Black bear blood and sera
-
-The number of blood specimens obtained from the nine CBBs for cAMP levels was 58, and the number of serum specimens obtained from 10 CBBs for cortisol levels was 137. Sera were prepared on-site and stored frozen at VPI until shipped. Whole-blood samples were collected in heparinized tubes and immediately shipped overnight to IBR on ice packs. Because only one specimen was obtained from each of four CBBs at the end of April after exit from hibernation, they were not included in the analysis.
-
-## Harvesting of black bear leukocytes
-
-Whole blood was centrifuged for 10 min at 2,000 × g (4°C). The buffy coat was collected and washed once in tris-buffered saline (TBS). The cells were collected by centrifugation, and the pellets were suspended in TBS, aliquoted, and stored at −80°C until needed.
-
-## Assay of protein concentration
-
-Protein concentrations were determined by the method of Lowry et al. (51) using bovine serum albumin as standard.
-
-## cAMP levels in black bear leukocytes
-### Preparation of leukocytes
-
-Blood was drawn from female CBBs in heparinized (green-top) tubes and shipped by overnight express from VPI to IBR. The tubes were centrifuged at 800 × g for 15 min at room temperature (RT). The plasma and buffy coat were removed to clean tubes and centrifuged at 2,000 × g for 15 min at RT. The plasma was removed, and the cells were washed with isotonic tris-buffered saline (TBS; pH 8.0) and re-centrifuged. The washing was repeated once. The cells were re-suspended in TBS, quick-frozen on dry ice, and stored at −80°C.
-
-### Assay of adenosine 3′,5′-cAMP
-
-The concentration of cAMP in leukocytes was determined using a direct cAMP colorimetric ELISA kit (Assay Designs Inc., Ann Arbor, MI, United States), following the manufacturer’s protocol. This kit is designed for use with cell culture and tissue and includes 0.1 M HCl, which is used to lyse the cells, stop endogenous phosphodiesterase (PDE) activity, and stabilize the released cAMP. The 0.1% HCl-treated samples were analyzed directly in a microtiter plate without extraction, drying, or reconstitution. Because the sample-to-sample yield of leukocytes was variable, aliquots of the cells were removed to measure total protein concentration, after which the cAMP values were normalized to 100 μg of total protein.
-
-### Cortisol levels in black bear sera
-
-The levels of cortisol in black bear sera were determined using the cortisol ELISA kit (Assay Designs Inc.) following the manufacturer’s protocol.
+### Data analysis and statistics
+Shapiro-Wilks tests were conducted to confirm normality of distribution. Food intake data were analysed using a repeated measures oneway analysis of variance (ANOVA) with post-hoc analysis by Bonferroni correction at each time point. Activation of c-Fos-IR was determined using Student’s t-test. Data are expressed as the mean ± SEM.

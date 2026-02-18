@@ -28,7 +28,7 @@ ui <- bslib::page_navbar(
 ),
   id = "topnav",
   theme = theme,
-
+  fluid = TRUE,
 
 tags$head(
   tags$title("Parsible - Learn to Read a Paper"),
@@ -68,6 +68,7 @@ tags$head(
   tags$script(src = "js/card-complete.js"),
   tags$script(src = "js/fig_nav_keys.js"),
   tags$script(src = "js/modal-scroll-fix.js"),
+  tags$script(src = "js/scroll_to_anchor.js"),
   
 
   tags$link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap"),

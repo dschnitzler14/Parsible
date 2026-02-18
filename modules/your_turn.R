@@ -61,8 +61,8 @@ practice_your_turn_module_ui <- function(id) {
                 tags$span(class = "ps-step-num", "2"),
                 tags$div(
                   class = "ps-topic-title-text",
-                  tags$h3("Downregulation of cyclic adenosine monophosphate levels in leukocytes of hibernating captive black bears is similar to reported cyclic adenosine monophosphate findings in major depressive disorder"),
-                  tags$p(class = "ps-topic-subtitle", "Tsiouris and Flory (2023)")
+                  tags$h3("Forced treadmill exercise in the male rat: Effect on food intake and c-Fos expression"),
+                  tags$p(class = "ps-topic-subtitle", "Eccles et al. (2025)")
                 )
               ),
               tags$div(

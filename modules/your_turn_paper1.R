@@ -46,7 +46,8 @@ your_turn_paper1_ui <- function(id) {
                 class = "paperstars-instructions-card",
                 card_header("Title and Abstract Instructions"),
                 card_body(
-                    uiOutput(ns("paper1_title_abstract_instructions_text"))
+                    uiOutput(ns("paper1_title_abstract_instructions_text")),
+                    uiOutput(ns("paper1_title_abstract_section_goals_text"))
                   )
               ),
               layout_columns(
@@ -112,7 +113,8 @@ your_turn_paper1_ui <- function(id) {
                 card_header("Introduction Instructions"),
                 card_body(
                   div(
-                    uiOutput(ns("paper1_introduction_instructions_text"))
+                    uiOutput(ns("paper1_introduction_instructions_text")),
+                    uiOutput(ns("paper1_introduction_section_goals_text"))
                   )
                 )
               ),
@@ -173,7 +175,8 @@ your_turn_paper1_ui <- function(id) {
                 card_header("Methods Instructions"),
                 card_body(
                   div(
-                    uiOutput(ns("paper1_methods_instructions_text"))
+                    uiOutput(ns("paper1_methods_instructions_text")),
+                    uiOutput(ns("paper1_methods_section_goals_text"))
                   )
                 )
             ),
@@ -251,7 +254,8 @@ your_turn_paper1_ui <- function(id) {
               card_header("Results Instructions"),
               card_body(
                 div(
-                  uiOutput(ns("paper1_results_instructions_text"))
+                  uiOutput(ns("paper1_results_instructions_text")),
+                  uiOutput(ns("paper1_results_section_goals_text"))
                 )
               )
             ),
@@ -434,7 +438,8 @@ your_turn_paper1_ui <- function(id) {
               card_header("Discussion Instructions"),
               card_body(
                 div(
-                  uiOutput(ns("paper1_discussion_instructions_text"))
+                  uiOutput(ns("paper1_discussion_instructions_text")),
+                  uiOutput(ns("paper1_discussion_section_goals_text"))
                 )
               )
             ),
@@ -707,7 +712,7 @@ your_turn_paper1_ui <- function(id) {
           ),
           
         )
-      ),
+      ), 
       div(
           class = "ps-tab-nav-wrap",
           div(
@@ -733,6 +738,10 @@ your_turn_paper1_server <- function(id, process_markdown, process_rmd_fragment) 
     md_ui("english/your_turn/paper1/paper1_title_abstract.Rmd")
   })
 
+  output$paper1_title_abstract_section_goals_text <- renderUI({
+    process_markdown("strategies/title_abstract_section_goals.md")
+  })
+
   output$paper1_title_abstract_instructions_text <- renderUI({
     process_markdown("your_turn/paper1/paper1_title_abstract_instructions.md")
   })
@@ -745,6 +754,10 @@ your_turn_paper1_server <- function(id, process_markdown, process_rmd_fragment) 
     process_markdown("your_turn/paper1/paper1_intro_instructions.md")
   })
 
+output$paper1_introduction_section_goals_text <- renderUI({
+  process_markdown("strategies/intro_section_goals.md")
+  })
+
   output$paper1_methods <- renderUI({
     md_ui("english/your_turn/paper1/paper1_methods.Rmd")
   })
@@ -753,12 +766,20 @@ your_turn_paper1_server <- function(id, process_markdown, process_rmd_fragment) 
     process_markdown("your_turn/paper1/paper1_methods_instructions.md")
   })
 
+output$paper1_methods_section_goals_text <- renderUI({
+  process_markdown("strategies/methods_section_goals.md")
+  })
+
   output$paper1_results <- renderUI({
       md_ui("english/your_turn/paper1/paper1_results.Rmd")
     })
   
   output$paper1_results_instructions_text <- renderUI({
     process_markdown("your_turn/paper1/paper1_results_instructions.md")
+  })
+
+  output$paper1_results_section_goals_text <- renderUI({
+    process_markdown("strategies/results_section_goals.md")
   })
 
  output$paper1_pause_instructions_text <- renderUI({
@@ -774,6 +795,9 @@ your_turn_paper1_server <- function(id, process_markdown, process_rmd_fragment) 
     process_markdown("your_turn/paper1/paper1_discussion_instructions.md")
   })
 
+output$paper1_discussion_section_goals_text <- renderUI({
+  process_markdown("strategies/discussion_section_goals.md")
+  })
 
 ##Pause
 

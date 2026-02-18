@@ -33,11 +33,12 @@ your_turn_paper2_ui <- function(id) {
       card_body(
         tags$div(
           class = "ps-reading-tabs",
+          tags$div(id = ns("reading_top")),
         navset_tab(
           id = ns("reading_tabs"),
           
           nav_panel(
-            value = ns("title_abstract_panel"),
+            value = "yourturn2_title_abstract_panel",
             title = tagList(
               bs_icon("1-circle-fill"),
               " Title and Abstract"),
@@ -46,7 +47,8 @@ your_turn_paper2_ui <- function(id) {
                 class = "paperstars-instructions-card",
                 card_header("Title and Abstract Instructions"),
                 card_body(
-                    uiOutput(ns("paper2_title_abstract_instructions_text"))
+                    uiOutput(ns("paper2_title_abstract_instructions_text")),
+                    uiOutput(ns("paper2_title_abstract_section_goals_text"))
                   )
               ),
               layout_columns(
@@ -102,6 +104,7 @@ your_turn_paper2_ui <- function(id) {
               )
           ),
           nav_panel(
+            value = "yourturn2_introduction_panel",
             title = tagList(
               bs_icon("2-circle-fill"),
               " Introduction"),
@@ -111,7 +114,9 @@ your_turn_paper2_ui <- function(id) {
                 card_header("Introduction Instructions"),
                 card_body(
                   div(
-                    uiOutput(ns("paper2_introduction_instructions_text"))
+                    uiOutput(ns("paper2_introduction_instructions_text")),
+                    uiOutput(ns("paper2_introduction_section_goals_text"))
+
                   )
                 )
               ),
@@ -161,6 +166,7 @@ your_turn_paper2_ui <- function(id) {
           ),
           
           nav_panel(
+            value = "yourturn2_methods_panel",
             title = tagList(
               bs_icon("3-circle-fill"),
               " Methods"
@@ -171,7 +177,9 @@ your_turn_paper2_ui <- function(id) {
                 card_header("Methods Instructions"),
                 card_body(
                   div(
-                    uiOutput(ns("paper2_methods_instructions_text"))
+                    uiOutput(ns("paper2_methods_instructions_text")),
+                    uiOutput(ns("paper2_methods_section_goals_text"))
+
                   )
                 )
             ),
@@ -238,6 +246,7 @@ your_turn_paper2_ui <- function(id) {
           ),
 
           nav_panel(
+            value = "yourturn2_results_panel",
             title = tagList(
               bs_icon("4-circle-fill"),
               " Results"
@@ -248,7 +257,9 @@ your_turn_paper2_ui <- function(id) {
               card_header("Results Instructions"),
               card_body(
                 div(
-                  uiOutput(ns("paper2_results_instructions_text"))
+                  uiOutput(ns("paper2_results_instructions_text")),
+                  uiOutput(ns("paper2_results_section_goals_text"))
+
                 )
               )
             ),
@@ -303,6 +314,7 @@ your_turn_paper2_ui <- function(id) {
           ),
           
           nav_panel(
+            value = "yourturn2_pause_panel",
             title = tagList(
               bs_icon("pause-circle"),
               " Pause"
@@ -419,6 +431,7 @@ your_turn_paper2_ui <- function(id) {
             )
           ),
           nav_panel(
+            value = "yourturn2_discussion_panel",
             title = tagList(
               bs_icon("5-circle-fill"),
               " Discussion"
@@ -429,7 +442,8 @@ your_turn_paper2_ui <- function(id) {
               card_header("Discussion Instructions"),
               card_body(
                 div(
-                  uiOutput(ns("paper2_discussion_instructions_text"))
+                  uiOutput(ns("paper2_discussion_instructions_text")),
+                  uiOutput(ns("paper2_discussion_section_goals_text"))
                 )
               )
             ),
@@ -495,6 +509,7 @@ your_turn_paper2_ui <- function(id) {
           ),
 
           nav_panel(
+            value = "yourturn2_understanding_panel",
             title = tagList(
               bs_icon("question-circle"),
               " Understanding"
@@ -613,6 +628,7 @@ your_turn_paper2_ui <- function(id) {
           ),
         
           nav_panel(
+            value = "yourturn2_reflection_panel",
             title = tagList(
               bs_icon("star"),
               " Reflection"
@@ -700,12 +716,17 @@ your_turn_paper2_ui <- function(id) {
           ),
           
         )
-      )
-        )
       ),
-    
-  nav_buttons_ui(ns("nav_controls"))
-    
+       div(
+          class = "ps-tab-nav-wrap",
+          div(
+            class = "ps-tab-nav",
+            actionButton(ns("reading_prev"), "← Previous Section", class = "ps-nav-prev"),
+            actionButton(ns("reading_next"), "Next Section →", class = "ps-nav-next")
+          )
+        )
+        )
+      ),    
 )
 
 }
@@ -724,6 +745,10 @@ your_turn_paper2_server <- function(id, process_markdown, process_rmd_fragment) 
   output$paper2_title_abstract_instructions_text <- renderUI({
     process_markdown("your_turn/paper2/paper2_title_abstract_instructions.md")
   })
+
+  output$paper2_title_abstract_section_goals_text <- renderUI({
+    process_markdown("strategies/title_abstract_section_goals.md")
+  })
  
   output$paper2_introduction <- renderUI({
     md_ui("english/your_turn/paper2/paper2_intro.Rmd")
@@ -731,6 +756,10 @@ your_turn_paper2_server <- function(id, process_markdown, process_rmd_fragment) 
 
   output$paper2_introduction_instructions_text <- renderUI({
     process_markdown("your_turn/paper2/paper2_intro_instructions.md")
+  })
+
+  output$paper2_introduction_section_goals_text <- renderUI({
+  process_markdown("strategies/intro_section_goals.md")
   })
 
   output$paper2_methods <- renderUI({
@@ -741,12 +770,20 @@ your_turn_paper2_server <- function(id, process_markdown, process_rmd_fragment) 
     process_markdown("your_turn/paper2/paper2_methods_instructions.md")
   })
 
+output$paper2_methods_section_goals_text <- renderUI({
+  process_markdown("strategies/methods_section_goals.md")
+  })
+
   output$paper2_results <- renderUI({
       md_ui("english/your_turn/paper2/paper2_results.Rmd")
     })
   
   output$paper2_results_instructions_text <- renderUI({
     process_markdown("your_turn/paper2/paper2_results_instructions.md")
+  })
+
+  output$paper2_results_section_goals_text <- renderUI({
+    process_markdown("strategies/results_section_goals.md")
   })
 
  output$paper2_pause_instructions_text <- renderUI({
@@ -760,6 +797,10 @@ your_turn_paper2_server <- function(id, process_markdown, process_rmd_fragment) 
 
   output$paper2_discussion_instructions_text <- renderUI({
     process_markdown("your_turn/paper2/paper2_discussion_instructions.md")
+  })
+
+  output$paper2_discussion_section_goals_text <- renderUI({
+  process_markdown("strategies/discussion_section_goals.md")
   })
 
 
@@ -1077,6 +1118,60 @@ observeEvent(input$submit_review, {
       )
     )
   })
+})
+
+    # nav buttons_strategy----
+
+reading_tab_order <- c(
+  "yourturn2_title_abstract_panel",
+  "yourturn2_introduction_panel",
+  "yourturn2_methods_panel",
+  "yourturn2_results_panel",
+  "yourturn2_pause_panel",
+  "yourturn2_discussion_panel",
+  "yourturn2_understanding_panel",
+  "yourturn2_reflection_panel"
+)
+
+observeEvent(input$reading_next, {
+  current <- input$reading_tabs
+  i <- match(current, reading_tab_order)
+
+  if (!is.na(i) && i < length(reading_tab_order)) {
+    bslib::nav_select("reading_tabs", reading_tab_order[i + 1], session = session)
+    session$sendCustomMessage(
+      "scrollToAnchor",
+      list(id = ns("reading_top"))
+    )
+  }
+})
+
+observeEvent(input$reading_prev, {
+  current <- input$reading_tabs
+  i <- match(current, reading_tab_order)
+
+  if (!is.na(i) && i > 1) {
+    bslib::nav_select("reading_tabs", reading_tab_order[i - 1], session = session)
+    session$sendCustomMessage(
+      "scrollToAnchor",
+      list(id = ns("reading_top"))
+    )
+  }
+})
+
+observe({
+  current <- input$reading_tabs
+  i <- match(current, reading_tab_order)
+
+  shinyjs::toggle(
+    id = "reading_prev",
+    condition = !is.na(i) && i > 1
+  )
+
+  shinyjs::toggle(
+    id = "reading_next",
+    condition = !is.na(i) && i < length(reading_tab_order)
+  )
 })
     
   })

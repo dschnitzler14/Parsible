@@ -92,12 +92,13 @@ strategies_module_ui <- function(id) {
                 class = "paperstars-instructions-card",
                 card_header("Title and Abstract Instructions"),
                 card_body(
-                    uiOutput(ns("title_abstract_instruction_text"))
+                    uiOutput(ns("title_abstract_instruction_text")),
+                    uiOutput(ns("title_abstract_section_goals_text"))
                   )
               ),
               layout_columns(
                 col_widths = c(3, 9),
-
+              div(
                 div(
                   paperstars_rating_ui(
                       id = ns("title_rating"),
@@ -109,6 +110,15 @@ strategies_module_ui <- function(id) {
                   ),
 
                 ),
+                div(
+                    class = "sb-notepad",
+                    tags$h4("Unknown Concepts and Vocabulary"),
+                    uiOutput(ns("strategies_title_abstract_1_vocab_click")),
+                    uiOutput(ns("strategies_title_abstract_2_vocab_click")),
+                    uiOutput(ns("strategies_title_abstract_3_vocab_click")),
+                    uiOutput(ns("strategies_title_abstract_4_vocab_click"))
+                ),
+              ),
 
                 div(
                   class = "paper-box",
@@ -127,7 +137,8 @@ strategies_module_ui <- function(id) {
                 card_header("Introduction Instructions"),
                 card_body(
                   div(
-                    uiOutput(ns("intro_instruction_text"))
+                    uiOutput(ns("intro_instruction_text")),
+                    uiOutput(ns("intro_section_goals_text"))
                   )
                 )
               ),
@@ -171,7 +182,8 @@ strategies_module_ui <- function(id) {
                 card_header("Methods Instructions"),
                 card_body(
                   div(
-                    uiOutput(ns("methods_instruction_text"))
+                    uiOutput(ns("methods_instruction_text")),
+                    uiOutput(ns("methods_section_goals_text"))
                   )
                 )
             ),
@@ -250,7 +262,8 @@ strategies_module_ui <- function(id) {
               card_header("Results Instructions"),
               card_body(
                 div(
-                  uiOutput(ns("results_instruction_text"))
+                  uiOutput(ns("results_instruction_text")),
+                  uiOutput(ns("results_section_goals_text"))
                 )
               )
             ),
@@ -461,7 +474,8 @@ strategies_module_ui <- function(id) {
               card_header("Discussion Instructions"),
               card_body(
                 div(
-                  uiOutput(ns("discussion_instruction_text"))
+                  uiOutput(ns("discussion_instruction_text")),
+                  uiOutput(ns("discussion_section_goals_text"))
                 )
               )
             ),
@@ -936,16 +950,64 @@ output$title_abstract_instruction_text <- renderUI({
   process_markdown("strategies/title_abstract_instructions.md")
 })
 
+output$title_abstract_section_goals_text <- renderUI({
+  process_markdown("strategies/title_abstract_section_goals.md")
+})
+
   output$strategies_title_abstract <- renderUI({
   md_ui("english/strategies/title_abstract_strategy.Rmd")
 })
 
+
+observeEvent(input$title_abstract_vocab1, {
+  output$strategies_title_abstract_1_vocab_click <- renderUI({
+    tagList(
+      tags$ul(
+        tags$li("✏️ locomotor activity = movement and physical activity")
+      )
+    )
+  })
+})
+
+observeEvent(input$title_abstract_vocab2, {
+  output$strategies_title_abstract_2_vocab_click <- renderUI({
+    tagList(
+      tags$ul(
+        tags$li("✏️ corticosterone = stress hormone")
+      )
+    )
+  })
+})
+
+observeEvent(input$title_abstract_vocab3, {
+  output$strategies_title_abstract_3_vocab_click <- renderUI({
+    tagList(
+      tags$ul(
+        tags$li("✏️ ghrelin = appetite hormone")
+      )
+    )
+  })
+})
+
+observeEvent(input$title_abstract_vocab4, {
+  output$strategies_title_abstract_4_vocab_click <- renderUI({
+    tagList(
+      tags$ul(
+        tags$li("✏️ myostatin = growth inhibitor of skeletal muscles")
+      )
+    )
+  })
+})
 
 
 # Intro_server----
 
 output$intro_instruction_text <- renderUI({
   process_markdown("strategies/intro_instructions.md")
+})
+
+output$intro_section_goals_text <- renderUI({
+  process_markdown("strategies/introduction_section_goals.md")
 })
 
 output$strategies_introduction <- renderUI({
@@ -993,7 +1055,6 @@ observeEvent(input$intro4, {
   })
 })
 
-
 observeEvent(input$intro_vocab1, {
   output$strategies_introduction1_vocab_click <- renderUI({
     tagList(
@@ -1009,6 +1070,10 @@ observeEvent(input$intro_vocab1, {
 
 output$methods_instruction_text <- renderUI({
   process_markdown("strategies/methods_instructions.md")
+})
+
+output$methods_section_goals_text <- renderUI({
+  process_markdown("strategies/methods_section_goals.md")
 })
 
 output$strategies_methods <- renderUI({
@@ -1341,6 +1406,10 @@ output$results_instruction_text <- renderUI({
   process_markdown("strategies/results_instructions.md")
 })
 
+output$results_section_goals_text <- renderUI({
+  process_markdown("strategies/results_section_goals.md")
+})
+
   output$strategies_results <- renderUI({
     md_ui("english/strategies/results_strategy.Rmd")
   })
@@ -1583,6 +1652,10 @@ output$sentence_out <- renderText({
 
 output$discussion_instruction_text <- renderUI({
   process_markdown("strategies/discussion_instructions.md")
+})
+
+output$discussion_section_goals_text <- renderUI({
+  process_markdown("strategies/discussion_section_goals.md")
 })
 
   output$strategies_discussion <- renderUI({
@@ -2149,7 +2222,7 @@ observeEvent(input$reading_next, {
     )
   }
 })
-
+ 
 observeEvent(input$reading_prev, {
   current <- input$reading_tabs
   i <- match(current, reading_tab_order)

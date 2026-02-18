@@ -755,7 +755,7 @@ your_turn_paper1_server <- function(id, process_markdown, process_rmd_fragment) 
   })
 
 output$paper1_introduction_section_goals_text <- renderUI({
-  process_markdown("strategies/intro_section_goals.md")
+  process_markdown("strategies/introduction_section_goals.md")
   })
 
   output$paper1_methods <- renderUI({

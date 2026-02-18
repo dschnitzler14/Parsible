@@ -759,7 +759,7 @@ your_turn_paper2_server <- function(id, process_markdown, process_rmd_fragment) 
   })
 
   output$paper2_introduction_section_goals_text <- renderUI({
-  process_markdown("strategies/intro_section_goals.md")
+  process_markdown("strategies/introduction_section_goals.md")
   })
 
   output$paper2_methods <- renderUI({
@@ -850,7 +850,7 @@ output$paper2_paperstars_parameters_my_rating <- renderUI({
     tags$li(
       class = "paperstars-parameter-item rated-okay",
       tags$span(class = "paperstars-parameter-label", "Title & Abstract"),
-      tags$span(class = "paperstars-parameter-value", "Slightly Misleading")
+      tags$span(class = "paperstars-parameter-value", "Appropriate")
     ),
 
     tags$li(
@@ -862,19 +862,19 @@ output$paper2_paperstars_parameters_my_rating <- renderUI({
     tags$li(
       class = "paperstars-parameter-item rated-bad",
       tags$span(class = "paperstars-parameter-label", "Statistical Analysis"),
-      tags$span(class = "paperstars-parameter-value", "Major concerns")
+      tags$span(class = "paperstars-parameter-value", "Appropriate")
     ),
 
     tags$li(
       class = "paperstars-parameter-item rated-bad",
       tags$span(class = "paperstars-parameter-label", "Data Presentation"),
-      tags$span(class = "paperstars-parameter-value", "Misrepresented")
+      tags$span(class = "paperstars-parameter-value", "Complete and Transparent")
     ),
 
     tags$li(
       class = "paperstars-parameter-item rated-okay",
       tags$span(class = "paperstars-parameter-label", "Discussion"),
-      tags$span(class = "paperstars-parameter-value", "Slightly Misleading")
+      tags$span(class = "paperstars-parameter-value", "Appropriate")
     ),
 
     tags$li(

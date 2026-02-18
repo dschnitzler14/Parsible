@@ -18,7 +18,7 @@ advice_module_ui <- function(id) {
     
 
      bslib::layout_columns(
-        col_widths = c(3, 3, 3, 3),
+        col_widths = c(4, 4, 4),
         class = "ps-step-grid",
 
         bslib::card(
@@ -42,7 +42,7 @@ advice_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title",
-                tags$h3("🔬 What if you don’t understand all the technical jargon?")
+                tags$h3("🔬 What should I focus on?")
               ),
               uiOutput(ns("strategies_intro_jargon"))
             )
@@ -59,6 +59,20 @@ advice_module_ui <- function(id) {
                 tags$h3("⏩️ What you can safely ignore (on your first read)")
               ),
               uiOutput(ns("strategies_intro_ignore"))
+            )
+          )
+        ),
+
+        bslib::card(
+          class = "ps-step ps-static-card",
+          bslib::card_body(
+            tags$div(
+              class = "ps-step-inner",
+              tags$div(
+                class = "ps-step-title",
+                tags$h3("💬 How to handle jargon")
+              ),
+              uiOutput(ns("strategies_intro_esl"))
             )
           )
         ),
@@ -115,6 +129,11 @@ output$strategies_intro_ignore <- renderUI({
 output$strategies_intro_tldr <- renderUI({
   process_markdown("strategies/strategies_intro_tldr_text.md")
 })
+
+output$strategies_intro_esl <- renderUI({
+  process_markdown("strategies/strategies_intro_esl_text.md")
+})
+
 
 # nav_buttons_server----
 

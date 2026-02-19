@@ -1,2 +1,10 @@
-- Read short sections of a paper at a time
-- Answer quick questions to check your understanding
+- Learn what a science paper is and how scientific publishing works
+- Learn the basic anatomy of a science paper
+- Read basic reading advice
+- Work though an example paper section by section, learning what to pay attention to
+- Get a quick refresher on basic statistics
+- Play games to help practice your new skills
+- Work through some papers on your own
+- Learn how to search for papers
+- Learn how to cite papers
+- Find useful tools to help you in your future work

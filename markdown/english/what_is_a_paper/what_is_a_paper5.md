@@ -2,23 +2,21 @@
 
 If you are publishing in a traditional journal, you will have to pay "Article Processing Charges" (APCs) - these fees can be quite high, depending on the journal you are publishing in. Additionally, if you opt to have your paper published Open Access, the fees can be even higher.
 
-There are different tiers of Open Acess within traditional journals - green and gold. Green means the paper is embargoed for a while and stays behind a paywall for a certain length of time, before the author can share the paper freely, while gold means that it is immediately accessible.
+There are different tiers of Open Acess within traditional journals - green and gold. Green means the paper is embargoed for a while and stays behind a paywall for a certain length of time, before the author can share the paper freely on Open Access servers, while gold means that it is immediately accessible.
 
-Remember, unless you publish Open Acess, readers have to pay to access and read your paper too. Usually, University and Institute libraries pay these fees, which is why you may be asked to "log in via your Institue" when you visit a site to read a paper.
+Remember, unless you publish Open Acess, readers have to pay to access and read your paper too. Usually, University and Institute libraries pay these fees, which is why you may be asked to "log in via your Institue" when you visit a publisher's site to read a paper.
 
-So, between the author paying to publish a paper, reviewers (and often editors) working on a volunatary basis, and readers needing to pay for access to the paper, you might be asking yourself at this point why people opt for the traditional route.
+So, between the author paying to publish a paper, reviewers (and sometimes editors) working on a volunatary basis, and readers needing to pay for access to the paper, you might be asking yourself at this point why people opt for the traditional route.
 
-The answer is: metrics, visibility, and perceived credibility. Traditional journals are indexed in major citation databases and often have a Journal Impact Factor - metrics that can influence hiring, promotion, funding decisions, and institutional rankings, feeding into the familiar “publish or perish” culture (more on this in "What is Wrong").
+The answer is: metrics, visibility, and perceived credibility. Traditional journals are indexed in major citation databases and have a Journal Impact Factor, that feed into individual metrics that can influence hiring, promotion, funding decisions, and institutional rankings, feeding into the familiar “publish or perish” culture.
 
-Large, well-known journals also tend to have broad readership and strong brand recognition, which can increase exposure. That said, many researchers now search via databases using keywords, meaning relevant work is often discovered regardless of the journal. Finally, perceived credibility matters: papers in prestigious journals may initially be judged more favourably simply because of where they are published, even though the true quality of a study depends on its methods, analysis, and transparency rather than the journal’s name.
+Large, well-known journals also tend to have broad readership and strong recognition, which can increase exposure. That said, many researchers now search via databases using keywords, meaning relevant work is often discovered regardless of the journal. Finally, perceived credibility matters for some too: papers in prestigious journals may initially be judged more favourably simply because of where they are published, even though the true quality of a study depends on its methods, analysis, and transparency rather than the journal’s name.
 
 ### Predatory Journals & Paper Mills
 
-It’s also important to briefly mention predatory journals at this point. These are journals that actively solicit submissions, often through persistent email invitations that can sound flattering, and promise fast publication, impressive metrics, or international visibility. However, they typically lack genuine peer review, proper editorial oversight, and transparent publishing standards. Their primary goal is financial profit, not research integrity.
+It’s also important to briefly mention predatory journals at this point. These are journals that actively solicit submissions, often through persistent email invitations that can sound flattering, and promise fast publication, impressive metrics, or international visibility. However, they typically lack genuine peer review, proper editorial oversight, and transparent publishing standards. Their primary goal is financial profit, not research integrity. Publishing in a predatory journal can damage a researcher’s credibility, as the work may not have been rigorously reviewed or meaningfully evaluated.
 
-Publishing in a predatory journal can damage a researcher’s credibility, as the work may not have been rigorously reviewed or meaningfully evaluated.
-
-Closely related are paper mills. These are organisations that produce and sell fabricated or heavily manipulated manuscripts to researchers, often for a fee. This might include fake data, recycled images, or entirely invented studies. Paper mills undermine scientific trust at a much deeper level because they introduce research that may never have actually been conducted.
+Closely related are paper mills. These are organisations that produce and sell fabricated or heavily manipulated manuscripts to researchers, often for a fee. This might include fake data, recycled images, or entirely invented studies. The purpose of these is to fraudulently boost and individual's metrics. Paper mills undermine scientific trust at a much deeper level because they introduce research that may never have actually been conducted.
 
 Both predatory journals and paper mills exploit pressure within academia, such as the “publish or perish” culture, but they operate outside legitimate scholarly standards.
 
@@ -34,7 +32,7 @@ When reading (or publishing), it is important to consider not just what the pape
 
 ## Diamond Open Access
 
-This type of publishing uses a very similar model to tradional publishing, but it is entirely free - no publication fees (APCs), no paywall, no financial gain from publishing. The downside to this, at least for some researchers, is that Diamond Open Access journals often operate with more limited financial resources. This can mean fewer staff, slower processing times, less marketing visibility, and sometimes lower perceived prestige compared to large commercial publishers. Additionally, Diamond Open Access journals do not have traditional metrics, such as a Journal Impact Factor, which in turn means that the researcher cannot advance their personal H-Index.Finally, in some fields, they may also have smaller readerships.
+This type of publishing uses a very similar model to tradional publishing, but it is entirely free - no publication fees (APCs), no paywall, no financial gain from publishing. The downside to this, at least for some researchers, is that Diamond Open Access journals often operate with more limited financial resources. This can mean fewer staff, slower processing times, less marketing visibility, and sometimes lower perceived prestige compared to large commercial publishers. Additionally, Diamond Open Access journals do not have traditional metrics, such as a Journal Impact Factor, which in turn means that the researcher cannot advance their personal H-Index. Finally, in some fields, they may also have smaller readerships.
 
 However, the core principle is accessibility: research is freely available to read and free to publish, removing financial barriers on both sides. These works are no less rigorous than "traditional" publishing and still undergo editorial and peer review processes.
 

@@ -1,4 +1,4 @@
-- Breaks a paper into clear sections (Introduction, Methods, Results, Discussion)
+- Teaches you how to read a paper by breaking papers into clear sections (Introduction, Methods, Results, Discussion)
 - Explains what each section is for
 - Shows you what good (or bad!) scientific practice looks like
 - Helps you spot common mistakes and red flags

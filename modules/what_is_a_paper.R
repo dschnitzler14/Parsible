@@ -34,7 +34,7 @@ what_is_a_paper_module_ui <- function(id) {
                 tags$div(
                   class = "ps-topic-title-text",
                   tags$h3("So, what actually is a Paper?"),
-                  tags$p(class = "ps-topic-subtitle", "Papers come in all shapes and sizes.")
+                  tags$p(class = "ps-topic-subtitle", "A paper is a structured argument.")
                 )
               ),
               tags$div(
@@ -60,7 +60,7 @@ what_is_a_paper_module_ui <- function(id) {
                 tags$div(
                   class = "ps-topic-title-text",
                   tags$h3("If it’s in a Paper, it must be True!"),
-                  tags$p(class = "ps-topic-subtitle", "Why publication isn’t a guarantee of an absolute truth.")
+                  tags$p(class = "ps-topic-subtitle", "Why publication isn’t a guarantee of correctness.")
                 )
               ),
               tags$div(
@@ -86,7 +86,7 @@ what_is_a_paper_module_ui <- function(id) {
                 tags$div(
                   class = "ps-topic-title-text",
                   tags$h3("How does Scientific Publishing Work?"),
-                  tags$p(class = "ps-topic-subtitle", "Peer review, revisions, journals, and incentives.")
+                  tags$p(class = "ps-topic-subtitle", "Peer review, revisions, and journals.")
                 )
               ),
               tags$div(
@@ -112,7 +112,7 @@ what_is_a_paper_module_ui <- function(id) {
                 tags$div(
                   class = "ps-topic-title-text",
                   tags$h3("Different Types of Publication"),
-                  tags$p(class = "ps-topic-subtitle", "Preprints, articles, reviews, and more.")
+                  tags$p(class = "ps-topic-subtitle", "Traditional journals, Preprints, and alternatives.")
                 )
               ),
               tags$div(
@@ -138,7 +138,7 @@ what_is_a_paper_module_ui <- function(id) {
                 tags$div(
                   class = "ps-topic-title-text",
                   tags$h3("Problems with Scientific Publishing"),
-                  tags$p(class = "ps-topic-subtitle", "Bias, incentives, paywalls, and reproducibility.")
+                  tags$p(class = "ps-topic-subtitle", "Incentives, paywalls, and inequalty.")
                 )
               ),
               tags$div(
@@ -164,7 +164,7 @@ what_is_a_paper_module_ui <- function(id) {
                 tags$div(
                   class = "ps-topic-title-text",
                   tags$h3("What is Open Science?"),
-                  tags$p(class = "ps-topic-subtitle", "Science should be collaborative - enter Open Science Practices")
+                  tags$p(class = "ps-topic-subtitle", "Sharing methods, data, code, and more.")
                 )
               ),
               tags$div(
@@ -238,7 +238,7 @@ what_is_a_paper_module_server <- function(id, parent_session, nav_order_list, pr
     observeEvent(input$open_box1, {
       open_md_modal(
         "So, what actually is a Paper?",
-        "A paper is a structured argument, not a fact dump.",
+        "A paper is a structured argument",
         "what_is_a_paper/what_is_a_paper1.md"
       )
     }, ignoreInit = TRUE)
@@ -254,23 +254,15 @@ what_is_a_paper_module_server <- function(id, parent_session, nav_order_list, pr
     observeEvent(input$open_box3, {
       open_md_modal(
         "How does Scientific Publishing Work?",
-        "Peer review, revisions, journals, and incentives.",
+        "Peer review, revisions, and journals.",
         "what_is_a_paper/what_is_a_paper3.md"
       )
     }, ignoreInit = TRUE)
 
-    # observeEvent(input$open_box4, {
-    #   open_md_modal(
-    #     "History of Publishing",
-    #     "How we got from letters to modern journals.",
-    #     "what_is_a_paper/what_is_a_paper4.md"
-    #   )
-    # }, ignoreInit = TRUE)
-
     observeEvent(input$open_box4, {
       open_md_modal(
         "Different Types of Publication",
-        "Preprints, articles, reviews, and more.",
+        "Traditional journals, Preprints, and alternatives.",
         "what_is_a_paper/what_is_a_paper5.md"
       )
     }, ignoreInit = TRUE)
@@ -278,7 +270,7 @@ what_is_a_paper_module_server <- function(id, parent_session, nav_order_list, pr
     observeEvent(input$open_box5, {
       open_md_modal(
         "Problems with Scientific Publishing",
-        "Bias, incentives, paywalls, and reproducibility.",
+        "Incentives, paywalls, and inequalty",
         "what_is_a_paper/what_is_a_paper6.md"
       )
     }, ignoreInit = TRUE)
@@ -294,7 +286,7 @@ what_is_a_paper_module_server <- function(id, parent_session, nav_order_list, pr
     observeEvent(input$open_box7, {
       open_md_modal(
         "Good ≠ Perfect",
-        "How to read critically without being a perfectionist.",
+        "No study, model, or paper is ever perfect, that doesn't mean it isn't good.",
         "what_is_a_paper/what_is_a_paper8.md"
       )
     }, ignoreInit = TRUE)

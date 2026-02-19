@@ -41,7 +41,7 @@ introduction_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title",
-                tags$h3("🧠 What you’ll actually do")
+                tags$h3("🧠 What you can do with Parsible")
               ),
               uiOutput(ns("intro_box_do"))
             )

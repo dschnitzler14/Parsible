@@ -1,43 +1,129 @@
-Plainly put, the larger the sample size, the more likely you will get a significant result. However, it can be impossible or impractical to have a huge sample, you may also be wasting resources and expose more subjects than necessary to risk.
+<div class="ps-chapter">
 
-Similarly, if the sample size is too small, then the results might be inconclusive which not only means you will also have wasted time, money, and energy, but it also has ethical implications - you might have exposed human or animal subjects to unnessecary risks as well, even though the results are functionally useless.
+<div class="ps-block ps-callout">
+  <div class="ps-callout-title">
+    <i class="bi bi-lightbulb-fill"></i>
+    Main Concept
+  </div>
+    The <span class="ps-highlight-term">sample size</span> has a big effect on the statistical results, but it is important to strike the right balance between "big enough" and "too big".
+</div>
 
-When interpreting results in a paper it is important to look at the sample size - while the results are most likely to show a type II error (false negative), that does not mean that any results you _do_ see in a small sample are more reliable.
-In fact, small studies often produce unstable estimates, exaggerated effect sizes, and results that fail to replicate. A statistically significant result from a very small sample should be treated with caution, not excitement.
+<div class="ps-divider"></div>
 
-It is very common for studies to use an arbitrary number of samples, for example, n = 10, simply because that is what has been done before, or because it “worked” in a previous paper.
+<div class="ps-block ps-def">
+  <div class="ps-term">Small Sample Size</div>
+  <div>
+    <ul class="ps-list">
+        <li><span class="ps-dot"></span><span>You might miss a real effect and get inconclusive results</span></li>
+        <li><span class="ps-dot"></span><span>Wasted time, resources, and energy</span></li>
+        <li><span class="ps-dot"></span><span>Ethical implications of carrying out study knowing the results will likely be inconclusive due to small sample size</span></li>
+    </ul>
+  </div>
+</div>
 
-But that is not a scientific justification.
+<div class="ps-block ps-def">
+  <div class="ps-term">Large Sample Size</div>
+  <div>
+    <ul class="ps-list">
+        <li><span class="ps-dot"></span><span>More likely to get a real result</span></li>
+        <li><span class="ps-dot"></span><span>Can be impractical or even impossible due to timing, cost, etc. </span></li>
+        <li><span class="ps-dot"></span><span>Need to determine the minimum number of samples required to obtain a given effect size</span></li>
+    </ul>
+  </div>
+</div>
 
-Sample size should be based on:
-- The expected effect size
-- The variability in the data
-- The acceptable risk of Type I error (α)
-- The desired statistical power (1 − β)
+<p class="ps-lede"> When interpreting results in a paper it is important to look at the sample size. It is very common for studies to use an <span class="ps-highlight-wrong">arbitrary number of samples</span>, for example, n = 10, simply because that is what has been done before, or because it “worked” in a previous paper.</p>
 
-Using an arbitrary number can lead to underpowered studies that miss real effects, or overpowered studies that detect trivial differences that are not practically meaningful.
+<div class="ps-block ps-def">
+  <div class="ps-term">What sample size should be based on</div>
+  <div>
+  Using an arbitrary number can lead to underpowered studies that miss real effects, or overpowered studies that detect trivial differences that are not actually meaningful.
+    <ul class="ps-list">
+        <li><span class="ps-dot"></span><span>The expected effect size</span></li>
+        <li><span class="ps-dot"></span><span>The variability in the data</span></li>
+        <li><span class="ps-dot"></span><span>The acceptable risk of Type I error (α)</span></li>
+        <li><span class="ps-dot"></span><span>The desired statistical power</span></li>
+    </ul>
+  </div>
+</div>
 
-Just because a previous study used n = 10 does not mean n = 10 is appropriate for your research question, your design, or your population.
-
-This is why reviewers increasingly expect to see a reported power analysis or a clear rationale for the chosen sample size.
+<div class="ps-divider"></div>
 
 ## Power Analysis
 
-A power analysis is made up of four components - if you know, or can estimate three, then you can calculate the fourth.
+<p class="ps-lede">Luckily, there is a way to calculate how many samples needed to adequately test a hypothesis at a given effect size. This is called a <span class="ps-highlight-term">power analysis</span>.</p>
 
-1. Statistical power: the likelihood that a test will detect an effect of a certain size if there is one, usually set at 80% or higher.
-2. Sample size: the minimum number of observations needed to observe an effect of a certain size with a given power level.
-3. Significance level (alpha): the maximum risk of rejecting a true null hypothesis that you are willing to take, usually set at 5%.
-4. Expected effect size: a standardized way of expressing the magnitude of the expected result of your study, usually based on similar studies or a pilot study.
+<div class="ps-block ps-def">
+  <div class="ps-term">Power analysis</div>
+  <div>
+    A power analysis is made up of four components - if you know, or can estimate three, then you can calculate the fourth.
+  </div>
+</div>
 
+<div class="ps-myths">
+  <div class="ps-myth">
+    <div class="ps-myth-icon"><i class="bi bi-check-circle-fill"></i></div>
+    <div class="ps-myth-body">
+      <div class="ps-myth-title">Statistical power</div>
+      <div class="ps-myth-text">
+        The likelihood that a test will detect an effect of a certain size if there is one, usually set at 80% or higher.
+      </div>
+    </div>
+  </div>
 
+  <div class="ps-myth">
+    <div class="ps-myth-icon"><i class="bi bi-check-circle-fill"></i></div>
+    <div class="ps-myth-body">
+      <div class="ps-myth-title">Sample size</div>
+      <div class="ps-myth-text">
+         The minimum number of observations needed to observe an effect of a certain size with a given power level.
+      </div>
+    </div>
+  </div>
+
+  <div class="ps-myth">
+    <div class="ps-myth-icon"><i class="bi bi-check-circle-fill"></i></div>
+    <div class="ps-myth-body">
+      <div class="ps-myth-title">Significance level (𝜶)</div>
+      <div class="ps-myth-text">
+         The maximum risk of rejecting a true null hypothesis that you are willing to take, usually set at 5%.
+      </div>
+    </div>
+  </div>
+
+  <div class="ps-myth">
+    <div class="ps-myth-icon"><i class="bi bi-check-circle-fill"></i></div>
+    <div class="ps-myth-body">
+      <div class="ps-myth-title">Expected effect size</div>
+      <div class="ps-myth-text">
+         A standardised way of expressing the magnitude of the expected result of your study, usually based on similar studies or a pilot study.
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+<div class="ps-divider"></div>
+
+## Sample Selection
+
+<p class="ps-lede">Statistical inference assumes that your sample is drawn from a defined population using an appropriate sampling process. If the sample is <span class="ps-highlight-term">biased</span> or not randomly selected, the probabilities calculated by statistical tests may no longer accurately reflect the true error rates.</p>
+
+<div class="ps-divider"></div>
 
 ## Convenience Sample
 
-Sometimes you will see the term "convenience sample", which means participants were selected because they were easy to acceses, such as students from the researcher’s own university or animals already available in a laboratory.
+<p class="ps-lede">Sometimes you will see the term <span class="ps-quote-inline">convenience sample</span>, which means participants were selected because they were easy to acceses, such as students from the researcher’s own university or animals already available in a laboratory.</p>
 
-This is not inherently “wrong,” and in many fields it is unavoidable. However, it has important implications. Because:
+<div class="ps-block ps-def">
+  <div class="ps-term">Aspects to Consider for a Convenience Sample</div>
+  <div>
+    <ul class="ps-list">
+        <li><span class="ps-dot"></span><span>Is usually not randomly selected</span></li>
+        <li><span class="ps-dot"></span><span>May not represent the wider population</span></li>
+        <li><span class="ps-dot"></span><span>Limits how confidently the results can be generalised</span></li>
+    </ul>
+  </div>
+</div>
 
-- Is usually not randomly selected
-- May not represent the wider population
-- Limits how confidently the results can be generalised
+</div>

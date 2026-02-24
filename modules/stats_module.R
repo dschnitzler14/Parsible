@@ -1,6 +1,6 @@
 stats_module_ui <- function(id) {
   ns <- NS(id)
- 
+
   bslib::page_fluid(
     div(
       class = "ps-guide ps-what-paper",
@@ -13,7 +13,7 @@ stats_module_ui <- function(id) {
             uiOutput(ns("stats_intro_text1"))
           )
         )
-      ), 
+      ),
       bslib::layout_columns(
         col_widths = c(4, 4, 4),
         class = "ps-step-grid ps-what-paper-grid",
@@ -28,7 +28,7 @@ stats_module_ui <- function(id) {
               tags$div(
                 class = "ps-step-title ps-topic-title",
                 tags$span(class = "ps-step-num", "1"),
-                tags$h3("What is a statistical test and why do we use them?"),
+                tags$h3("What is are statistical tests and why do we need them?"),
                 tags$p("")
               ),
               tags$div(
@@ -458,8 +458,6 @@ stats_module_ui <- function(id) {
 
 stats_module_server <- function(id, parent_session, nav_order_list, process_markdown, process_rmd_fragment) {
   moduleServer(id, function(input, output, session) {
-
-
     open_md_modal <- function(title, subtitle, md_path) {
       showModal(
         modalDialog(
@@ -480,136 +478,137 @@ stats_module_server <- function(id, parent_session, nav_order_list, process_mark
       process_markdown("stats/stats_intro.md")
     })
 
-  observeEvent(input$open_box1, {
-      open_md_modal(
-        "What is a statistical test and why do we use them?",
-        "",
-        "stats/stats_step1_text.md"
-      )
-    },
-    ignoreInit = TRUE
-  )
-
-observeEvent(input$open_box2,
-  {
-    open_md_modal(
-      "What is a p-value?",
-      "",
-      "stats/stats_step2_text.md"
+    observeEvent(input$open_box1,
+      {
+        open_md_modal(
+          "What is a statistical test and why do we use them?",
+          "",
+          "stats/stats_step1_text.md"
+        )
+      },
+      ignoreInit = TRUE
     )
-  },
-  ignoreInit = TRUE
-)
 
-observeEvent(input$open_box3,
-  {
-    open_md_modal(
-      "Why do we need to check assumptions of statistical tests?",
-      "",
-      "stats/stats_step3_text.md"
+    observeEvent(input$open_box2,
+      {
+        open_md_modal(
+          "What is a p-value?",
+          "",
+          "stats/stats_step2_text.md"
+        )
+      },
+      ignoreInit = TRUE
     )
-  },
-  ignoreInit = TRUE
-)
 
-observeEvent(input$open_box4,
-  {
-    open_md_modal(
-      "Type I and Type II Errors",
-      "",
-      "stats/stats_step4_text.md"
+    observeEvent(input$open_box3,
+      {
+        open_md_modal(
+          "Why do we need to check assumptions of statistical tests?",
+          "",
+          "stats/stats_step3_text.md"
+        )
+      },
+      ignoreInit = TRUE
     )
-  },
-  ignoreInit = TRUE
-)
 
-observeEvent(input$open_box5,
-  {
-    open_md_modal(
-      "Confidence Intervals",
-      "",
-      "stats/stats_step5_text.md"
+    observeEvent(input$open_box4,
+      {
+        open_md_modal(
+          "Type I and Type II Errors",
+          "",
+          "stats/stats_step4_text.md"
+        )
+      },
+      ignoreInit = TRUE
     )
-  },
-  ignoreInit = TRUE
-)
 
-observeEvent(input$open_box6,
-  {
-    open_md_modal(
-      "Why does sample size matter?",
-      "",
-      "stats/stats_step6_text.md"
+    observeEvent(input$open_box5,
+      {
+        open_md_modal(
+          "Confidence Intervals",
+          "",
+          "stats/stats_step5_text.md"
+        )
+      },
+      ignoreInit = TRUE
     )
-  },
-  ignoreInit = TRUE
-)
 
-observeEvent(input$open_box7,
-  {
-    open_md_modal(
-      "What are effect sizes?",
-      "",
-      "stats/stats_step7_text.md"
+    observeEvent(input$open_box6,
+      {
+        open_md_modal(
+          "Why does sample size matter?",
+          "",
+          "stats/stats_step6_text.md"
+        )
+      },
+      ignoreInit = TRUE
     )
-  },
-  ignoreInit = TRUE
-)
 
-observeEvent(input$open_box8,
-  {
-    open_md_modal(
-      "What is p-hacking?",
-      "",
-      "stats/stats_step8_text.md"
+    observeEvent(input$open_box7,
+      {
+        open_md_modal(
+          "What are effect sizes?",
+          "",
+          "stats/stats_step7_text.md"
+        )
+      },
+      ignoreInit = TRUE
     )
-  },
-  ignoreInit = TRUE
-)
 
-observeEvent(input$open_box9,
-  {
-    open_md_modal(
-      "Summary Statistics and Data Types",
-      "",
-      "stats/stats_step9_text.md"
+    observeEvent(input$open_box8,
+      {
+        open_md_modal(
+          "What is p-hacking?",
+          "",
+          "stats/stats_step8_text.md"
+        )
+      },
+      ignoreInit = TRUE
     )
-  },
-  ignoreInit = TRUE
-)
 
-observeEvent(input$open_box10,
-  {
-    open_md_modal(
-      "Common statistical mistakes in papers",
-      "",
-      "stats/stats_step10_text.md"
+    observeEvent(input$open_box9,
+      {
+        open_md_modal(
+          "Summary Statistics and Data Types",
+          "",
+          "stats/stats_step9_text.md"
+        )
+      },
+      ignoreInit = TRUE
     )
-  },
-  ignoreInit = TRUE
-)
 
-observeEvent(input$open_box11,
-  {
-    open_md_modal(
-      "Multiple testing corrections",
-      "",
-      "stats/stats_step11_text.md"
+    observeEvent(input$open_box10,
+      {
+        open_md_modal(
+          "Common statistical mistakes in papers",
+          "",
+          "stats/stats_step10_text.md"
+        )
+      },
+      ignoreInit = TRUE
     )
-  },
-  ignoreInit = TRUE
-)
 
-observeEvent(input$open_box12,
-  {
-    open_md_modal(
-      "Which Test Should I Use?",
-      "",
-      "stats/stats_step12_text.md"
+    observeEvent(input$open_box11,
+      {
+        open_md_modal(
+          "Multiple testing corrections",
+          "",
+          "stats/stats_step11_text.md"
+        )
+      },
+      ignoreInit = TRUE
     )
-  },
-  ignoreInit = TRUE
-)
+
+    observeEvent(input$open_box12,
+      {
+        open_md_modal(
+          "Which Test Should I Use?",
+          "",
+          "stats/stats_step12_text.md"
+        )
+      },
+      ignoreInit = TRUE
+    )
     # output$stats_step1_text <- renderUI({
     #   process_markdown("stats/stats_step1_text.md")
     # })

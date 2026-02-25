@@ -96,7 +96,8 @@ ui <- bslib::page_navbar(
     body.dyslexia-font * {
       font-family: 'OpenDyslexic', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif !important; # nolint: line_length_linter.
     }
-  "))
+  ")),
+    includeHTML("google-analytics.html")
   ),
   nav_panel(
     title = tagList(

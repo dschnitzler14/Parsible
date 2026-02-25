@@ -1,9 +1,8 @@
 sortable_ui <- function(id, dictionary) {
   ns <- NS(id)
-  tagList(
+
   div(
-  class = "ps-sortable-page",
-  #div(
+    class = "ps-sortable-page",
     bucket_list(
       header = NULL,
       group_name = "bucket_list_group",
@@ -14,59 +13,55 @@ sortable_ui <- function(id, dictionary) {
         input_id = ns("rank_source"),
         orientation = "horizontal"
       )
-    #)
-  )
-),
-
-  div(
-    class = "bucket-targets-wrap",
-    bucket_list(
-      header = NULL,
-      group_name = "bucket_list_group",
-      css_id = ns("bucket_list_targets"),
-      add_rank_list(
-        text = "Intro",
-        labels = NULL,
-        input_id = ns("rank_intro"),
-        orientation = "vertical"
-      ),
-      add_rank_list(
-        text = "Methods",
-        labels = NULL,
-        input_id = ns("rank_methods"),
-        orientation = "vertical"
-      ),
-      add_rank_list(
-        text = "Results",
-        labels = NULL,
-        input_id = ns("rank_results"),
-        orientation = "vertical"
-      ),
-      add_rank_list(
-        text = "Discussion",
-        labels = NULL,
-        input_id = ns("rank_discussion"),
-        orientation = "vertical"
+    ),
+    div(
+      class = "bucket-targets-wrap",
+      bucket_list(
+        header = NULL,
+        group_name = "bucket_list_group",
+        css_id = ns("bucket_list_targets"),
+        add_rank_list(
+          text = "Intro",
+          labels = NULL,
+          input_id = ns("rank_intro"),
+          orientation = "vertical"
+        ),
+        add_rank_list(
+          text = "Methods",
+          labels = NULL,
+          input_id = ns("rank_methods"),
+          orientation = "vertical"
+        ),
+        add_rank_list(
+          text = "Results",
+          labels = NULL,
+          input_id = ns("rank_results"),
+          orientation = "vertical"
+        ),
+        add_rank_list(
+          text = "Discussion",
+          labels = NULL,
+          input_id = ns("rank_discussion"),
+          orientation = "vertical"
+        )
       )
-    )
-  ),
-  
-    actionButton(ns("done_sorting"), 
-    "Done Sorting",
-    class = "btn btn-primary lecturi-checklist__submit"),
+    ),
+    actionButton(
+      ns("done_sorting"),
+      "Done Sorting",
+      class = "btn btn-primary lecturi-checklist__submit"
+    ),
     uiOutput(ns("sorting_feedback"))
   )
 }
 
 sortable_server <- function(id, dictionary, dictionary_intro, dictionary_methods, dictionary_results, dictionary_discussion) {
   moduleServer(id, function(input, output, session) {
-
     `%||%` <- function(x, y) if (is.null(x)) y else x
 
     output$sorting_feedback <- renderUI(NULL)
 
     observeEvent(input$done_sorting, {
-
       intro_correct <- unique(as.character(unname(unlist(dictionary_intro))))
       methods_correct <- unique(as.character(unname(unlist(dictionary_methods))))
       results_correct <- unique(as.character(unname(unlist(dictionary_results))))

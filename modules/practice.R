@@ -18,7 +18,7 @@ practice_module_ui <- function(id) {
     card(
       card_body(
         tags$div(
-          class = "ps-reading-tabs",
+          class = "ps-practice-tabs",
           tags$div(id = ns("practice_top")),
           navset_tab(
             id = ns("practice_tabs"),

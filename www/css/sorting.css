@@ -224,3 +224,78 @@
         --ps-footer-clearance: 160px;
     }
 }
+
+/* new */
+
+:root {
+    --ps-targets-gap: clamp(10px, 2vw, 14px);
+    --ps-after-targets: clamp(12px, 2vw, 16px);
+    --ps-between-source-targets: clamp(10px, 2vw, 12px);
+
+    --ps-r-xl: clamp(18px, 2.2vw, 26px);
+    --ps-r-lg: clamp(14px, 1.8vw, 20px);
+    --ps-r-md: clamp(12px, 1.5vw, 16px);
+
+    --ps-target-col-min: clamp(220px, 26vw, 170px);
+}
+
+.ps-sortable-page [id$="bucket_list_targets"] .bucket-list {
+    padding: clamp(8px, 1.8vw, 12px);
+    gap: var(--ps-targets-gap);
+}
+
+.ps-sortable-page [id$="bucket_list_targets"] .bucket,
+.ps-sortable-page [id$="bucket_list_source"] .bucket,
+.ps-sortable-page .bucket {
+    padding: clamp(12px, 2.2vw, 16px) !important;
+}
+
+.ps-sortable-page .rank-list-title {
+    font-size: clamp(0.95rem, 1.2vw, 1.08rem) !important;
+    margin: 0 0 clamp(8px, 1.6vw, 10px) !important;
+}
+
+.ps-sortable-page .rank-list {
+    padding: clamp(10px, 2vw, 12px) !important;
+    border-radius: var(--ps-r-lg) !important;
+}
+
+.ps-sortable-page .rank-list-item {
+    font-size: clamp(0.85rem, 1.4vw, 0.93rem) !important;
+    padding: clamp(8px, 1.6vw, 10px) clamp(10px, 1.8vw, 12px) !important;
+    border-radius: clamp(14px, 2vw, 18px) !important;
+    margin: 0 0 clamp(8px, 1.6vw, 10px) !important;
+}
+
+@media (max-width: 900px) {
+    .ps-sortable-page [id$="bucket_list_targets"] {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .ps-sortable-page [id$="bucket_list_targets"] .bucket-list {
+        grid-template-columns: 1fr;
+    }
+
+    .ps-sortable-page [id$="bucket_list_source"] .rank-list {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: clamp(10px, 3vw, 14px);
+        overflow-x: auto;
+        padding-bottom: 10px !important;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x proximity;
+    }
+
+    .ps-sortable-page [id$="bucket_list_source"] .rank-list-item {
+        flex: 0 0 clamp(220px, 75vw, 320px);
+        margin: 0 !important;
+        scroll-snap-align: start;
+        cursor: grab;
+    }
+
+    .ps-sortable-page [id$="bucket_list_source"] .rank-list:empty::after {
+        padding: 18px 0;
+    }
+}

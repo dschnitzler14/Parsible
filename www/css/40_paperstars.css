@@ -61,9 +61,9 @@
     margin: 0 !important;
 }
 
-.paperstars-rating label.btn:not(:last-of-type) {
+/* .paperstars-rating label.btn:not(:last-of-type) {
     margin-bottom: 18px !important;
-}
+} */
 
 .paperstars-rating label.btn:hover {
     filter: brightness(0.97);
@@ -74,6 +74,31 @@
 .paperstars-rating input[type="radio"].btn-check:focus+label.btn {
     outline: none !important;
     box-shadow: none !important;
+}
+
+.paperstars-rating input[type="radio"].btn-check+label.btn {
+    padding: clamp(7px, 1.2vw, 9px) clamp(12px, 2vw, 16px);
+    font-size: clamp(0.85rem, 1.3vw, 0.95rem);
+    line-height: 1.2;
+
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+}
+
+.paperstars-rating label.btn:not(:last-of-type) {
+    margin-bottom: clamp(10px, 2.2vw, 18px) !important;
+}
+
+.paperstars-rating .btn-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 2.5vw, 18px);
+}
+
+.paperstars-rating label.btn:not(:last-of-type) {
+    margin-bottom: 0 !important;
 }
 
 .paperstars-textbox {

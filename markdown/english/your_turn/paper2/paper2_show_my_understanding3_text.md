@@ -1,1 +1,4 @@
-- 
+- forced exercise may be more stressful than voluntary exercise
+- cfos is general activity marker - would be interesting to exclude other confounding factors that may be influencing brain activity
+- effect size not given
+- arbitrary n

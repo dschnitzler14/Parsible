@@ -747,7 +747,7 @@ strategies_module_ui <- function(id) {
             )
           )
         )
-      ) # newdiv
+      ) # newdiv  
     ),
     nav_buttons_ui(ns("nav_controls"))
   )

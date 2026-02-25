@@ -18,6 +18,28 @@ stats_module_ui <- function(id) {
         col_widths = c(4, 4, 4),
         class = "ps-step-grid ps-what-paper-grid",
         bslib::card(
+          class = "ps-step ps-step-9 ps-topic-card",
+          `data-card-id` = "what-paper-39",
+          bslib::card_body(
+            class = "ps-topic-click",
+            actionButton(ns("open_box9"), label = NULL, class = "ps-topic-btn"),
+            tags$div(
+              class = "ps-step-inner",
+              tags$div(
+                class = "ps-step-title ps-topic-title",
+                tags$span(class = "ps-step-num", "1"),
+                tags$h3("Summary Statistics and Data Types"),
+                tags$p("")
+              ),
+              tags$div(
+                class = "ps-tool-cta",
+                bs_icon("book"),
+                tags$span("Open chapter")
+              )
+            )
+          )
+        ),
+        bslib::card(
           class = "ps-step ps-step-1 ps-topic-card",
           `data-card-id` = "what-paper-31",
           bslib::card_body(
@@ -27,7 +49,7 @@ stats_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "1"),
+                tags$span(class = "ps-step-num", "2"),
                 tags$h3("What is are statistical tests and why do we need them?"),
                 tags$p("")
               ),
@@ -49,7 +71,7 @@ stats_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "2"),
+                tags$span(class = "ps-step-num", "3"),
                 tags$h3("What is a p-value?"),
                 tags$p("")
               ),
@@ -71,7 +93,7 @@ stats_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "3"),
+                tags$span(class = "ps-step-num", "4"),
                 tags$h3("Why do we need to check assumptions of statistical tests?"),
                 tags$p("")
               ),
@@ -93,7 +115,7 @@ stats_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "4"),
+                tags$span(class = "ps-step-num", "5"),
                 tags$h3("Type I and Type II Errors"),
                 tags$p("")
               ),
@@ -115,7 +137,7 @@ stats_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "5"),
+                tags$span(class = "ps-step-num", "6"),
                 tags$h3("Confidence Intervals"),
                 tags$p("")
               ),
@@ -137,7 +159,7 @@ stats_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "6"),
+                tags$span(class = "ps-step-num", "7"),
                 tags$h3("Why does sample size matter?"),
                 tags$p("")
               ),
@@ -159,88 +181,8 @@ stats_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "7"),
-                tags$h3("What are effect sizes?"),
-                tags$p("")
-              ),
-              tags$div(
-                class = "ps-tool-cta",
-                bs_icon("book"),
-                tags$span("Open chapter")
-              )
-            )
-          )
-        ),
-        bslib::card(
-          class = "ps-step ps-step-8 ps-topic-card",
-          `data-card-id` = "what-paper-38",
-          bslib::card_body(
-            class = "ps-topic-click",
-            actionButton(ns("open_box8"), label = NULL, class = "ps-topic-btn"),
-            tags$div(
-              class = "ps-step-inner",
-              tags$div(
-                class = "ps-step-title ps-topic-title",
                 tags$span(class = "ps-step-num", "8"),
-                tags$h3("What is p-hacking?"),
-                tags$p("")
-              ),
-              tags$div(
-                class = "ps-tool-cta",
-                bs_icon("book"),
-                tags$span("Open chapter")
-              )
-            )
-          )
-        ),
-        # bslib::card(
-        #   class = "ps-step ps-step-9 ps-static-card",
-        #   bslib::card_body(
-        #     tags$div(
-        #       class = "ps-step-inner",
-        #       tags$div(
-        #         class = "ps-step-title",
-        #         tags$span(class = "ps-step-num", "9"),
-        #         tags$h3("Summary Statistics and Data Types")
-        #       ),
-        #       uiOutput(ns("stats_step9_text"))
-        #     )
-        #   )
-        # ),
-        bslib::card(
-          class = "ps-step ps-step-9 ps-topic-card",
-          `data-card-id` = "what-paper-39",
-          bslib::card_body(
-            class = "ps-topic-click",
-            actionButton(ns("open_box9"), label = NULL, class = "ps-topic-btn"),
-            tags$div(
-              class = "ps-step-inner",
-              tags$div(
-                class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "9"),
-                tags$h3("Summary Statistics and Data Types"),
-                tags$p("")
-              ),
-              tags$div(
-                class = "ps-tool-cta",
-                bs_icon("book"),
-                tags$span("Open chapter")
-              )
-            )
-          )
-        ),
-        bslib::card(
-          class = "ps-step ps-step-10 ps-topic-card",
-          `data-card-id` = "what-paper-310",
-          bslib::card_body(
-            class = "ps-topic-click",
-            actionButton(ns("open_box10"), label = NULL, class = "ps-topic-btn"),
-            tags$div(
-              class = "ps-step-inner",
-              tags$div(
-                class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "10"),
-                tags$h3("Common statistical mistakes in papers"),
+                tags$h3("What are effect sizes?"),
                 tags$p("")
               ),
               tags$div(
@@ -261,8 +203,30 @@ stats_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "11"),
+                tags$span(class = "ps-step-num", "9"),
                 tags$h3("Multiple testing corrections"),
+                tags$p("")
+              ),
+              tags$div(
+                class = "ps-tool-cta",
+                bs_icon("book"),
+                tags$span("Open chapter")
+              )
+            )
+          )
+        ),
+        bslib::card(
+          class = "ps-step ps-step-8 ps-topic-card",
+          `data-card-id` = "what-paper-38",
+          bslib::card_body(
+            class = "ps-topic-click",
+            actionButton(ns("open_box8"), label = NULL, class = "ps-topic-btn"),
+            tags$div(
+              class = "ps-step-inner",
+              tags$div(
+                class = "ps-step-title ps-topic-title",
+                tags$span(class = "ps-step-num", "10"),
+                tags$h3("What is p-hacking?"),
                 tags$p("")
               ),
               tags$div(
@@ -283,8 +247,30 @@ stats_module_ui <- function(id) {
               class = "ps-step-inner",
               tags$div(
                 class = "ps-step-title ps-topic-title",
-                tags$span(class = "ps-step-num", "12"),
+                tags$span(class = "ps-step-num", "11"),
                 tags$h3("Which Test Should I Use?"),
+                tags$p("")
+              ),
+              tags$div(
+                class = "ps-tool-cta",
+                bs_icon("book"),
+                tags$span("Open chapter")
+              )
+            )
+          )
+        ),
+        bslib::card(
+          class = "ps-step ps-step-10 ps-topic-card",
+          `data-card-id` = "what-paper-310",
+          bslib::card_body(
+            class = "ps-topic-click",
+            actionButton(ns("open_box10"), label = NULL, class = "ps-topic-btn"),
+            tags$div(
+              class = "ps-step-inner",
+              tags$div(
+                class = "ps-step-title ps-topic-title",
+                tags$span(class = "ps-step-num", "12"),
+                tags$h3("Common statistical mistakes in papers"),
                 tags$p("")
               ),
               tags$div(

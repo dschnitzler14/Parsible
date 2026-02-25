@@ -709,6 +709,15 @@ your_turn_paper2_server <- function(id, process_markdown, process_rmd_fragment) 
       process_markdown("your_turn/paper2/paper2_pause_instructions.md")
     })
 
+    output$paper2_understanding_instructions_text <- renderUI({
+      process_markdown("your_turn/paper2/paper2_understanding_instructions.md")
+    })
+
+    output$paper2_reflection_instructions_text <- renderUI({
+      process_markdown("your_turn/paper2/paper2_reflection_instructions.md")
+    })
+
+
 
     output$paper2_discussion <- renderUI({
       md_ui("english/your_turn/paper2/paper2_discussion.Rmd")

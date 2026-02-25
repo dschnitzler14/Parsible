@@ -786,6 +786,14 @@ output$paper1_methods_section_goals_text <- renderUI({
     process_markdown("your_turn/paper1/paper1_pause_instructions.md")
   })
 
+   output$paper1_understanding_instructions_text <- renderUI({
+     process_markdown("your_turn/paper1/paper1_understanding_instructions.md")
+   })
+
+      output$paper1_reflection_instructions_text <- renderUI({
+        process_markdown("your_turn/paper1/paper1_reflection_instructions.md")
+      })
+
 
   output$paper1_discussion <- renderUI({
     md_ui("english/your_turn/paper1/paper1_discussion.Rmd")
